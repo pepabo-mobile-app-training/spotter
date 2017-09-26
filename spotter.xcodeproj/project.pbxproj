@@ -44,8 +44,8 @@
 		BEA4CB931F7A207B0066BF44 /* spotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA4CB971F7A207B0066BF44 /* spotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotterUITests.swift; sourceTree = "<group>"; };
 		BEA4CB991F7A207B0066BF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEA4CBAD1F7A21C50066BF44 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = /Users/komei.nomura/dev/spotter/spotter/Storyboards/LaunchScreen.storyboard; sourceTree = "<absolute>"; };
-		BEA4CBAE1F7A21C50066BF44 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = /Users/komei.nomura/dev/spotter/spotter/Storyboards/Main.storyboard; sourceTree = "<absolute>"; };
+		BEA4CBAD1F7A21C50066BF44 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEA4CBAE1F7A21C50066BF44 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BEA4CBB11F7A22EA0066BF44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
