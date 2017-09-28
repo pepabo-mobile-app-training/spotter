@@ -25,6 +25,14 @@
                                     <segue destination="61g-AH-GGk" kind="show" id="oG6-GL-OpI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2N-r8-IDO">
+                                <rect key="frame" x="133" y="163" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="タイムラインへ"/>
+                                <connections>
+                                    <segue destination="SZJ-Qa-0Mr" kind="show" id="pdB-TC-2T5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -33,6 +41,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--TimeLine-->
+        <scene sceneID="qwM-OS-DaA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TimeLine" id="SZJ-Qa-0Mr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TD2-h2-A2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="290"/>
         </scene>
         <!--login-->
         <scene sceneID="12G-ES-wIb">
