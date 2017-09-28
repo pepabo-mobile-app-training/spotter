@@ -73,13 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="QSj-Bs-TFw"/>
                     </view>
                     <navigationItem key="navigationItem" id="u8K-Bh-q5L">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="h6N-2q-ZVA">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ldI-WZ-VTA">
-                                <rect key="frame" x="318" y="7" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Home"/>
-                            </button>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="Jm5-jk-KUb"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ah-fN-XFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
