@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,97 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="spotter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-5Z-j5I">
+                                <rect key="frame" x="41" y="289" width="76" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E04-4K-oR1">
+                                <rect key="frame" x="41" y="398" width="97" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ej1-ko-ozA">
+                                <rect key="frame" x="41" y="429" width="293" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="unp-yA-Sbu">
+                                <rect key="frame" x="41" y="320" width="293" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2R-Gh-OYz">
+                                <rect key="frame" x="109" y="90" width="157" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stt-bD-gv5" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                <rect key="frame" x="41" y="543" width="293" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="ログイン"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.072392590343952179" green="0.823314368724823" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エラーメッセージ用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4y-x0-yl1">
+                                <rect key="frame" x="41" y="222" width="293" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="unp-yA-Sbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="1RG-RK-ipp"/>
+                            <constraint firstItem="ej1-ko-ozA" firstAttribute="top" secondItem="E04-4K-oR1" secondAttribute="bottom" constant="8" id="71f-vY-Hd4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="stt-bD-gv5" secondAttribute="bottom" constant="82" id="7YU-pn-5C0"/>
+                            <constraint firstItem="4WU-5Z-j5I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="Bxu-IS-6Co"/>
+                            <constraint firstItem="E04-4K-oR1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="DQW-0z-fIg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d4y-x0-yl1" secondAttribute="trailing" constant="41" id="EBL-Ws-9s3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="unp-yA-Sbu" secondAttribute="trailing" constant="41" id="ECc-wS-cyJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ej1-ko-ozA" secondAttribute="trailing" constant="41" id="GNR-Nt-Z18"/>
+                            <constraint firstItem="4WU-5Z-j5I" firstAttribute="top" secondItem="W2R-Gh-OYz" secondAttribute="bottom" constant="139" id="J6f-5r-58I"/>
+                            <constraint firstItem="d4y-x0-yl1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="JOm-NL-CYH"/>
+                            <constraint firstItem="ej1-ko-ozA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="JUI-rD-7V8"/>
+                            <constraint firstItem="d4y-x0-yl1" firstAttribute="top" secondItem="W2R-Gh-OYz" secondAttribute="bottom" constant="72" id="XJX-et-bIF"/>
+                            <constraint firstItem="W2R-Gh-OYz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="YCo-Iu-KaC"/>
+                            <constraint firstItem="ej1-ko-ozA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bkw-J8-x2R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="stt-bD-gv5" secondAttribute="trailing" constant="41" id="d3T-mk-0CM"/>
+                            <constraint firstItem="d4y-x0-yl1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dAY-Gh-Jes"/>
+                            <constraint firstItem="unp-yA-Sbu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eeo-bz-dqM"/>
+                            <constraint firstItem="4WU-5Z-j5I" firstAttribute="top" secondItem="d4y-x0-yl1" secondAttribute="bottom" constant="27" id="lPy-Iz-NCf"/>
+                            <constraint firstItem="E04-4K-oR1" firstAttribute="top" secondItem="unp-yA-Sbu" secondAttribute="bottom" constant="48" id="n2V-7X-Xrf"/>
+                            <constraint firstItem="stt-bD-gv5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pvW-Oa-eAi"/>
+                            <constraint firstItem="ej1-ko-ozA" firstAttribute="top" secondItem="E04-4K-oR1" secondAttribute="bottom" constant="8" id="qgR-Cv-oTW"/>
+                            <constraint firstItem="unp-yA-Sbu" firstAttribute="top" secondItem="4WU-5Z-j5I" secondAttribute="bottom" constant="8" id="sBV-vy-pnP"/>
+                            <constraint firstItem="stt-bD-gv5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="vfQ-lz-weF"/>
+                            <constraint firstItem="W2R-Gh-OYz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wHk-yh-Lcf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>
