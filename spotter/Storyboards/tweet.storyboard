@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,15 +18,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="あいうえお" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d3T-7r-DrF">
-                                <rect key="frame" x="67" y="88" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eU-rF-geh" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                <rect key="frame" x="243" y="319" width="112" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="Qlf-Y6-Jfh"/>
+                                    <constraint firstAttribute="height" constant="48" id="olP-0B-WL2"/>
+                                    <constraint firstAttribute="width" secondItem="4eU-rF-geh" secondAttribute="height" multiplier="7:3" id="qcq-Fv-Sq2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="今の気持ち"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.072392590339999993" green="0.82331436869999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d3T-7r-DrF" customClass="TweetTextView" customModule="spotter" customModuleProvider="target">
+                                <rect key="frame" x="20" y="134" width="335" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d3T-7r-DrF" secondAttribute="height" multiplier="67:32" id="DP8-LF-lb8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QSj-Bs-TFw" firstAttribute="trailing" secondItem="d3T-7r-DrF" secondAttribute="trailing" constant="20" id="QrM-0u-ibP"/>
+                            <constraint firstItem="d3T-7r-DrF" firstAttribute="top" secondItem="QSj-Bs-TFw" secondAttribute="top" constant="70" id="Qvc-x3-FAo"/>
+                            <constraint firstItem="d3T-7r-DrF" firstAttribute="centerX" secondItem="PpP-OP-dT4" secondAttribute="centerX" id="X4c-Y2-xko"/>
+                            <constraint firstItem="d3T-7r-DrF" firstAttribute="leading" secondItem="QSj-Bs-TFw" secondAttribute="leading" constant="20" id="f0n-Ac-pxb"/>
+                            <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="d3T-7r-DrF" secondAttribute="bottom" constant="25" id="g1f-iQ-cWP"/>
+                            <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="d3T-7r-DrF" secondAttribute="bottom" constant="25" id="uVQ-Xg-gF2"/>
+                            <constraint firstItem="QSj-Bs-TFw" firstAttribute="trailing" secondItem="4eU-rF-geh" secondAttribute="trailing" constant="20" id="zwf-rh-ukn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QSj-Bs-TFw"/>
                     </view>
                     <navigationItem key="navigationItem" id="u8K-Bh-q5L">

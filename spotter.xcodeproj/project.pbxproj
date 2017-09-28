@@ -21,6 +21,7 @@
 		BEA4CBBE1F7BA82C0066BF44 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CBBD1F7BA82C0066BF44 /* LoginViewController.swift */; };
 		BEA4CBC01F7CC7C10066BF44 /* tweet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CBBF1F7CC7C10066BF44 /* tweet.storyboard */; };
 		BEA4CBC21F7CC7E00066BF44 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CBC11F7CC7E00066BF44 /* TweetViewController.swift */; };
+		BEA4CBC41F7CD0000066BF44 /* TweetTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CBC31F7CD0000066BF44 /* TweetTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		BEA4CBBD1F7BA82C0066BF44 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BEA4CBBF1F7CC7C10066BF44 /* tweet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tweet.storyboard; sourceTree = "<group>"; };
 		BEA4CBC11F7CC7E00066BF44 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
+		BEA4CBC31F7CD0000066BF44 /* TweetTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA4CBB91F7B8DB10066BF44 /* RoundRectButton.swift */,
+				BEA4CBC31F7CD0000066BF44 /* TweetTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA4CBBE1F7BA82C0066BF44 /* LoginViewController.swift in Sources */,
+				BEA4CBC41F7CD0000066BF44 /* TweetTextView.swift in Sources */,
 				BEA4CBB21F7A22EA0066BF44 /* ViewController.swift in Sources */,
 				BEA4CBC21F7CC7E00066BF44 /* TweetViewController.swift in Sources */,
 				BEA4CBBA1F7B8DB10066BF44 /* RoundRectButton.swift in Sources */,
