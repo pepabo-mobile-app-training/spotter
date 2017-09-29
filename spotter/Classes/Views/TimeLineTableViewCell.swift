@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  TimeLineTableViewCell.swift
 //  spotter
 //
 //  Created by futoshi.endo on 2017/09/29.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
-
+class TimeLineTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var faceImageView: UIImageView!
+    @IBOutlet weak var tweetText: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
