@@ -18,15 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eU-rF-geh" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
-                                <rect key="frame" x="243" y="319" width="112" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrL-72-p59" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                <rect key="frame" x="247" y="593" width="112" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="112" id="Qlf-Y6-Jfh"/>
-                                    <constraint firstAttribute="height" constant="48" id="olP-0B-WL2"/>
-                                    <constraint firstAttribute="width" secondItem="4eU-rF-geh" secondAttribute="height" multiplier="7:3" id="qcq-Fv-Sq2"/>
+                                    <constraint firstAttribute="height" constant="48" id="O77-RE-NXQ"/>
+                                    <constraint firstAttribute="width" secondItem="yrL-72-p59" secondAttribute="height" multiplier="7:3" id="kUx-1y-kff"/>
+                                    <constraint firstAttribute="width" constant="112" id="nir-8D-MoE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="今の気持ち"/>
+                                <state key="normal" title="曲選択へ"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
@@ -40,7 +40,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d3T-7r-DrF" customClass="TweetTextView" customModule="spotter" customModuleProvider="target">
-                                <rect key="frame" x="20" y="134" width="335" height="160"/>
+                                <rect key="frame" x="20" y="88" width="335" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d3T-7r-DrF" secondAttribute="height" multiplier="67:32" id="DP8-LF-lb8"/>
@@ -59,16 +59,100 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kr-Nz-gKt">
+                                <rect key="frame" x="-0.5" y="306" width="376" height="175"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyL-UJ-Yeu" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                        <rect key="frame" x="192" y="8" width="162" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="#怒る"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="0.80216354131698608" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gr-Yj-KjK" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                        <rect key="frame" x="192" y="91" width="162" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="#楽しい"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="0.070393599569797516" green="0.89194482564926147" blue="0.45761072635650635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eU-rF-geh" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                        <rect key="frame" x="22" y="8" width="162" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="#嬉しい"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="0.94577676057815552" green="0.7584795355796814" blue="0.19065558910369873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-WN-WsA" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                        <rect key="frame" x="22" y="91" width="162" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="#悲しい"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="0.2874743640422821" green="0.52716183662414551" blue="0.91021198034286499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今の気持ちを選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xap-aM-spH">
+                                <rect key="frame" x="20" y="278" width="171" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xap-aM-spH" firstAttribute="top" secondItem="d3T-7r-DrF" secondAttribute="bottom" constant="30" id="3CC-Nx-JP9"/>
+                            <constraint firstItem="5kr-Nz-gKt" firstAttribute="top" secondItem="xap-aM-spH" secondAttribute="bottom" constant="2" id="4p1-l2-nid"/>
+                            <constraint firstItem="yrL-72-p59" firstAttribute="width" secondItem="yrL-72-p59" secondAttribute="height" multiplier="7:3" id="KLj-8O-QDo"/>
+                            <constraint firstItem="5kr-Nz-gKt" firstAttribute="centerX" secondItem="PpP-OP-dT4" secondAttribute="centerX" id="LSw-GD-idt"/>
                             <constraint firstItem="QSj-Bs-TFw" firstAttribute="trailing" secondItem="d3T-7r-DrF" secondAttribute="trailing" constant="20" id="QrM-0u-ibP"/>
-                            <constraint firstItem="d3T-7r-DrF" firstAttribute="top" secondItem="QSj-Bs-TFw" secondAttribute="top" constant="70" id="Qvc-x3-FAo"/>
+                            <constraint firstItem="d3T-7r-DrF" firstAttribute="top" secondItem="QSj-Bs-TFw" secondAttribute="top" constant="24" id="Qvc-x3-FAo"/>
                             <constraint firstItem="d3T-7r-DrF" firstAttribute="centerX" secondItem="PpP-OP-dT4" secondAttribute="centerX" id="X4c-Y2-xko"/>
                             <constraint firstItem="d3T-7r-DrF" firstAttribute="leading" secondItem="QSj-Bs-TFw" secondAttribute="leading" constant="20" id="f0n-Ac-pxb"/>
-                            <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="d3T-7r-DrF" secondAttribute="bottom" constant="25" id="g1f-iQ-cWP"/>
-                            <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="d3T-7r-DrF" secondAttribute="bottom" constant="25" id="uVQ-Xg-gF2"/>
-                            <constraint firstItem="QSj-Bs-TFw" firstAttribute="trailing" secondItem="4eU-rF-geh" secondAttribute="trailing" constant="20" id="zwf-rh-ukn"/>
+                            <constraint firstAttribute="trailing" secondItem="5kr-Nz-gKt" secondAttribute="trailing" constant="-0.5" id="hSl-Kb-31P"/>
+                            <constraint firstItem="5kr-Nz-gKt" firstAttribute="leading" secondItem="PpP-OP-dT4" secondAttribute="leading" constant="-0.5" id="u5M-g7-PFY"/>
+                            <constraint firstItem="xap-aM-spH" firstAttribute="leading" secondItem="QSj-Bs-TFw" secondAttribute="leading" constant="20" id="xNx-Jw-dEE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QSj-Bs-TFw"/>
                     </view>
