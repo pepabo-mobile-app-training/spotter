@@ -33,16 +33,8 @@
                                     <segue destination="MuX-pV-MtE" kind="show" id="PhD-uO-JQL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE1-TX-dcZ">
-                                <rect key="frame" x="133" y="341" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="感情選択画面へ"/>
-                                <connections>
-                                    <segue destination="uHn-ws-3fy" kind="show" id="z5Y-VZ-PSL"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdj-gk-T2b">
-                                <rect key="frame" x="141" y="435" width="92" height="30"/>
+                                <rect key="frame" x="141" y="344" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="曲選択画面へ"/>
                                 <connections>
@@ -50,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSJ-Ko-mc9">
-                                <rect key="frame" x="128" y="522" width="118" height="30"/>
+                                <rect key="frame" x="128" y="446" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tweet確認画面へ"/>
                                 <connections>
@@ -81,14 +73,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xw8-z0-idp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="898" y="32"/>
-        </scene>
-        <!--SelectEmotion-->
-        <scene sceneID="G7K-O5-TrD">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SelectEmotion" id="uHn-ws-3fy" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xlo-9m-XRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="895" y="125"/>
         </scene>
         <!--SelectMusic-->
         <scene sceneID="ljd-wR-pI4">

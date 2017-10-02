@@ -5,7 +5,9 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,131 +40,206 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VrS-gm-Z6g">
+                                <rect key="frame" x="20" y="443" width="328" height="67"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyL-UJ-Yeu" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="162" id="7kk-Gk-J12"/>
+                                            <constraint firstAttribute="height" constant="67" id="Jpn-pe-q0R"/>
+                                            <constraint firstAttribute="width" constant="162" id="Zto-qX-yAc"/>
+                                            <constraint firstAttribute="height" constant="67" id="pag-jj-jaA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="#怒る"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="0.80216354131698608" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-WN-WsA" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                        <rect key="frame" x="166" y="0.0" width="162" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="162" id="t8N-xO-Un6"/>
+                                            <constraint firstAttribute="width" constant="162" id="tgG-Kf-lJ5"/>
+                                            <constraint firstAttribute="height" constant="67" id="tvc-Pd-2pK"/>
+                                            <constraint firstAttribute="height" constant="67" id="y1P-LJ-W4f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="#悲しい"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="0.2874743640422821" green="0.52716183662414551" blue="0.91021198034286499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dcJ-WN-WsA" secondAttribute="trailing" id="5HZ-2y-uIX"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="leading" secondItem="VrS-gm-Z6g" secondAttribute="leading" id="5Ss-pX-LlG"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="baseline" secondItem="VyL-UJ-Yeu" secondAttribute="baseline" id="8aU-V8-j3R"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="top" secondItem="VrS-gm-Z6g" secondAttribute="top" id="8rM-nN-DZD"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="leading" secondItem="VrS-gm-Z6g" secondAttribute="leading" constant="166" id="9Dg-mJ-aSG"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="top" secondItem="VrS-gm-Z6g" secondAttribute="top" id="9Mp-Qe-Aax"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="leading" secondItem="VrS-gm-Z6g" secondAttribute="leading" id="9ex-Fh-JUG"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="top" secondItem="VrS-gm-Z6g" secondAttribute="top" id="Au3-tB-E7T"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="bottom" secondItem="VyL-UJ-Yeu" secondAttribute="bottom" id="CrV-Et-YcG"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="top" secondItem="VrS-gm-Z6g" secondAttribute="top" id="EhJ-5Y-ldj"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="bottom" secondItem="VrS-gm-Z6g" secondAttribute="bottomMargin" id="F8a-lq-4DU"/>
+                                    <constraint firstAttribute="bottom" secondItem="dcJ-WN-WsA" secondAttribute="bottom" id="K9s-xd-o8K"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="centerY" secondItem="VyL-UJ-Yeu" secondAttribute="centerY" id="L6J-Vt-5qo"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="top" secondItem="VrS-gm-Z6g" secondAttribute="top" id="LKV-a9-tei"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="firstBaseline" secondItem="dcJ-WN-WsA" secondAttribute="firstBaseline" id="LO2-So-BeB"/>
+                                    <constraint firstAttribute="bottom" secondItem="VyL-UJ-Yeu" secondAttribute="bottom" id="MF9-pj-jsk"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="bottom" secondItem="VrS-gm-Z6g" secondAttribute="bottomMargin" id="MLT-hI-BQM"/>
+                                    <constraint firstAttribute="bottom" secondItem="VyL-UJ-Yeu" secondAttribute="bottom" id="MU2-UQ-dwF"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="leading" secondItem="VyL-UJ-Yeu" secondAttribute="trailing" constant="4" id="NRk-Mv-l8S"/>
+                                    <constraint firstAttribute="trailing" secondItem="dcJ-WN-WsA" secondAttribute="trailing" id="Rsh-RJ-2FX"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="trailing" secondItem="VrS-gm-Z6g" secondAttribute="trailingMargin" id="XRm-mW-hra"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="top" secondItem="VrS-gm-Z6g" secondAttribute="top" id="YIV-SA-q4R"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="top" secondItem="dcJ-WN-WsA" secondAttribute="top" id="dUV-Pa-lMO"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="firstBaseline" secondItem="VyL-UJ-Yeu" secondAttribute="baseline" id="edP-dV-YDa"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="top" secondItem="VrS-gm-Z6g" secondAttribute="top" id="fix-YG-ZWT"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="leading" secondItem="VrS-gm-Z6g" secondAttribute="leadingMargin" id="g3N-c3-g7e"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="centerY" secondItem="VrS-gm-Z6g" secondAttribute="centerY" id="g5X-o0-7d1"/>
+                                    <constraint firstItem="dcJ-WN-WsA" firstAttribute="centerY" secondItem="VrS-gm-Z6g" secondAttribute="centerY" id="lPf-cs-QdT"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="firstBaseline" secondItem="dcJ-WN-WsA" secondAttribute="baseline" id="nII-4b-rmc"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="leading" secondItem="VrS-gm-Z6g" secondAttribute="leading" id="vOE-uS-zvm"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="top" secondItem="VrS-gm-Z6g" secondAttribute="top" id="xFT-p6-uYR"/>
+                                    <constraint firstItem="VyL-UJ-Yeu" firstAttribute="leading" secondItem="VrS-gm-Z6g" secondAttribute="leading" id="xGW-ZB-s2N"/>
+                                    <constraint firstAttribute="bottom" secondItem="dcJ-WN-WsA" secondAttribute="bottom" id="xO0-cb-uRk"/>
+                                    <constraint firstAttribute="trailing" secondItem="dcJ-WN-WsA" secondAttribute="trailing" id="yFE-h9-5Yb"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="W2X-6t-UHd">
+                                <rect key="frame" x="20" y="353" width="328" height="67"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eU-rF-geh" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="67" id="20q-df-DyH"/>
+                                            <constraint firstAttribute="height" constant="67" id="7O5-uh-fcd"/>
+                                            <constraint firstAttribute="width" constant="162" id="Lcm-q0-WOq"/>
+                                            <constraint firstAttribute="width" constant="162" id="QhV-UL-YIo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="#嬉しい"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="0.94577676057815552" green="0.7584795355796814" blue="0.19065558910369873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gr-Yj-KjK" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
+                                        <rect key="frame" x="166" y="0.0" width="162" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="162" id="lyy-sf-8kS"/>
+                                            <constraint firstAttribute="height" constant="67" id="rJo-bS-4dq"/>
+                                            <constraint firstAttribute="height" constant="67" id="z7V-qd-Qzs"/>
+                                            <constraint firstAttribute="width" constant="162" id="zK4-Cw-uex"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="#楽しい"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                                <color key="value" red="0.070393599569797516" green="0.89194482564926147" blue="0.45761072635650635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4Gr-Yj-KjK" secondAttribute="bottom" id="0ss-vN-lfV"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Gr-Yj-KjK" secondAttribute="trailing" id="6PT-ca-Gde"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="leading" secondItem="W2X-6t-UHd" secondAttribute="leading" id="6R6-66-m8L"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="centerY" secondItem="4Gr-Yj-KjK" secondAttribute="centerY" id="9n1-rl-VwW"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="centerY" secondItem="W2X-6t-UHd" secondAttribute="centerY" id="A2h-zv-WEw"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="bottom" secondItem="W2X-6t-UHd" secondAttribute="bottomMargin" id="GYh-ov-0DY"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="top" secondItem="W2X-6t-UHd" secondAttribute="top" id="H9V-Gm-6Rw"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="4Gr-Yj-KjK" secondAttribute="top" id="HZi-Xk-tDj"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="leading" secondItem="W2X-6t-UHd" secondAttribute="leading" id="Hcd-AX-uv5"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="top" secondItem="W2X-6t-UHd" secondAttribute="top" id="JYS-4V-asU"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Gr-Yj-KjK" secondAttribute="bottom" id="KTH-nM-0z5"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="leading" secondItem="W2X-6t-UHd" secondAttribute="leading" id="MQE-Yt-Xlt"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="baseline" secondItem="4Gr-Yj-KjK" secondAttribute="baseline" id="NIb-gu-9hG"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="W2X-6t-UHd" secondAttribute="top" id="P41-yQ-LFb"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="firstBaseline" secondItem="4eU-rF-geh" secondAttribute="firstBaseline" id="Q5c-8X-nPD"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="bottom" secondItem="4Gr-Yj-KjK" secondAttribute="bottom" id="QdX-fo-GeC"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="W2X-6t-UHd" secondAttribute="top" id="Tua-wn-NKz"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Gr-Yj-KjK" secondAttribute="trailing" id="WK8-RK-H4V"/>
+                                    <constraint firstAttribute="bottom" secondItem="4eU-rF-geh" secondAttribute="bottom" id="YN3-6J-H5m"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="leading" secondItem="W2X-6t-UHd" secondAttribute="leading" id="aO9-Ph-vlq"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="baseline" secondItem="4Gr-Yj-KjK" secondAttribute="firstBaseline" id="aXQ-JG-D7n"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="top" secondItem="W2X-6t-UHd" secondAttribute="top" id="bZM-dO-Idd"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="trailing" secondItem="W2X-6t-UHd" secondAttribute="trailingMargin" id="bbL-xE-6T7"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="leading" secondItem="W2X-6t-UHd" secondAttribute="leadingMargin" id="biw-o5-JLd"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="firstBaseline" secondItem="4Gr-Yj-KjK" secondAttribute="baseline" id="dFk-89-8jU"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="centerY" secondItem="W2X-6t-UHd" secondAttribute="centerY" id="eBJ-2i-WOG"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="W2X-6t-UHd" secondAttribute="top" id="eaC-c5-mGZ"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="leading" secondItem="4eU-rF-geh" secondAttribute="trailing" constant="4" id="fsy-Jo-id1"/>
+                                    <constraint firstAttribute="bottom" secondItem="4eU-rF-geh" secondAttribute="bottom" id="i5n-zY-nAj"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Gr-Yj-KjK" secondAttribute="trailing" id="ikb-EL-j5k"/>
+                                    <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="W2X-6t-UHd" secondAttribute="top" id="otI-jT-AmZ"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="bottom" secondItem="W2X-6t-UHd" secondAttribute="bottomMargin" id="q0S-Ja-Xlt"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="top" secondItem="W2X-6t-UHd" secondAttribute="top" id="usw-W1-u0C"/>
+                                    <constraint firstItem="4Gr-Yj-KjK" firstAttribute="leading" secondItem="W2X-6t-UHd" secondAttribute="leading" constant="166" id="x5K-s6-vQ1"/>
+                                </constraints>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今の気持ちを選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xap-aM-spH">
-                                <rect key="frame" x="20" y="278" width="171" height="26"/>
+                                <rect key="frame" x="20" y="312" width="171" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrL-72-p59" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
-                                <rect key="frame" x="247" y="593" width="112" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="O77-RE-NXQ"/>
-                                    <constraint firstAttribute="width" constant="112" id="nir-8D-MoE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="曲選択へ"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                        <color key="value" red="0.072392590339999993" green="0.82331436869999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gr-Yj-KjK" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
-                                <rect key="frame" x="193" y="319" width="162" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="z7V-qd-Qzs"/>
-                                    <constraint firstAttribute="width" constant="162" id="zK4-Cw-uex"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="#楽しい"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                        <color key="value" red="0.070393599569797516" green="0.89194482564926147" blue="0.45761072635650635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyL-UJ-Yeu" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
-                                <rect key="frame" x="20" y="409" width="162" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="Jpn-pe-q0R"/>
-                                    <constraint firstAttribute="width" constant="162" id="Zto-qX-yAc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="#怒る"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                        <color key="value" red="0.80216354131698608" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-WN-WsA" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
-                                <rect key="frame" x="193" y="409" width="162" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="162" id="tgG-Kf-lJ5"/>
-                                    <constraint firstAttribute="height" constant="67" id="tvc-Pd-2pK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="#悲しい"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                        <color key="value" red="0.2874743640422821" green="0.52716183662414551" blue="0.91021198034286499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eU-rF-geh" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
-                                <rect key="frame" x="20" y="319" width="162" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="20q-df-DyH"/>
-                                    <constraint firstAttribute="width" constant="162" id="Lcm-q0-WOq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="#嬉しい"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
-                                        <color key="value" red="0.94577676057815552" green="0.7584795355796814" blue="0.19065558910369873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4Gr-Yj-KjK" firstAttribute="leading" secondItem="4eU-rF-geh" secondAttribute="trailing" constant="11" id="0yf-77-yU6"/>
-                            <constraint firstItem="dcJ-WN-WsA" firstAttribute="top" secondItem="4Gr-Yj-KjK" secondAttribute="bottom" constant="23" id="82p-Lj-CQ6"/>
-                            <constraint firstItem="4eU-rF-geh" firstAttribute="top" secondItem="xap-aM-spH" secondAttribute="bottom" constant="15" id="CZB-Yl-7D8"/>
+                            <constraint firstItem="VrS-gm-Z6g" firstAttribute="top" secondItem="W2X-6t-UHd" secondAttribute="bottom" constant="23" id="0Eo-LR-C1U"/>
+                            <constraint firstItem="QSj-Bs-TFw" firstAttribute="trailing" secondItem="W2X-6t-UHd" secondAttribute="trailing" constant="27" id="0We-M0-vgi"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="centerX" secondItem="VrS-gm-Z6g" secondAttribute="centerX" id="4Fx-99-7YI"/>
+                            <constraint firstItem="xap-aM-spH" firstAttribute="top" secondItem="d3T-7r-DrF" secondAttribute="bottom" constant="64" id="4OL-vd-sJo"/>
+                            <constraint firstAttribute="trailing" secondItem="W2X-6t-UHd" secondAttribute="trailing" constant="27" id="5ff-2T-gaG"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="leading" secondItem="VrS-gm-Z6g" secondAttribute="leading" id="8gt-4M-eFu"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="top" secondItem="PpP-OP-dT4" secondAttribute="top" constant="353" id="Erk-0P-NuP"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="leading" secondItem="xap-aM-spH" secondAttribute="leading" id="IbA-iF-e2t"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="leading" secondItem="d3T-7r-DrF" secondAttribute="leading" id="Mt4-Me-3lL"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="top" secondItem="xap-aM-spH" secondAttribute="bottom" constant="15" id="PyC-rI-5U0"/>
                             <constraint firstItem="QSj-Bs-TFw" firstAttribute="trailing" secondItem="d3T-7r-DrF" secondAttribute="trailing" constant="20" id="QrM-0u-ibP"/>
                             <constraint firstItem="d3T-7r-DrF" firstAttribute="top" secondItem="QSj-Bs-TFw" secondAttribute="top" constant="24" id="Qvc-x3-FAo"/>
-                            <constraint firstItem="VyL-UJ-Yeu" firstAttribute="leading" secondItem="QSj-Bs-TFw" secondAttribute="leading" constant="20" id="Rll-8s-MLA"/>
-                            <constraint firstItem="yrL-72-p59" firstAttribute="leading" secondItem="QSj-Bs-TFw" secondAttribute="leading" constant="247" id="Tnq-Q0-HKw"/>
-                            <constraint firstItem="4eU-rF-geh" firstAttribute="leading" secondItem="QSj-Bs-TFw" secondAttribute="leading" constant="20" id="Ttg-se-ZzA"/>
-                            <constraint firstItem="VyL-UJ-Yeu" firstAttribute="top" secondItem="4eU-rF-geh" secondAttribute="bottom" constant="23" id="VX0-Qq-wag"/>
-                            <constraint firstItem="4Gr-Yj-KjK" firstAttribute="top" secondItem="d3T-7r-DrF" secondAttribute="bottom" constant="71" id="Wle-e7-jFG"/>
                             <constraint firstItem="d3T-7r-DrF" firstAttribute="centerX" secondItem="PpP-OP-dT4" secondAttribute="centerX" id="X4c-Y2-xko"/>
-                            <constraint firstItem="dcJ-WN-WsA" firstAttribute="leading" secondItem="VyL-UJ-Yeu" secondAttribute="trailing" constant="11" id="ZXR-Ov-jtO"/>
-                            <constraint firstItem="xap-aM-spH" firstAttribute="top" secondItem="d3T-7r-DrF" secondAttribute="bottom" constant="30" id="eKB-mp-mci"/>
+                            <constraint firstAttribute="bottom" secondItem="W2X-6t-UHd" secondAttribute="bottom" constant="247" id="bkM-7x-YPW"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="trailing" secondItem="VrS-gm-Z6g" secondAttribute="trailing" id="d7a-Fs-nhZ"/>
                             <constraint firstItem="d3T-7r-DrF" firstAttribute="leading" secondItem="QSj-Bs-TFw" secondAttribute="leading" constant="20" id="f0n-Ac-pxb"/>
-                            <constraint firstItem="yrL-72-p59" firstAttribute="top" secondItem="dcJ-WN-WsA" secondAttribute="bottom" constant="117" id="t8s-np-XSx"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="leading" secondItem="PpP-OP-dT4" secondAttribute="leading" constant="20" id="fhe-Uw-AG6"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="leading" secondItem="QSj-Bs-TFw" secondAttribute="leading" constant="20" id="pH1-wR-AQC"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="top" secondItem="PpP-OP-dT4" secondAttribute="top" constant="353" id="sai-wQ-6mu"/>
                             <constraint firstItem="xap-aM-spH" firstAttribute="leading" secondItem="QSj-Bs-TFw" secondAttribute="leading" constant="20" id="xNx-Jw-dEE"/>
+                            <constraint firstItem="W2X-6t-UHd" firstAttribute="leading" secondItem="PpP-OP-dT4" secondAttribute="leading" constant="20" id="y2f-BF-mPJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QSj-Bs-TFw"/>
                     </view>
