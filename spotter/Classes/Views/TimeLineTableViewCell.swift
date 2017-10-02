@@ -1,17 +1,18 @@
 //
-//  TimeLineTableViewCell.swift
+//  TimelineTableViewCell.swift
 //  spotter
 //
-//  Created by futoshi.endo on 2017/09/29.
+//  Created by futoshi.endo on 2017/10/02.
 //  Copyright © 2017年 GMO Pepabo. All rights reserved.
 //
 
 import UIKit
 
-class TimeLineTableViewCell: UITableViewCell {
+class TimelineTableViewCell: UITableViewCell {
     
     @IBOutlet weak var faceImageView: UIImageView!
     @IBOutlet weak var tweetText: UITextView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
