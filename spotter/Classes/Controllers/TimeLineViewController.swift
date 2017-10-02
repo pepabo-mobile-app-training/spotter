@@ -8,12 +8,15 @@
 
 import UIKit
 
-class TimeLineViewController: UIViewController {
-
+class TimeLineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    @IBOutlet weak var timelineView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       timelineView.register(UINib(nibName: "TimelineTableViewCell", bundle: nil), forCellReuseIdentifier: "myTableCell")
         
 //        
     }
@@ -22,6 +25,21 @@ class TimeLineViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myTableCell", for: indexPath) as! TimelineTableViewCell
+        
+        cell.faceImageView.image = UIImage(named: "komei")
+        cell.tweetText.text = "FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンク "
+        
+        return cell
+    }
+    
+    
     
 
     /*
