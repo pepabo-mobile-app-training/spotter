@@ -57,6 +57,14 @@
                                     <segue destination="p37-6c-2IR" kind="show" id="lQ3-cN-aXZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g27-Kp-kPX">
+                                <rect key="frame" x="118" y="151" width="138" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="タイムライン画面　"/>
+                                <connections>
+                                    <segue destination="cN5-64-1mq" kind="show" id="0d0-QP-Vth"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,14 +74,6 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
-        <!--TimeLine-->
-        <scene sceneID="qwM-OS-DaA">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TimeLine" id="SZJ-Qa-0Mr" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TD2-h2-A2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="885" y="290"/>
-        </scene>
         <!--login-->
         <scene sceneID="12G-ES-wIb">
             <objects>
@@ -81,6 +81,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3X-UH-97X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="894" y="-255"/>
+        </scene>
+        <!--TimeLine-->
+        <scene sceneID="HfC-6j-Fpc">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Time" storyboardName="TimeLine" id="cN5-64-1mq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wti-xh-A7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="-77"/>
         </scene>
         <!--tweet-->
         <scene sceneID="12Q-cb-ExV">

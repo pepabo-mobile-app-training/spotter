@@ -10,7 +10,7 @@
 		B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED851F81E2D100529310 /* TimeLineViewController.swift */; };
 		B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */; };
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
-		B7BE5B3D1F822B3500CAFCD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BE5B3C1F822A6300CAFCD9 /* Main.storyboard */; };
+		B7BE5B3E1F82311200CAFCD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BE5B3C1F822A6300CAFCD9 /* Main.storyboard */; };
 		B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */; };
 		BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CB771F7A207B0066BF44 /* AppDelegate.swift */; };
 		BEA4CB7F1F7A207B0066BF44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CB7E1F7A207B0066BF44 /* Assets.xcassets */; };
@@ -344,13 +344,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BE5B3E1F82311200CAFCD9 /* Main.storyboard in Resources */,
 				BEA4CBCA1F7CFBC60066BF44 /* selectEmotion.storyboard in Resources */,
 				BEA4CBBC1F7BA7400066BF44 /* login.storyboard in Resources */,
 				BEA4CBC81F7CFB920066BF44 /* selectMusic.storyboard in Resources */,
 				BEA4CBAF1F7A226C0066BF44 /* LaunchScreen.storyboard in Resources */,
 				B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */,
 				B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */,
-				BEA4CBB01F7A226C0066BF44 /* Main.storyboard in Resources */,
 				BEA4CBCC1F7CFC1C0066BF44 /* confirmTweet.storyboard in Resources */,
 				BEA4CB7F1F7A207B0066BF44 /* Assets.xcassets in Resources */,
 				BEA4CBC01F7CC7C10066BF44 /* tweet.storyboard in Resources */,
