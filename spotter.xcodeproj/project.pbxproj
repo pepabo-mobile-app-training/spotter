@@ -23,6 +23,12 @@
 		BEA4CBBA1F7B8DB10066BF44 /* RoundRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CBB91F7B8DB10066BF44 /* RoundRectButton.swift */; };
 		BEA4CBBC1F7BA7400066BF44 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CBBB1F7BA7400066BF44 /* login.storyboard */; };
 		BEA4CBBE1F7BA82C0066BF44 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CBBD1F7BA82C0066BF44 /* LoginViewController.swift */; };
+		BEA4CBC01F7CC7C10066BF44 /* tweet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CBBF1F7CC7C10066BF44 /* tweet.storyboard */; };
+		BEA4CBC21F7CC7E00066BF44 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CBC11F7CC7E00066BF44 /* TweetViewController.swift */; };
+		BEA4CBC41F7CD0000066BF44 /* TweetTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CBC31F7CD0000066BF44 /* TweetTextView.swift */; };
+		BEA4CBC81F7CFB920066BF44 /* selectMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CBC71F7CFB920066BF44 /* selectMusic.storyboard */; };
+		BEA4CBCA1F7CFBC60066BF44 /* selectEmotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CBC91F7CFBC60066BF44 /* selectEmotion.storyboard */; };
+		BEA4CBCC1F7CFC1C0066BF44 /* confirmTweet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CBCB1F7CFC1C0066BF44 /* confirmTweet.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,12 @@
 		BEA4CBB91F7B8DB10066BF44 /* RoundRectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRectButton.swift; sourceTree = "<group>"; };
 		BEA4CBBB1F7BA7400066BF44 /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		BEA4CBBD1F7BA82C0066BF44 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BEA4CBBF1F7CC7C10066BF44 /* tweet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tweet.storyboard; sourceTree = "<group>"; };
+		BEA4CBC11F7CC7E00066BF44 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
+		BEA4CBC31F7CD0000066BF44 /* TweetTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTextView.swift; sourceTree = "<group>"; };
+		BEA4CBC71F7CFB920066BF44 /* selectMusic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = selectMusic.storyboard; sourceTree = "<group>"; };
+		BEA4CBC91F7CFBC60066BF44 /* selectEmotion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = selectEmotion.storyboard; sourceTree = "<group>"; };
+		BEA4CBCB1F7CFC1C0066BF44 /* confirmTweet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = confirmTweet.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +172,7 @@
 		BEA4CBA61F7A21BA0066BF44 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BEA4CBC11F7CC7E00066BF44 /* TweetViewController.swift */,
 				BEA4CBBD1F7BA82C0066BF44 /* LoginViewController.swift */,
 				B747ED851F81E2D100529310 /* TimeLineViewController.swift */,
 				BEA4CBB11F7A22EA0066BF44 /* ViewController.swift */,
@@ -194,6 +207,7 @@
 				B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */,
 				B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */,
 				BEA4CBB91F7B8DB10066BF44 /* RoundRectButton.swift */,
+				BEA4CBC31F7CD0000066BF44 /* TweetTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +216,10 @@
 			isa = PBXGroup;
 			children = (
 				B7BE5B3C1F822A6300CAFCD9 /* Main.storyboard */,
+				BEA4CBC91F7CFBC60066BF44 /* selectEmotion.storyboard */,
+				BEA4CBCB1F7CFC1C0066BF44 /* confirmTweet.storyboard */,
+				BEA4CBC71F7CFB920066BF44 /* selectMusic.storyboard */,
+				BEA4CBBF1F7CC7C10066BF44 /* tweet.storyboard */,
 				BEA4CBAD1F7A21C50066BF44 /* LaunchScreen.storyboard */,
 				B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */,
 				BEA4CBBB1F7BA7400066BF44 /* login.storyboard */,
@@ -326,12 +344,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BE5B3D1F822B3500CAFCD9 /* Main.storyboard in Resources */,
+				BEA4CBCA1F7CFBC60066BF44 /* selectEmotion.storyboard in Resources */,
 				BEA4CBBC1F7BA7400066BF44 /* login.storyboard in Resources */,
+				BEA4CBC81F7CFB920066BF44 /* selectMusic.storyboard in Resources */,
 				BEA4CBAF1F7A226C0066BF44 /* LaunchScreen.storyboard in Resources */,
 				B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */,
 				B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */,
+				BEA4CBB01F7A226C0066BF44 /* Main.storyboard in Resources */,
+				BEA4CBCC1F7CFC1C0066BF44 /* confirmTweet.storyboard in Resources */,
 				BEA4CB7F1F7A207B0066BF44 /* Assets.xcassets in Resources */,
+				BEA4CBC01F7CC7C10066BF44 /* tweet.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +399,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA4CBBE1F7BA82C0066BF44 /* LoginViewController.swift in Sources */,
+				BEA4CBC41F7CD0000066BF44 /* TweetTextView.swift in Sources */,
 				BEA4CBB21F7A22EA0066BF44 /* ViewController.swift in Sources */,
+				BEA4CBC21F7CC7E00066BF44 /* TweetViewController.swift in Sources */,
 				BEA4CBBA1F7B8DB10066BF44 /* RoundRectButton.swift in Sources */,
 				BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */,
 				B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */,

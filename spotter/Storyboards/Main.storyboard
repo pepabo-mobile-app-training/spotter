@@ -25,12 +25,36 @@
                                     <segue destination="61g-AH-GGk" kind="show" id="oG6-GL-OpI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2N-r8-IDO">
-                                <rect key="frame" x="133" y="163" width="108" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXi-24-Ago">
+                                <rect key="frame" x="143" y="236" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="タイムラインへ"/>
+                                <state key="normal" title="Tweet画面へ"/>
                                 <connections>
-                                    <segue destination="SZJ-Qa-0Mr" kind="show" id="pdB-TC-2T5"/>
+                                    <segue destination="MuX-pV-MtE" kind="show" id="PhD-uO-JQL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE1-TX-dcZ">
+                                <rect key="frame" x="133" y="341" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="感情選択画面へ"/>
+                                <connections>
+                                    <segue destination="uHn-ws-3fy" kind="show" id="z5Y-VZ-PSL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdj-gk-T2b">
+                                <rect key="frame" x="141" y="435" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="曲選択画面へ"/>
+                                <connections>
+                                    <segue destination="0pW-at-pEF" kind="show" id="EsO-YI-z2C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSJ-Ko-mc9">
+                                <rect key="frame" x="128" y="522" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tweet確認画面へ"/>
+                                <connections>
+                                    <segue destination="p37-6c-2IR" kind="show" id="lQ3-cN-aXZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,7 +80,39 @@
                 <viewControllerPlaceholder storyboardName="login" id="61g-AH-GGk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3X-UH-97X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="-257"/>
+            <point key="canvasLocation" x="894" y="-255"/>
+        </scene>
+        <!--tweet-->
+        <scene sceneID="12Q-cb-ExV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="tweet" id="MuX-pV-MtE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xw8-z0-idp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="32"/>
+        </scene>
+        <!--selectEmotion-->
+        <scene sceneID="G7K-O5-TrD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="selectEmotion" id="uHn-ws-3fy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlo-9m-XRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="125"/>
+        </scene>
+        <!--selectMusic-->
+        <scene sceneID="ljd-wR-pI4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="selectMusic" id="0pW-at-pEF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Twz-Mq-W60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="256"/>
+        </scene>
+        <!--confirmTweet-->
+        <scene sceneID="yE4-Hf-oGJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="confirmTweet" id="p37-6c-2IR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hb-8e-Ezd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="344"/>
         </scene>
     </scenes>
 </document>
