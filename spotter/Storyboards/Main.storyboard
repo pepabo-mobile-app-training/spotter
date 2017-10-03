@@ -60,7 +60,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g27-Kp-kPX">
                                 <rect key="frame" x="118" y="151" width="138" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="タイムライン画面　"/>
+                                <state key="normal" title="タイムライン画面"/>
                                 <connections>
                                     <segue destination="cN5-64-1mq" kind="show" id="0d0-QP-Vth"/>
                                 </connections>
