@@ -21,6 +21,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d3T-7r-DrF" customClass="TweetTextView" customModule="spotter" customModuleProvider="target">
                                 <rect key="frame" x="20" y="88" width="335" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tweetTextField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d3T-7r-DrF" secondAttribute="height" multiplier="67:32" id="DP8-LF-lb8"/>
                                 </constraints>
@@ -38,12 +39,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今の気持ちを選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xap-aM-spH">
-                                <rect key="frame" x="20" y="312" width="171" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="W2X-6t-UHd">
                                 <rect key="frame" x="20" y="353" width="328" height="67"/>
                                 <subviews>
@@ -140,6 +135,13 @@
                                     <constraint firstItem="dcJ-WN-WsA" firstAttribute="width" secondItem="VyL-UJ-Yeu" secondAttribute="width" id="UZu-0p-xen"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="descriptionLabel" text="今の気持ちを選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xap-aM-spH">
+                                <rect key="frame" x="20" y="312" width="171" height="25.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="descriptionLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
