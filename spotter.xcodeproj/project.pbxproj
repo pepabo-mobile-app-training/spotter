@@ -25,6 +25,7 @@
 		BEA4CBC41F7CD0000066BF44 /* TweetTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CBC31F7CD0000066BF44 /* TweetTextView.swift */; };
 		BEA4CBC81F7CFB920066BF44 /* SelectMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CBC71F7CFB920066BF44 /* SelectMusic.storyboard */; };
 		BEA4CBCC1F7CFC1C0066BF44 /* ConfirmTweet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CBCB1F7CFC1C0066BF44 /* ConfirmTweet.storyboard */; };
+		BEC8E0F71F83546600AD1806 /* confirmTweetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E0F61F83546600AD1806 /* confirmTweetViewUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BEA4CBC31F7CD0000066BF44 /* TweetTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTextView.swift; sourceTree = "<group>"; };
 		BEA4CBC71F7CFB920066BF44 /* SelectMusic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectMusic.storyboard; sourceTree = "<group>"; };
 		BEA4CBCB1F7CFC1C0066BF44 /* ConfirmTweet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfirmTweet.storyboard; sourceTree = "<group>"; };
+		BEC8E0F61F83546600AD1806 /* confirmTweetViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmTweetViewUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		BEA4CB961F7A207B0066BF44 /* spotterUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BEC8E0F61F83546600AD1806 /* confirmTweetViewUITests.swift */,
 				BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */,
 				BEA4CB971F7A207B0066BF44 /* spotterUITests.swift */,
 				BEA4CB991F7A207B0066BF44 /* Info.plist */,
@@ -404,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC8E0F71F83546600AD1806 /* confirmTweetViewUITests.swift in Sources */,
 				BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */,
 				BEA4CB981F7A207B0066BF44 /* spotterUITests.swift in Sources */,
 			);
