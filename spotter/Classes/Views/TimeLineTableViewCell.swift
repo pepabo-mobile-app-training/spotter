@@ -15,6 +15,7 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var tweetText: UITextView!
     
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +26,7 @@ class TimelineTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     
     // Custome Color
     @IBInspectable var borderWidth : CGFloat = 0 {

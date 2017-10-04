@@ -23,10 +23,10 @@
                         <rect key="frame" x="165" y="0.0" width="288" height="146"/>
                         <accessibility key="accessibilityConfiguration" identifier="emoteTextBox"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="146" id="G5W-7G-TVu"/>
-                            <constraint firstAttribute="width" constant="288" id="MTh-jz-XBT"/>
+                            <constraint firstAttribute="width" constant="288" id="3nT-YY-U74"/>
+                            <constraint firstAttribute="height" constant="146" id="jHo-fl-i1e"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -44,19 +44,19 @@
                         <rect key="frame" x="18" y="27" width="100" height="90"/>
                         <accessibility key="accessibilityConfiguration" identifier="faceImageView"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="90" id="0w5-CB-1Rg"/>
-                            <constraint firstAttribute="width" constant="100" id="N1A-cG-cgC"/>
+                            <constraint firstAttribute="width" constant="100" id="i7o-B4-Imn"/>
+                            <constraint firstAttribute="height" constant="90" id="p1p-OO-CdH"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="fKs-ic-Fvb" secondAttribute="bottom" constant="20.5" id="5ax-2T-rmi"/>
-                    <constraint firstAttribute="bottom" secondItem="Ug9-Hw-OoP" secondAttribute="bottom" id="EcN-wJ-tyh"/>
-                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="Ekg-f0-R6Y"/>
-                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="leading" secondItem="fKs-ic-Fvb" secondAttribute="trailing" constant="47" id="cYX-cG-2aY"/>
-                    <constraint firstAttribute="trailing" secondItem="Ug9-Hw-OoP" secondAttribute="trailing" id="pVm-au-NfN"/>
-                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="q9x-Aa-rHj"/>
-                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="sR5-bu-JNb"/>
+                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9bD-xY-rHM"/>
+                    <constraint firstAttribute="trailing" secondItem="Ug9-Hw-OoP" secondAttribute="trailing" id="GPe-sP-Xj5"/>
+                    <constraint firstAttribute="bottom" secondItem="Ug9-Hw-OoP" secondAttribute="bottom" constant="-0.5" id="JGr-yJ-baN"/>
+                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="Qd9-EQ-DkN"/>
+                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="ccM-9o-Gnz"/>
+                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="leading" secondItem="fKs-ic-Fvb" secondAttribute="trailing" constant="47" id="o3R-rl-hfL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fKs-ic-Fvb" secondAttribute="bottom" constant="20.5" id="vtw-Zd-SgL"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -86,7 +86,7 @@
                 <outlet property="faceImageView" destination="fKs-ic-Fvb" id="7Rm-bw-XBb"/>
                 <outlet property="tweetText" destination="Ug9-Hw-OoP" id="yiQ-lA-nhg"/>
             </connections>
-            <point key="canvasLocation" x="109.5" y="-285"/>
+            <point key="canvasLocation" x="15" y="-264"/>
         </tableViewCell>
     </objects>
 </document>

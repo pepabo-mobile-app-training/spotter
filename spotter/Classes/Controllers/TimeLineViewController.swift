@@ -16,7 +16,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
 
        timelineView.register(UINib(nibName: "TimelineTableViewCell", bundle: nil), forCellReuseIdentifier: "myTableCell")
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,16 +26,12 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         return 1
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myTableCell", for: indexPath) as! TimelineTableViewCell
-        
+        let cell = timelineView.dequeueReusableCell(withIdentifier: "myTableCell", for: indexPath) as! TimelineTableViewCell
         
         cell.faceImageView.image = UIImage(named: "komei")
         cell.tweetText.text = "FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンク "
         
         return cell
     }
-    
-   
 }
