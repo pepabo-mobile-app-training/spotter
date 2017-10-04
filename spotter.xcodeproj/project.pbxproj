@@ -10,8 +10,8 @@
 		B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED851F81E2D100529310 /* TimeLineViewController.swift */; };
 		B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */; };
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
-		B7BE5B3E1F82311200CAFCD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BE5B3C1F822A6300CAFCD9 /* Main.storyboard */; };
-		B7BE5B401F823D5200CAFCD9 /* TimeLineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE5B3F1F823D5200CAFCD9 /* TimeLineUITests.swift */; };
+		B7BE5B441F84B9E400CAFCD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BE5B431F84B97700CAFCD9 /* Main.storyboard */; };
+		B7BE5B461F84BB1500CAFCD9 /* timelineViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */; };
 		B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */; };
 		BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */; };
 		BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CB771F7A207B0066BF44 /* AppDelegate.swift */; };
@@ -53,8 +53,8 @@
 		B747ED851F81E2D100529310 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
-		B7BE5B3C1F822A6300CAFCD9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B7BE5B3F1F823D5200CAFCD9 /* TimeLineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUITests.swift; sourceTree = "<group>"; };
+		B7BE5B431F84B97700CAFCD9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timelineViewUITest.swift; sourceTree = "<group>"; };
 		B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
 		BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetViewUITests.swift; sourceTree = "<group>"; };
 		BEA4CB741F7A207B0066BF44 /* spotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,10 +153,9 @@
 		BEA4CB961F7A207B0066BF44 /* spotterUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B7BE5B3F1F823D5200CAFCD9 /* TimeLineUITests.swift */,
+				B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */,
 				BEC8E0F61F83546600AD1806 /* confirmTweetViewUITests.swift */,
 				BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */,
-				BEA4CB971F7A207B0066BF44 /* spotterUITests.swift */,
 				BEA4CB991F7A207B0066BF44 /* Info.plist */,
 			);
 			path = spotterUITests;
@@ -225,8 +224,8 @@
 				BEA4CBC71F7CFB920066BF44 /* SelectMusic.storyboard */,
 				BEA4CBBF1F7CC7C10066BF44 /* Tweet.storyboard */,
 				BEA4CBAD1F7A21C50066BF44 /* LaunchScreen.storyboard */,
-				BEA4CBAE1F7A21C50066BF44 /* Main.storyboard */,
 				BEA4CBBB1F7BA7400066BF44 /* Login.storyboard */,
+				B7BE5B431F84B97700CAFCD9 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -348,12 +347,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BE5B441F84B9E400CAFCD9 /* Main.storyboard in Resources */,
 				B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */,
 				B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */,
 				BEA4CBBC1F7BA7400066BF44 /* Login.storyboard in Resources */,
 				BEA4CBC81F7CFB920066BF44 /* SelectMusic.storyboard in Resources */,
 				BEA4CBAF1F7A226C0066BF44 /* LaunchScreen.storyboard in Resources */,
-				BEA4CBB01F7A226C0066BF44 /* Main.storyboard in Resources */,
 				BEA4CBCC1F7CFC1C0066BF44 /* ConfirmTweet.storyboard in Resources */,
 				BEA4CB7F1F7A207B0066BF44 /* Assets.xcassets in Resources */,
 				BEA4CBC01F7CC7C10066BF44 /* Tweet.storyboard in Resources */,
@@ -424,10 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BE5B401F823D5200CAFCD9 /* TimeLineUITests.swift in Sources */,
 				BEC8E0F71F83546600AD1806 /* confirmTweetViewUITests.swift in Sources */,
 				BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */,
-				BEA4CB981F7A207B0066BF44 /* spotterUITests.swift in Sources */,
+				B7BE5B461F84BB1500CAFCD9 /* timelineViewUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
