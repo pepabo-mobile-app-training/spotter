@@ -24,10 +24,7 @@ class timelineViewUITest: XCTestCase {
         let app = XCUIApplication()
         app.buttons["タイムライン画面"].tap()
         
-        let profileElements = ["usernameLabel", "useridLabel"]
-        profileElements.forEach { profileElement in
-            XCTAssert(app.staticTexts[profileElement].exists)
-        }
+        XCTAssert(app.staticTexts["usernameLabel"].exists)
         XCTAssert(app.images["profileImage"].exists)
         XCTAssert(app.buttons["tweetButton"].exists)
         
