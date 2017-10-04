@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,42 +19,74 @@
                 <rect key="frame" x="0.0" y="0.0" width="453" height="145.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-ic-Fvb">
-                        <rect key="frame" x="16" y="17" width="126" height="109"/>
-                        <accessibility key="accessibilityConfiguration" identifier="faceImageView"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="109" id="6m3-qQ-N2p"/>
-                            <constraint firstAttribute="width" constant="126" id="qN1-i8-tQK"/>
-                        </constraints>
-                    </imageView>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ug9-Hw-OoP">
-                        <rect key="frame" x="157" y="7" width="288" height="131"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="165" y="0.0" width="288" height="146"/>
                         <accessibility key="accessibilityConfiguration" identifier="emoteTextBox"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="Ug9-Hw-OoP" secondAttribute="height" multiplier="288:131" id="VAa-B5-YmH"/>
-                            <constraint firstAttribute="width" secondItem="Ug9-Hw-OoP" secondAttribute="height" multiplier="288:131" id="td1-uL-iP8"/>
+                            <constraint firstAttribute="height" constant="146" id="G5W-7G-TVu"/>
+                            <constraint firstAttribute="width" constant="288" id="MTh-jz-XBT"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </textView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-ic-Fvb">
+                        <rect key="frame" x="18" y="27" width="100" height="90"/>
+                        <accessibility key="accessibilityConfiguration" identifier="faceImageView"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="0w5-CB-1Rg"/>
+                            <constraint firstAttribute="width" constant="100" id="N1A-cG-cgC"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="8E2-mI-0tY"/>
-                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="9EC-Vh-zxt"/>
-                    <constraint firstAttribute="bottom" secondItem="Ug9-Hw-OoP" secondAttribute="bottom" constant="6.5" id="Beb-0p-9gU"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="fKs-ic-Fvb" secondAttribute="bottom" constant="10.5" id="Vvo-ll-pXU"/>
-                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="e6j-oU-fK1"/>
-                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="leading" secondItem="fKs-ic-Fvb" secondAttribute="trailing" constant="15" id="l6f-QK-HtS"/>
-                    <constraint firstAttribute="trailing" secondItem="Ug9-Hw-OoP" secondAttribute="trailing" constant="8" id="wyC-HI-HmA"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fKs-ic-Fvb" secondAttribute="bottom" constant="20.5" id="5ax-2T-rmi"/>
+                    <constraint firstAttribute="bottom" secondItem="Ug9-Hw-OoP" secondAttribute="bottom" id="EcN-wJ-tyh"/>
+                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="Ekg-f0-R6Y"/>
+                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="leading" secondItem="fKs-ic-Fvb" secondAttribute="trailing" constant="47" id="cYX-cG-2aY"/>
+                    <constraint firstAttribute="trailing" secondItem="Ug9-Hw-OoP" secondAttribute="trailing" id="pVm-au-NfN"/>
+                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="q9x-Aa-rHj"/>
+                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="sR5-bu-JNb"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                        <real key="value" value="1"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="10"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="faceImageView" destination="fKs-ic-Fvb" id="7Rm-bw-XBb"/>
                 <outlet property="tweetText" destination="Ug9-Hw-OoP" id="yiQ-lA-nhg"/>
             </connections>
-            <point key="canvasLocation" x="108.5" y="-129"/>
+            <point key="canvasLocation" x="109.5" y="-285"/>
         </tableViewCell>
     </objects>
 </document>

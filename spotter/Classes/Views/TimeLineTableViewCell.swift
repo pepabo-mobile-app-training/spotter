@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class TimelineTableViewCell: UITableViewCell {
     
     @IBOutlet weak var faceImageView: UIImageView!
@@ -23,6 +24,25 @@ class TimelineTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    // Custome Color
+    @IBInspectable var borderWidth : CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var borderColor : UIColor = UIColor.clear {
+        didSet {
+            layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+    @IBInspectable var cornerRadius : CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+        }
     }
     
 }
