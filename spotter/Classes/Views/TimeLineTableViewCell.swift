@@ -34,13 +34,13 @@ class TimelineTableViewCell: UITableViewCell {
             layer.borderWidth = borderWidth
         }
     }
-    
+
     @IBInspectable var borderColor : UIColor = UIColor.clear {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
     }
-    
+
     @IBInspectable var cornerRadius : CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius

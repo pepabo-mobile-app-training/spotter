@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,22 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="timelineView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2S-eh-BEE">
-                                <rect key="frame" x="16" y="245" width="288" height="323"/>
+                                <rect key="frame" x="0.0" y="146" width="320" height="422"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="Q4M-Qv-imP"/>
-                                    <constraint firstAttribute="height" constant="323" id="kmN-Dz-HXX"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myTableCell" rowHeight="99" id="n9M-aS-PPu" customClass="TimelineTableViewCell" customModule="spotter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="288" height="99"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n9M-aS-PPu" id="BqS-z3-F7O">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="98.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="wLR-WC-aud" id="plx-q0-oQb"/>
@@ -42,49 +27,40 @@
                                     <outlet property="prefetchDataSource" destination="wLR-WC-aud" id="qWc-AZ-0nU"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="komei" translatesAutoresizingMaskIntoConstraints="NO" id="8tI-pk-sOX">
-                                <rect key="frame" x="16" y="23" width="152" height="137"/>
-                                <accessibility key="accessibilityConfiguration" identifier="profileImage">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="137" id="91F-5i-YCE"/>
-                                    <constraint firstAttribute="width" constant="152" id="I8a-Pd-KIR"/>
-                                    <constraint firstAttribute="width" secondItem="8tI-pk-sOX" secondAttribute="height" multiplier="152:137" id="mL4-iA-9dw"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R9i-kk-Ted">
-                                <rect key="frame" x="16" y="192" width="88" height="20.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="5el-X6-mr7">
+                                <rect key="frame" x="20" y="50" width="281" height="69"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KvJ-El-JUU">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@komei_22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfY-5c-7vu">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="useridLabel"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="komei" translatesAutoresizingMaskIntoConstraints="NO" id="8tI-pk-sOX">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="69"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="profileImage">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="69" id="SgY-yX-HTO"/>
+                                            <constraint firstAttribute="width" constant="78" id="Wc1-tw-bSV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gek-tw-iic">
+                                        <rect key="frame" x="198" y="0.0" width="83" height="69"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="tweetButton"/>
+                                        <state key="normal" title="Button" image="pen"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="88" id="04W-7p-bKW"/>
-                                    <constraint firstAttribute="height" constant="20.5" id="pmT-oN-lzc"/>
+                                    <constraint firstItem="8tI-pk-sOX" firstAttribute="leading" secondItem="5el-X6-mr7" secondAttribute="leading" id="Aw2-7u-u6w"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gek-tw-iic" secondAttribute="trailing" id="Say-Ri-h0u"/>
+                                    <constraint firstItem="8tI-pk-sOX" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="top" id="SmC-Hg-ubx"/>
+                                    <constraint firstAttribute="height" constant="69" id="a6b-LE-Zpk"/>
+                                    <constraint firstItem="Gek-tw-iic" firstAttribute="leading" secondItem="8tI-pk-sOX" secondAttribute="trailing" constant="120" id="qWI-kE-Hnf"/>
+                                    <constraint firstItem="Gek-tw-iic" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="top" id="wU0-K8-5H3"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gek-tw-iic">
-                                <rect key="frame" x="182" y="34" width="122" height="114"/>
-                                <accessibility key="accessibilityConfiguration" identifier="tweetButton"/>
-                                <state key="normal" title="Button" image="pen"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こーめい" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-lT-786">
-                                <rect key="frame" x="16" y="168" width="69.5" height="20.5"/>
+                                <rect key="frame" x="27" y="127" width="69.5" height="20.5"/>
                                 <accessibility key="accessibilityConfiguration" identifier="usernameLabel"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="69.5" id="g1E-iP-9AW"/>
-                                    <constraint firstAttribute="height" constant="20.5" id="iIc-AU-JFT"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="8Pl-OR-lrI"/>
+                                    <constraint firstAttribute="width" constant="69.5" id="hzv-aB-g97"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -93,18 +69,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qrh-KC-Kc1" firstAttribute="trailing" secondItem="l2S-eh-BEE" secondAttribute="trailing" constant="16" id="7gr-3X-Uqi"/>
-                            <constraint firstItem="l2S-eh-BEE" firstAttribute="bottom" secondItem="Qrh-KC-Kc1" secondAttribute="bottom" id="OXf-tr-u7c"/>
-                            <constraint firstItem="8tI-pk-sOX" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="16" id="Q2e-lb-5oh"/>
-                            <constraint firstItem="Gek-tw-iic" firstAttribute="leading" secondItem="8tI-pk-sOX" secondAttribute="trailing" constant="14" id="Snu-ue-roF"/>
-                            <constraint firstItem="Gek-tw-iic" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="14" id="Vnn-fD-xaF"/>
-                            <constraint firstItem="O3Z-lT-786" firstAttribute="top" secondItem="8tI-pk-sOX" secondAttribute="bottom" constant="8" id="ZPA-Qa-07r"/>
-                            <constraint firstItem="R9i-kk-Ted" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="16" id="aJ6-zc-hBL"/>
-                            <constraint firstItem="O3Z-lT-786" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="16" id="bVF-0h-Q6z"/>
-                            <constraint firstItem="8tI-pk-sOX" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="3" id="f4U-8g-xED"/>
-                            <constraint firstItem="l2S-eh-BEE" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="16" id="hhd-3I-nGX"/>
-                            <constraint firstItem="R9i-kk-Ted" firstAttribute="top" secondItem="O3Z-lT-786" secondAttribute="bottom" constant="3.5" id="qaC-Dq-uVe"/>
-                            <constraint firstItem="Qrh-KC-Kc1" firstAttribute="trailing" secondItem="Gek-tw-iic" secondAttribute="trailing" constant="16" id="xXE-gM-B3H"/>
+                            <constraint firstItem="Qrh-KC-Kc1" firstAttribute="trailing" secondItem="5el-X6-mr7" secondAttribute="trailing" constant="19" id="2WY-oS-9HH"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="bottom" constant="27" id="5Fb-BH-GU0"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="trailing" secondItem="Qrh-KC-Kc1" secondAttribute="trailing" id="5cv-2b-6zt"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" id="61M-9L-qKN"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="bottom" secondItem="Qrh-KC-Kc1" secondAttribute="bottom" id="6vK-4J-oI1"/>
+                            <constraint firstItem="5el-X6-mr7" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="20" id="A5b-DT-aTw"/>
+                            <constraint firstItem="5el-X6-mr7" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="30" id="Hdt-5W-3hc"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="trailing" secondItem="Qrh-KC-Kc1" secondAttribute="trailing" id="c8a-PV-biM"/>
+                            <constraint firstItem="O3Z-lT-786" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="bottom" constant="8" id="eAK-Ds-9V6"/>
+                            <constraint firstItem="O3Z-lT-786" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="bottom" constant="8" id="gYh-LY-Hjm"/>
+                            <constraint firstItem="O3Z-lT-786" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="27" id="iSA-Ms-AAj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qrh-KC-Kc1"/>
                     </view>
