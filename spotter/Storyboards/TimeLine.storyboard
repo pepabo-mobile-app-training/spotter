@@ -20,6 +20,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="timelineView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2S-eh-BEE">
                                 <rect key="frame" x="0.0" y="141" width="320" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="427" id="pyf-8n-lou"/>
+                                </constraints>
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="wLR-WC-aud" id="plx-q0-oQb"/>
@@ -27,37 +30,8 @@
                                     <outlet property="prefetchDataSource" destination="wLR-WC-aud" id="qWc-AZ-0nU"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="5el-X6-mr7">
-                                <rect key="frame" x="20" y="20" width="281" height="69"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="komei" translatesAutoresizingMaskIntoConstraints="NO" id="8tI-pk-sOX">
-                                        <rect key="frame" x="0.0" y="0.0" width="78" height="69"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="profileImage">
-                                            <bool key="isElement" value="YES"/>
-                                        </accessibility>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="69" id="SgY-yX-HTO"/>
-                                            <constraint firstAttribute="width" constant="78" id="Wc1-tw-bSV"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gek-tw-iic">
-                                        <rect key="frame" x="198" y="0.0" width="83" height="69"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="tweetButton"/>
-                                        <state key="normal" title="Button" image="pen"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Gek-tw-iic" firstAttribute="leading" secondItem="8tI-pk-sOX" secondAttribute="trailing" constant="120" id="88k-ug-jc6"/>
-                                    <constraint firstItem="8tI-pk-sOX" firstAttribute="leading" secondItem="5el-X6-mr7" secondAttribute="leading" id="Aw2-7u-u6w"/>
-                                    <constraint firstItem="8tI-pk-sOX" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="top" id="SmC-Hg-ubx"/>
-                                    <constraint firstAttribute="height" constant="69" id="a6b-LE-Zpk"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gek-tw-iic" secondAttribute="trailing" id="lgw-DQ-aFE"/>
-                                    <constraint firstAttribute="bottom" secondItem="Gek-tw-iic" secondAttribute="bottom" id="nru-fz-g6T"/>
-                                    <constraint firstItem="Gek-tw-iic" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="top" id="zaH-pW-iEg"/>
-                                </constraints>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こーめい" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-lT-786">
-                                <rect key="frame" x="20" y="97" width="69.5" height="20.5"/>
+                                <rect key="frame" x="24" y="112" width="70" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="usernameLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="8Pl-OR-lrI"/>
@@ -67,18 +41,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="komei" translatesAutoresizingMaskIntoConstraints="NO" id="8tI-pk-sOX">
+                                <rect key="frame" x="20" y="23" width="78" height="69"/>
+                                <accessibility key="accessibilityConfiguration" identifier="profileImage">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="5JL-j4-C7d"/>
+                                    <constraint firstAttribute="width" constant="78" id="ciZ-FN-1mu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O2-Mo-bzl">
+                                <rect key="frame" x="199" y="23" width="77" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="st0-jd-9nZ"/>
+                                    <constraint firstAttribute="height" constant="77" id="z4l-r4-AOm"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="pen"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Qrh-KC-Kc1" firstAttribute="trailing" secondItem="8O2-Mo-bzl" secondAttribute="trailing" constant="44" id="1Dp-yr-sQD"/>
+                            <constraint firstItem="8tI-pk-sOX" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="3" id="2M5-lD-2on"/>
                             <constraint firstItem="l2S-eh-BEE" firstAttribute="bottom" secondItem="Qrh-KC-Kc1" secondAttribute="bottom" id="2xP-uw-QOT"/>
-                            <constraint firstItem="5el-X6-mr7" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="20" id="A5b-DT-aTw"/>
                             <constraint firstItem="l2S-eh-BEE" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" id="Adm-II-AkS"/>
-                            <constraint firstItem="5el-X6-mr7" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" id="Hdt-5W-3hc"/>
+                            <constraint firstItem="O3Z-lT-786" firstAttribute="top" secondItem="8tI-pk-sOX" secondAttribute="bottom" constant="20" id="Fct-FC-jtE"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="top" secondItem="8O2-Mo-bzl" secondAttribute="bottom" constant="41" id="Lfx-fz-hBh"/>
                             <constraint firstItem="l2S-eh-BEE" firstAttribute="trailing" secondItem="Qrh-KC-Kc1" secondAttribute="trailing" id="Y9n-Wv-pdG"/>
-                            <constraint firstItem="l2S-eh-BEE" firstAttribute="top" secondItem="O3Z-lT-786" secondAttribute="bottom" constant="23.5" id="efm-PN-gGU"/>
-                            <constraint firstItem="Qrh-KC-Kc1" firstAttribute="trailing" secondItem="5el-X6-mr7" secondAttribute="trailing" constant="19" id="fuJ-Pd-xYA"/>
-                            <constraint firstItem="O3Z-lT-786" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="bottom" constant="8" id="gYh-LY-Hjm"/>
-                            <constraint firstItem="O3Z-lT-786" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="20" id="iSA-Ms-AAj"/>
+                            <constraint firstItem="8tI-pk-sOX" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="3" id="dqS-Su-HhV"/>
+                            <constraint firstItem="O3Z-lT-786" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="24" id="fee-ms-rNd"/>
+                            <constraint firstItem="8tI-pk-sOX" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="20" id="m1y-gp-ark"/>
+                            <constraint firstItem="8O2-Mo-bzl" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="3" id="sfL-3u-PQy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qrh-KC-Kc1"/>
                     </view>

@@ -13,8 +13,8 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var timelineView: UITableView!
     
     //  表示するテキスト
-    var DataList:[String] = ["株式会社イーディーエー（英文社名：E.D.A Inc.,株式会社イーディーエー（英文社名：E.D.A Inc.）,株式会社イーディーエー（英文社名：E.D.A Inc.）",
-                             "どうもこんにちは!  \n\n 鶴本です。遠藤です！！！ 遠藤です！！！！,　遠藤です！！！！",
+    var DataList:[String] = ["FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンクFF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ ",
+                             "どうもこんにちは!  \n\n こーめいとみせかけて遠藤です！！！ 遠藤です！！！！,　遠藤です！！！！",
                              "AutoLayoutで可変UITableViewCellの実装をしてみました!!!!!!!",
                              "テストテストテストテストテス\nトテストテストテストテストテストテストテストテストテストテストテストテストテストテス\nトテストテストテスト\n\n",
                              "便利です。"]
@@ -41,7 +41,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = timelineView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
         
         cell.faceImageView.image = UIImage(named: "komei")
-//        cell.tweetText.text = "FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンクFF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ "
         let str = self.DataList[indexPath.row]
         cell.tweetText.text = str
         
