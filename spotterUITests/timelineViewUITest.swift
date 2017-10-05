@@ -29,7 +29,7 @@ class timelineViewUITest: XCTestCase {
         XCTAssert(app.buttons["tweetButton"].exists)
         
         //カスタムテーブルビューセルの要素を確認する。
-        XCTAssert(app.tables/*@START_MENU_TOKEN@*/.textViews["emoteTextBox"]/*[[".cells.textViews[\"emoteTextBox\"]",".textViews[\"emoteTextBox\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
+        XCTAssert(app.tables.staticTexts["usernameLabel"].exists)
         XCTAssert(app.tables.images["faceImageView"].exists)
     }
     

@@ -29,6 +29,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TweetBox" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpM-2t-KsA">
                         <rect key="frame" x="148" y="0.0" width="305" height="146"/>
+                        <accessibility key="accessibilityConfiguration" identifier="tweetTextBox"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -60,7 +61,7 @@
                 <outlet property="faceImageView" destination="fKs-ic-Fvb" id="7Rm-bw-XBb"/>
                 <outlet property="tweetText" destination="dpM-2t-KsA" id="ykg-Zm-5fy"/>
             </connections>
-            <point key="canvasLocation" x="14.5" y="-225"/>
+            <point key="canvasLocation" x="214" y="8"/>
         </tableViewCell>
     </objects>
 </document>
