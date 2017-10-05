@@ -24,7 +24,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.register(UINib(nibName: "TimelineTableViewCell", bundle: nil), forCellReuseIdentifier: "TimelineTableViewCell")
         
         // tableviewcellの表示を可変対応にする。
-        timelineView.estimatedRowHeight = 50
+        timelineView.estimatedRowHeight = 70
         timelineView.rowHeight = UITableViewAutomaticDimension
         
     }
