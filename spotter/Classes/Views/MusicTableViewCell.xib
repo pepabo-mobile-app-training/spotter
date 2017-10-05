@@ -19,25 +19,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="542" height="69.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zzU-Lh-ugL">
-                        <rect key="frame" x="0.0" y="-1" width="70" height="70"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="70" id="7sW-c6-hzP"/>
-                            <constraint firstAttribute="width" constant="70" id="QI5-7g-9KS"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o9-e5-Cof">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o9-e5-Cof">
                         <rect key="frame" x="110" y="8" width="424" height="53.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53.5" id="WpJ-qW-pC2"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zzU-Lh-ugL">
+                        <rect key="frame" x="8" y="8" width="60" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="54" id="7sW-c6-hzP"/>
+                            <constraint firstAttribute="width" constant="60" id="QI5-7g-9KS"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zzU-Lh-ugL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IiB-zd-62y"/>
+                    <constraint firstItem="zzU-Lh-ugL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="IiB-zd-62y"/>
                     <constraint firstItem="zzU-Lh-ugL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Qme-d6-pIQ"/>
                     <constraint firstItem="7o9-e5-Cof" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="bJp-Bj-X3i"/>
-                    <constraint firstItem="7o9-e5-Cof" firstAttribute="leading" secondItem="zzU-Lh-ugL" secondAttribute="trailing" constant="40" id="fBu-cV-P7M"/>
+                    <constraint firstItem="7o9-e5-Cof" firstAttribute="leading" secondItem="zzU-Lh-ugL" secondAttribute="trailing" constant="42" id="fBu-cV-P7M"/>
                     <constraint firstItem="7o9-e5-Cof" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="fgB-4f-toX"/>
                     <constraint firstAttribute="bottomMargin" secondItem="7o9-e5-Cof" secondAttribute="bottom" id="i1F-4G-QA6"/>
                     <constraint firstItem="7o9-e5-Cof" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="sgw-AT-YZK"/>

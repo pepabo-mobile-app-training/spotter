@@ -16,6 +16,7 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         musicTableView.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "musicTableCell")
+        musicTableView.estimatedRowHeight = 70
         musicTableView.rowHeight = UITableViewAutomaticDimension
     }
 
@@ -31,7 +32,7 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = musicTableView.dequeueReusableCell(withIdentifier: "musicTableCell", for: indexPath) as! MusicTableViewCell
         
         cell.musicImageView.image = UIImage(named: "linkin")
-        cell.musicLabel.text = "hoge\nfuga\npiyo"
+        cell.musicLabel.text = "hogefugapiyohogehoge"
         
         return cell
     }
