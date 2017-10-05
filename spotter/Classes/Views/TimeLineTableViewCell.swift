@@ -12,9 +12,7 @@ import UIKit
 class TimelineTableViewCell: UITableViewCell {
     
     @IBOutlet weak var faceImageView: UIImageView!
-    @IBOutlet weak var tweetText: UITextView!
-    
-    
+    @IBOutlet weak var tweetText: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

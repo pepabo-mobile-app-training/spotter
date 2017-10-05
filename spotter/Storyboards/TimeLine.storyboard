@@ -70,16 +70,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qrh-KC-Kc1" firstAttribute="trailing" secondItem="5el-X6-mr7" secondAttribute="trailing" constant="19" id="2WY-oS-9HH"/>
-                            <constraint firstItem="l2S-eh-BEE" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="bottom" constant="27" id="5Fb-BH-GU0"/>
-                            <constraint firstItem="l2S-eh-BEE" firstAttribute="trailing" secondItem="Qrh-KC-Kc1" secondAttribute="trailing" id="5cv-2b-6zt"/>
-                            <constraint firstItem="l2S-eh-BEE" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" id="61M-9L-qKN"/>
-                            <constraint firstItem="l2S-eh-BEE" firstAttribute="bottom" secondItem="Qrh-KC-Kc1" secondAttribute="bottom" id="6vK-4J-oI1"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="bottom" secondItem="Qrh-KC-Kc1" secondAttribute="bottom" id="8rq-Ud-NUk"/>
                             <constraint firstItem="5el-X6-mr7" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="20" id="A5b-DT-aTw"/>
                             <constraint firstItem="5el-X6-mr7" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="30" id="Hdt-5W-3hc"/>
-                            <constraint firstItem="l2S-eh-BEE" firstAttribute="trailing" secondItem="Qrh-KC-Kc1" secondAttribute="trailing" id="c8a-PV-biM"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="trailing" secondItem="Qrh-KC-Kc1" secondAttribute="trailing" id="JBu-Ze-1Xz"/>
                             <constraint firstItem="O3Z-lT-786" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="bottom" constant="8" id="eAK-Ds-9V6"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="bottom" constant="27" id="eOY-Vd-9iQ"/>
                             <constraint firstItem="O3Z-lT-786" firstAttribute="top" secondItem="5el-X6-mr7" secondAttribute="bottom" constant="8" id="gYh-LY-Hjm"/>
                             <constraint firstItem="O3Z-lT-786" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="27" id="iSA-Ms-AAj"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" id="lTB-Yt-zYm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qrh-KC-Kc1"/>
                     </view>

@@ -19,15 +19,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="453" height="145.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ug9-Hw-OoP">
-                        <rect key="frame" x="165" y="0.0" width="288" height="146"/>
-                        <accessibility key="accessibilityConfiguration" identifier="emoteTextBox"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="146" id="jHo-fl-i1e"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-ic-Fvb">
                         <rect key="frame" x="18" y="27" width="100" height="90"/>
                         <accessibility key="accessibilityConfiguration" identifier="faceImageView"/>
@@ -36,14 +27,20 @@
                             <constraint firstAttribute="height" constant="90" id="p1p-OO-CdH"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TweetBox" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpM-2t-KsA">
+                        <rect key="frame" x="148" y="0.0" width="305" height="146"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9bD-xY-rHM"/>
-                    <constraint firstAttribute="trailing" secondItem="Ug9-Hw-OoP" secondAttribute="trailing" id="GPe-sP-Xj5"/>
-                    <constraint firstAttribute="bottom" secondItem="Ug9-Hw-OoP" secondAttribute="bottom" constant="-0.5" id="JGr-yJ-baN"/>
+                    <constraint firstItem="dpM-2t-KsA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="4Fa-E8-wky"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dpM-2t-KsA" secondAttribute="bottom" constant="-8.5" id="6aK-I0-yqh"/>
+                    <constraint firstItem="dpM-2t-KsA" firstAttribute="leading" secondItem="fKs-ic-Fvb" secondAttribute="trailing" constant="30" id="IKz-a6-uXr"/>
+                    <constraint firstAttribute="trailing" secondItem="dpM-2t-KsA" secondAttribute="trailing" id="OIx-gz-uu0"/>
                     <constraint firstItem="fKs-ic-Fvb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="Qd9-EQ-DkN"/>
                     <constraint firstItem="fKs-ic-Fvb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="ccM-9o-Gnz"/>
-                    <constraint firstItem="Ug9-Hw-OoP" firstAttribute="leading" secondItem="fKs-ic-Fvb" secondAttribute="trailing" constant="47" id="o3R-rl-hfL"/>
                     <constraint firstAttribute="bottomMargin" secondItem="fKs-ic-Fvb" secondAttribute="bottom" constant="20.5" id="vtw-Zd-SgL"/>
                 </constraints>
             </tableViewCellContentView>
@@ -61,9 +58,9 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="faceImageView" destination="fKs-ic-Fvb" id="7Rm-bw-XBb"/>
-                <outlet property="tweetText" destination="Ug9-Hw-OoP" id="yiQ-lA-nhg"/>
+                <outlet property="tweetText" destination="dpM-2t-KsA" id="ykg-Zm-5fy"/>
             </connections>
-            <point key="canvasLocation" x="-175" y="-224"/>
+            <point key="canvasLocation" x="14.5" y="-225"/>
         </tableViewCell>
     </objects>
 </document>
