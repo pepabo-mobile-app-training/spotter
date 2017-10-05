@@ -12,26 +12,31 @@
         <!--selectMusic-->
         <scene sceneID="CqE-DY-ujU">
             <objects>
-                <viewController title="selectMusic" id="l8U-GK-ehq" sceneMemberID="viewController">
+                <viewController title="selectMusic" id="l8U-GK-ehq" customClass="SelectMusicViewController" customModule="spotter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vh7-zl-Jma">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="曲選択画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-8s-ZqQ">
-                                <rect key="frame" x="144" y="323" width="87" height="21"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pvj-PX-ELt">
+                                <rect key="frame" x="0.0" y="160" width="375" height="507"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="l8U-GK-ehq" id="oJY-NW-3aW"/>
+                                    <outlet property="delegate" destination="l8U-GK-ehq" id="aTO-EN-0jl"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="cSA-5F-o62"/>
                     </view>
+                    <connections>
+                        <outlet property="musicTableView" destination="pvj-PX-ELt" id="3hP-MU-iQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6D-J0-zJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-108" y="127"/>
+            <point key="canvasLocation" x="-108" y="126.38680659670166"/>
         </scene>
     </scenes>
 </document>
