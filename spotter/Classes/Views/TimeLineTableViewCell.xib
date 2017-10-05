@@ -19,30 +19,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="325" height="66.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TweetBox" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpM-2t-KsA">
-                        <rect key="frame" x="89" y="0.0" width="236" height="67"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-ic-Fvb">
+                        <rect key="frame" x="18" y="8" width="64" height="51"/>
+                        <accessibility key="accessibilityConfiguration" identifier="faceImageView"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="51" id="89h-IP-fB7"/>
+                            <constraint firstAttribute="width" constant="64" id="TcP-8v-boR"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TweetBox" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpM-2t-KsA">
+                        <rect key="frame" x="102" y="8" width="215" height="51"/>
                         <accessibility key="accessibilityConfiguration" identifier="tweetTextBox"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" id="HvH-EP-QcU"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-ic-Fvb">
-                        <rect key="frame" x="8" y="2" width="64" height="62"/>
-                        <accessibility key="accessibilityConfiguration" identifier="faceImageView"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="62" id="89h-IP-fB7"/>
-                            <constraint firstAttribute="width" constant="64" id="TcP-8v-boR"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="dpM-2t-KsA" firstAttribute="leading" secondItem="fKs-ic-Fvb" secondAttribute="trailing" constant="17" id="3Oc-Vn-nOa"/>
-                    <constraint firstAttribute="bottom" secondItem="dpM-2t-KsA" secondAttribute="bottom" id="8AG-5N-wC3"/>
-                    <constraint firstAttribute="trailing" secondItem="dpM-2t-KsA" secondAttribute="trailing" id="8vY-qI-Y2e"/>
-                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Jk0-v3-oXY"/>
-                    <constraint firstItem="dpM-2t-KsA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kba-lW-SfR"/>
-                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="uDO-He-tZl"/>
-                    <constraint firstAttribute="bottom" secondItem="dpM-2t-KsA" secondAttribute="bottom" id="xnI-j6-FPe"/>
+                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="0Lu-4l-0sP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dpM-2t-KsA" secondAttribute="bottom" id="6Jm-wa-rZF"/>
+                    <constraint firstItem="dpM-2t-KsA" firstAttribute="leading" secondItem="fKs-ic-Fvb" secondAttribute="trailing" constant="20" id="LeK-n8-nW6"/>
+                    <constraint firstItem="dpM-2t-KsA" firstAttribute="leading" secondItem="fKs-ic-Fvb" secondAttribute="trailing" constant="20" id="X1W-uJ-GWo"/>
+                    <constraint firstItem="dpM-2t-KsA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="XRd-pF-fXk"/>
+                    <constraint firstItem="fKs-ic-Fvb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="fQm-l9-uHh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dpM-2t-KsA" secondAttribute="trailing" id="mg8-4I-4KP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
