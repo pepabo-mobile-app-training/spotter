@@ -29,6 +29,7 @@
 		BEC8E1001F85FB9D00AD1806 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E0FE1F85FB9D00AD1806 /* MusicTableViewCell.swift */; };
 		BEC8E1011F85FB9D00AD1806 /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC8E0FF1F85FB9D00AD1806 /* MusicTableViewCell.xib */; };
 		BEC8E1031F85FC6000AD1806 /* SelectMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E1021F85FC6000AD1806 /* SelectMusicViewController.swift */; };
+		BEC8E1061F8607F500AD1806 /* selectMusicViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		BEC8E0FE1F85FB9D00AD1806 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		BEC8E0FF1F85FB9D00AD1806 /* MusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 		BEC8E1021F85FC6000AD1806 /* SelectMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMusicViewController.swift; sourceTree = "<group>"; };
+		BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectMusicViewUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		BEA4CB961F7A207B0066BF44 /* spotterUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */,
 				BEC8E0F61F83546600AD1806 /* confirmTweetViewUITests.swift */,
 				BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */,
 				BEA4CB971F7A207B0066BF44 /* spotterUITests.swift */,
@@ -419,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC8E1061F8607F500AD1806 /* selectMusicViewUITests.swift in Sources */,
 				BEC8E0F71F83546600AD1806 /* confirmTweetViewUITests.swift in Sources */,
 				BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */,
 				BEA4CB981F7A207B0066BF44 /* spotterUITests.swift in Sources */,
