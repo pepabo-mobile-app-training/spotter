@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wLR-WC-aud">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Time Line View Controller-->
+        <scene sceneID="Hyr-CV-2PV">
+            <objects>
+                <viewController id="wLR-WC-aud" customClass="TimeLineViewController" customModule="spotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DNT-Cl-xCG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="timelineView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2S-eh-BEE">
+                                <rect key="frame" x="0.0" y="141" width="320" height="427"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wLR-WC-aud" id="plx-q0-oQb"/>
+                                    <outlet property="delegate" destination="wLR-WC-aud" id="BbA-ct-VSZ"/>
+                                    <outlet property="prefetchDataSource" destination="wLR-WC-aud" id="qWc-AZ-0nU"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="komei" translatesAutoresizingMaskIntoConstraints="NO" id="8tI-pk-sOX">
+                                <rect key="frame" x="20" y="23" width="78" height="78"/>
+                                <accessibility key="accessibilityConfiguration" identifier="profileImage">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="5JL-j4-C7d"/>
+                                    <constraint firstAttribute="width" constant="78" id="ciZ-FN-1mu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O2-Mo-bzl">
+                                <rect key="frame" x="199" y="23" width="77" height="77"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tweetButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="st0-jd-9nZ"/>
+                                    <constraint firstAttribute="height" constant="77" id="z4l-r4-AOm"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="pen"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こーめい" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-lT-786">
+                                <rect key="frame" x="24" y="109" width="70" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="usernameLabel"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="8Pl-OR-lrI"/>
+                                    <constraint firstAttribute="width" constant="69.5" id="hzv-aB-g97"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qrh-KC-Kc1" firstAttribute="trailing" secondItem="8O2-Mo-bzl" secondAttribute="trailing" constant="44" id="1Dp-yr-sQD"/>
+                            <constraint firstItem="8tI-pk-sOX" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="3" id="2M5-lD-2on"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="bottom" secondItem="Qrh-KC-Kc1" secondAttribute="bottom" id="2xP-uw-QOT"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" id="Adm-II-AkS"/>
+                            <constraint firstItem="O3Z-lT-786" firstAttribute="top" secondItem="8tI-pk-sOX" secondAttribute="bottom" constant="8" id="Fct-FC-jtE"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="top" secondItem="8O2-Mo-bzl" secondAttribute="bottom" constant="41" id="Lfx-fz-hBh"/>
+                            <constraint firstItem="l2S-eh-BEE" firstAttribute="trailing" secondItem="Qrh-KC-Kc1" secondAttribute="trailing" id="Y9n-Wv-pdG"/>
+                            <constraint firstItem="8tI-pk-sOX" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="3" id="dqS-Su-HhV"/>
+                            <constraint firstItem="O3Z-lT-786" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="24" id="fee-ms-rNd"/>
+                            <constraint firstItem="8tI-pk-sOX" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="20" id="m1y-gp-ark"/>
+                            <constraint firstItem="8O2-Mo-bzl" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="3" id="sfL-3u-PQy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qrh-KC-Kc1"/>
+                    </view>
+                    <connections>
+                        <outlet property="timelineView" destination="l2S-eh-BEE" id="EoV-d2-vMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUH-dO-jWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690" y="-61.267605633802816"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="komei" width="460" height="460"/>
+        <image name="pen" width="724" height="724"/>
+    </resources>
+</document>
