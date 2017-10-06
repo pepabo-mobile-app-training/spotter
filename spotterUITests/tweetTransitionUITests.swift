@@ -51,7 +51,6 @@ class tweetTransitionUITest: XCTestCase {
     }
     
     func testNavigationBarTransition() {
-        
         let app = XCUIApplication()
         app.buttons["タイムライン画面"].tap()
         // ツイート画面へ
