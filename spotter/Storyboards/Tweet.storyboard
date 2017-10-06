@@ -160,9 +160,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QSj-Bs-TFw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="u8K-Bh-q5L">
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="Jm5-jk-KUb"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="u8K-Bh-q5L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ah-fN-XFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -69,9 +69,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hx8-uq-IDW"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eoA-yU-125">
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="FE5-Fh-pvn"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="eoA-yU-125"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wW0-tY-9mw" userLabel="First Responder" sceneMemberID="firstResponder"/>
