@@ -61,6 +61,9 @@
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Q6p-yq-dCg" kind="show" id="ByB-I0-xkj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gr-Yj-KjK" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
                                         <rect key="frame" x="166" y="0.0" width="162" height="67"/>
@@ -81,6 +84,9 @@
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Q6p-yq-dCg" kind="show" id="TJU-Ga-pCj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -109,6 +115,9 @@
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Q6p-yq-dCg" kind="show" id="czJ-dO-Bib"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-WN-WsA" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
                                         <rect key="frame" x="166" y="0.0" width="162" height="67"/>
@@ -129,6 +138,9 @@
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Q6p-yq-dCg" kind="show" id="Hso-Vr-VdX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -166,6 +178,14 @@
             </objects>
             <point key="canvasLocation" x="200.80000000000001" y="98.50074962518741"/>
         </scene>
+        <!--SelectMusic-->
+        <scene sceneID="pA5-qJ-739">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SelectMusic" id="Q6p-yq-dCg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYd-Ir-GEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="154"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="oC2-gZ-4aL">
             <objects>
@@ -185,4 +205,7 @@
             <point key="canvasLocation" x="-649" y="99"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hso-Vr-VdX"/>
+    </inferredMetricsTieBreakers>
 </document>
