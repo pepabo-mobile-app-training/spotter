@@ -12,6 +12,8 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var timelineView: UITableView!
     
+    
+    
     var DataList:[String] = ["FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンクFF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ ",
                              "どうもこんにちは!  \n\n こーめいとみせかけて遠藤です！！！ 遠藤です！！！！,　遠藤です！！！！",
                              "AutoLayoutで可変UITableViewCellの実装をしてみました!!!!!!!",
