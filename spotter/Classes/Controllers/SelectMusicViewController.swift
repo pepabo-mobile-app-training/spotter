@@ -36,5 +36,11 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // セル選択
+        musicTableView.deselectRow(at: indexPath, animated: true)
+        
+        self.performSegue(withIdentifier: "toConfirmTweet", sender: nil)
+    }
 }
