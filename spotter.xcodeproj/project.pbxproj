@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B724CD871F871AB4000FAA55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BE5B431F84B97700CAFCD9 /* Main.storyboard */; };
 		B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED851F81E2D100529310 /* TimeLineViewController.swift */; };
 		B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */; };
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
-		B7BE5B441F84B9E400CAFCD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BE5B431F84B97700CAFCD9 /* Main.storyboard */; };
 		B7BE5B461F84BB1500CAFCD9 /* timelineViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */; };
 		B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */; };
 		BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */; };
@@ -359,13 +359,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B724CD871F871AB4000FAA55 /* Main.storyboard in Resources */,
 				B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */,
 				B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */,
 				BEA4CBBC1F7BA7400066BF44 /* Login.storyboard in Resources */,
 				BEA4CBC81F7CFB920066BF44 /* SelectMusic.storyboard in Resources */,
 				BEA4CBAF1F7A226C0066BF44 /* LaunchScreen.storyboard in Resources */,
 				BEC8E1011F85FB9D00AD1806 /* MusicTableViewCell.xib in Resources */,
-				BEA4CBB01F7A226C0066BF44 /* Main.storyboard in Resources */,
 				BEA4CBCC1F7CFC1C0066BF44 /* ConfirmTweet.storyboard in Resources */,
 				BEA4CB7F1F7A207B0066BF44 /* Assets.xcassets in Resources */,
 				BEA4CBC01F7CC7C10066BF44 /* Tweet.storyboard in Resources */,
