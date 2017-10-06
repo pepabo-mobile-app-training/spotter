@@ -12,7 +12,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var timelineView: UITableView!
     
-    //  表示するテキスト
     var DataList:[String] = ["FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンクFF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ ",
                              "どうもこんにちは!  \n\n こーめいとみせかけて遠藤です！！！ 遠藤です！！！！,　遠藤です！！！！",
                              "AutoLayoutで可変UITableViewCellの実装をしてみました!!!!!!!",
@@ -22,11 +21,8 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         timelineView.register(UINib(nibName: "TimelineTableViewCell", bundle: nil), forCellReuseIdentifier: "TimelineTableViewCell")
-        
-        // tableviewcellの表示を可変対応にする。
         timelineView.estimatedRowHeight = 70
         timelineView.rowHeight = UITableViewAutomaticDimension
-        
     }
 
     override func didReceiveMemoryWarning() {
