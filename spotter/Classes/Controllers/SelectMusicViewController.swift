@@ -41,6 +41,6 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         // セル選択
         musicTableView.deselectRow(at: indexPath, animated: true)
         
-        self.performSegue(withIdentifier: "toConfirmTweet", sender: nil)
+        self.performSegue(withIdentifier: "goConfirmTweet", sender: nil)
     }
 }

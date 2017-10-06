@@ -58,7 +58,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="musicTableView" destination="pvj-PX-ELt" id="3hP-MU-iQH"/>
-                        <segue destination="Ggs-MF-Tbv" kind="show" identifier="toConfirmTweet" id="Ao3-iv-eqL"/>
+                        <segue destination="Ggs-MF-Tbv" kind="show" identifier="goConfirmTweet" id="Ao3-iv-eqL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6D-J0-zJM" userLabel="First Responder" sceneMemberID="firstResponder"/>

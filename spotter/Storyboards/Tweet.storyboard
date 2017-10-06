@@ -62,7 +62,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Q6p-yq-dCg" kind="show" id="ByB-I0-xkj"/>
+                                            <action selector="pushEmotionButton:" destination="hKa-NW-TGy" eventType="touchUpInside" id="HBw-G0-Wyq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gr-Yj-KjK" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
@@ -85,7 +85,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Q6p-yq-dCg" kind="show" id="TJU-Ga-pCj"/>
+                                            <action selector="pushEmotionButton:" destination="hKa-NW-TGy" eventType="touchUpInside" id="Jra-c0-zmD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -116,7 +116,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Q6p-yq-dCg" kind="show" id="czJ-dO-Bib"/>
+                                            <action selector="pushEmotionButton:" destination="hKa-NW-TGy" eventType="touchUpInside" id="Uxj-CB-KgW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-WN-WsA" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
@@ -139,7 +139,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Q6p-yq-dCg" kind="show" id="Hso-Vr-VdX"/>
+                                            <action selector="pushEmotionButton:" destination="hKa-NW-TGy" eventType="touchUpInside" id="dj3-7u-M9f"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -172,7 +172,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QSj-Bs-TFw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="u8K-Bh-q5L"/>
+                    <navigationItem key="navigationItem" id="u8K-Bh-q5L">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="UV9-xz-pPa">
+                            <connections>
+                                <action selector="pushCloseButton:" destination="hKa-NW-TGy" id="Icb-iO-DMt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Q6p-yq-dCg" kind="show" identifier="goSelectMusic" id="wQ1-X0-2St"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ah-fN-XFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,7 +214,4 @@
             <point key="canvasLocation" x="-649" y="99"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Hso-Vr-VdX"/>
-    </inferredMetricsTieBreakers>
 </document>
