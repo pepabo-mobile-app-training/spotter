@@ -25,6 +25,10 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.register(UINib(nibName: "TimelineTableViewCell", bundle: nil), forCellReuseIdentifier: "TimelineTableViewCell")
         timelineView.estimatedRowHeight = 70
         timelineView.rowHeight = UITableViewAutomaticDimension
+        
+        Profile.fetchProfiles(){ profiles in
+            dump(profiles)
+        }
     }
 
     override func didReceiveMemoryWarning() {
