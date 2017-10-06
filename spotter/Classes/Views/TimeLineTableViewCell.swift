@@ -22,8 +22,6 @@ class TimelineTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    
-    // Custome Color
     @IBInspectable var borderWidth : CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
