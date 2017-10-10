@@ -12,7 +12,6 @@ import Kingfisher
 class TimeLineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var timelineView: UITableView!
-    
     @IBOutlet weak var faceImage: UIImageView!
     @IBOutlet weak var useenameLabel: UILabel!
     
