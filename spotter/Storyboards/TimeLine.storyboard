@@ -77,7 +77,7 @@
                     <connections>
                         <outlet property="faceImage" destination="8tI-pk-sOX" id="Q5P-DS-RJO"/>
                         <outlet property="timelineView" destination="l2S-eh-BEE" id="EoV-d2-vMN"/>
-                        <outlet property="useenameLabel" destination="O3Z-lT-786" id="Iuc-va-LQ1"/>
+                        <outlet property="usernameLabel" destination="O3Z-lT-786" id="vud-Dh-onU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUH-dO-jWr" userLabel="First Responder" sceneMemberID="firstResponder"/>

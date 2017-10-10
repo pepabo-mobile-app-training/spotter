@@ -17,10 +17,10 @@ class Profile {
         self.img_url = img_url
     }
     
-    static func fetchProfiles(handler: @escaping ((Profile) -> Void)) {
+    static func fetchProfiles(handler: @escaping ((Array<Profile>) -> Void)) {
         APIClient.request(endpoint: Endpoint.userProfile) { json in
             let profiles = Profile(name: json["name"].stringValue,  img_url: (json["img_url"].url)!)
-            handler(profiles)
+            return handler([profiles])
         }
     }
 }

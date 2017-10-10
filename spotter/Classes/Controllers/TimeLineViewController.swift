@@ -13,13 +13,17 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var timelineView: UITableView!
     @IBOutlet weak var faceImage: UIImageView!
-    @IBOutlet weak var useenameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    
     
     var DataList:[String] = ["FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンクFF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ ",
                              "どうもこんにちは!  \n\n こーめいとみせかけて遠藤です！！！ 遠藤です！！！！,　遠藤です！！！！",
                              "AutoLayoutで可変UITableViewCellの実装をしてみました!!!!!!!",
                              "テストテストテストテストテス\nトテストテストテストテストテストテストテストテストテストテストテストテストテストテス\nトテストテストテスト\n\n",
                              "便利です。"]
+    
+    var profile = [Profile]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +32,13 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.rowHeight = UITableViewAutomaticDimension
         
         Profile.fetchProfiles(){ profiles in
-            self.useenameLabel.text = profiles.name
-            self.faceImage.kf.setImage(with: profiles.img_url)
+            self.profile = profiles
         }
+        
+//        usernameLabel.text = self.profile.name
+//        faceImage.kf.setImage(with: self.profile.img_url)
+ 
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +53,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = timelineView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
         
         cell.faceImageView.image = UIImage(named: "komei")
+//       cell.faceImageView.image = faceImage.kf.setImage(with: self.profile.img_url)
         let str = self.DataList[indexPath.row]
         cell.tweetText.text = str
         
