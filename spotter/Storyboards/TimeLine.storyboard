@@ -47,13 +47,13 @@
                                 <state key="normal" title="Button" image="pen"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こーめい" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-lT-786">
-                                <rect key="frame" x="24" y="109" width="70" height="21"/>
+                                <rect key="frame" x="16" y="109" width="112" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="usernameLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="8Pl-OR-lrI"/>
-                                    <constraint firstAttribute="width" constant="69.5" id="hzv-aB-g97"/>
+                                    <constraint firstAttribute="width" constant="112" id="hzv-aB-g97"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -68,19 +68,21 @@
                             <constraint firstItem="l2S-eh-BEE" firstAttribute="top" secondItem="8O2-Mo-bzl" secondAttribute="bottom" constant="41" id="Lfx-fz-hBh"/>
                             <constraint firstItem="l2S-eh-BEE" firstAttribute="trailing" secondItem="Qrh-KC-Kc1" secondAttribute="trailing" id="Y9n-Wv-pdG"/>
                             <constraint firstItem="8tI-pk-sOX" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="3" id="dqS-Su-HhV"/>
-                            <constraint firstItem="O3Z-lT-786" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="24" id="fee-ms-rNd"/>
+                            <constraint firstItem="O3Z-lT-786" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="16" id="fee-ms-rNd"/>
                             <constraint firstItem="8tI-pk-sOX" firstAttribute="leading" secondItem="Qrh-KC-Kc1" secondAttribute="leading" constant="20" id="m1y-gp-ark"/>
                             <constraint firstItem="8O2-Mo-bzl" firstAttribute="top" secondItem="Qrh-KC-Kc1" secondAttribute="top" constant="3" id="sfL-3u-PQy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qrh-KC-Kc1"/>
                     </view>
                     <connections>
+                        <outlet property="faceImage" destination="8tI-pk-sOX" id="Q5P-DS-RJO"/>
                         <outlet property="timelineView" destination="l2S-eh-BEE" id="EoV-d2-vMN"/>
+                        <outlet property="useenameLabel" destination="O3Z-lT-786" id="Iuc-va-LQ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUH-dO-jWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-690" y="-61.267605633802816"/>
+            <point key="canvasLocation" x="-872" y="-55"/>
         </scene>
     </scenes>
     <resources>

@@ -26,7 +26,7 @@ class APIClient {
             case .success(let value):
 //              ここで取得してきて値をいれている。
                 handler(JSON(value))
-                dump(JSON(value))
+//                dump(JSON(value))
             case .failure(let error):
                 print(error)
             }

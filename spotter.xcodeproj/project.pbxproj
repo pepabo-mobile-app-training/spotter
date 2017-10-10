@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B724CD871F871AB4000FAA55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BE5B431F84B97700CAFCD9 /* Main.storyboard */; };
-		B724CD891F873581000FAA55 /* RailsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD881F873581000FAA55 /* RailsAPI.swift */; };
+		B724CD891F873581000FAA55 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD881F873581000FAA55 /* API.swift */; };
 		B724CD8B1F8736CA000FAA55 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD8A1F8736CA000FAA55 /* Profile.swift */; };
+		B724CD8F1F8C777B000FAA55 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */; };
 		B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED851F81E2D100529310 /* TimeLineViewController.swift */; };
 		B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */; };
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
@@ -56,8 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B724CD881F873581000FAA55 /* RailsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RailsAPI.swift; path = spotterUITests/RailsAPI.swift; sourceTree = SOURCE_ROOT; };
+		B724CD881F873581000FAA55 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = spotterUITests/API.swift; sourceTree = SOURCE_ROOT; };
 		B724CD8A1F8736CA000FAA55 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = spotterUITests/Profile.swift; sourceTree = SOURCE_ROOT; };
+		B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		B747ED851F81E2D100529310 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B724CD8F1F8C777B000FAA55 /* Kingfisher.framework in Frameworks */,
 				BEA4CBB61F7B53410066BF44 /* Alamofire.framework in Frameworks */,
 				BEA4CBB71F7B53410066BF44 /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -201,7 +204,7 @@
 		BEA4CBA81F7A21BA0066BF44 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B724CD881F873581000FAA55 /* RailsAPI.swift */,
+				B724CD881F873581000FAA55 /* API.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 		BEA4CBB31F7B53410066BF44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */,
 				BEA4CBB41F7B53410066BF44 /* Alamofire.framework */,
 				BEA4CBB51F7B53410066BF44 /* SwiftyJSON.framework */,
 			);
@@ -268,6 +272,7 @@
 				BEA4CB711F7A207B0066BF44 /* Frameworks */,
 				BEA4CB721F7A207B0066BF44 /* Resources */,
 				BEA4CBB81F7B53510066BF44 /* ShellScript */,
+				B724CD901F8C779E000FAA55 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -395,6 +400,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B724CD901F8C779E000FAA55 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		BEA4CBB81F7B53510066BF44 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,6 +421,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/Alamofire.framework",
@@ -422,7 +441,7 @@
 				BEA4CBBE1F7BA82C0066BF44 /* LoginViewController.swift in Sources */,
 				B724CD8B1F8736CA000FAA55 /* Profile.swift in Sources */,
 				BEA4CBC41F7CD0000066BF44 /* TweetTextView.swift in Sources */,
-				B724CD891F873581000FAA55 /* RailsAPI.swift in Sources */,
+				B724CD891F873581000FAA55 /* API.swift in Sources */,
 				BEC8E1031F85FC6000AD1806 /* SelectMusicViewController.swift in Sources */,
 				BEA4CBB21F7A22EA0066BF44 /* ViewController.swift in Sources */,
 				BEA4CBC21F7CC7E00066BF44 /* TweetViewController.swift in Sources */,

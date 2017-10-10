@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TimeLineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var timelineView: UITableView!
     
+    @IBOutlet weak var faceImage: UIImageView!
+    @IBOutlet weak var useenameLabel: UILabel!
+    
+    var profiles = [Profile]()
     
     
     var DataList:[String] = ["FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンクFF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ ",
@@ -27,8 +32,11 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.rowHeight = UITableViewAutomaticDimension
         
         Profile.fetchProfiles(){ profiles in
-            dump(profiles)
+            self.useenameLabel.text = profiles.name
+//            self.faceImage.image = UIImage(named: profiles.img_url)
+            self.faceImage.kf.setImage(with: profiles.img_url)
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
