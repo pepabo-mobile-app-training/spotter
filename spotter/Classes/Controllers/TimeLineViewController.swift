@@ -16,9 +16,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var faceImage: UIImageView!
     @IBOutlet weak var useenameLabel: UILabel!
     
-    var profiles = [Profile]()
-    
-    
     var DataList:[String] = ["FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンクFF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ ",
                              "どうもこんにちは!  \n\n こーめいとみせかけて遠藤です！！！ 遠藤です！！！！,　遠藤です！！！！",
                              "AutoLayoutで可変UITableViewCellの実装をしてみました!!!!!!!",
@@ -33,10 +30,8 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         
         Profile.fetchProfiles(){ profiles in
             self.useenameLabel.text = profiles.name
-//            self.faceImage.image = UIImage(named: profiles.img_url)
             self.faceImage.kf.setImage(with: profiles.img_url)
         }
-        
     }
 
     override func didReceiveMemoryWarning() {

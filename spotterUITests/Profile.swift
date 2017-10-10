@@ -9,19 +9,17 @@
 import Foundation
 
 class Profile {
-    var id: Int
     var name: String
     var img_url: URL
     
-    init(id:Int, name: String, img_url: URL) {
-        self.id = id
+    init(name: String, img_url: URL) {
         self.name = name
         self.img_url = img_url
     }
     
     static func fetchProfiles(handler: @escaping ((Profile) -> Void)) {
         APIClient.request(endpoint: Endpoint.userProfile) { json in
-            let profiles = Profile(id: json["id"].intValue, name: json["name"].stringValue,  img_url: (json["img_url"].url)!)
+            let profiles = Profile(name: json["name"].stringValue,  img_url: (json["img_url"].url)!)
             handler(profiles)
         }
     }
