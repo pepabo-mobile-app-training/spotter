@@ -16,17 +16,12 @@ class APIClient {
     static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint: endpoint)
-        
-        dump(method)
-        dump(url)
-        
+
         Alamofire.request(url, method:method).validate(statusCode: 200...299).responseJSON { response in
             switch response.result {
                 
             case .success(let value):
-//              ここで取得してきて値をいれている。
                 handler(JSON(value))
-//                dump(JSON(value))
             case .failure(let error):
                 print(error)
             }
