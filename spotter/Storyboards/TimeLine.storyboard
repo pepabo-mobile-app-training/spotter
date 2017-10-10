@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wLR-WC-aud">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,37 +14,20 @@
             <objects>
                 <viewController id="wLR-WC-aud" customClass="TimeLineViewController" customModule="spotter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DNT-Cl-xCG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="timelineView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2S-eh-BEE">
-                                <rect key="frame" x="0.0" y="141" width="320" height="427"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="wLR-WC-aud" id="plx-q0-oQb"/>
-                                    <outlet property="delegate" destination="wLR-WC-aud" id="BbA-ct-VSZ"/>
-                                    <outlet property="prefetchDataSource" destination="wLR-WC-aud" id="qWc-AZ-0nU"/>
-                                </connections>
-                            </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="komei" translatesAutoresizingMaskIntoConstraints="NO" id="8tI-pk-sOX">
-                                <rect key="frame" x="20" y="23" width="78" height="78"/>
-                                <accessibility key="accessibilityConfiguration" identifier="profileImage">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="5JL-j4-C7d"/>
-                                    <constraint firstAttribute="width" constant="78" id="ciZ-FN-1mu"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O2-Mo-bzl">
-                                <rect key="frame" x="199" y="23" width="77" height="77"/>
+                                <rect key="frame" x="254" y="23" width="77" height="77"/>
                                 <accessibility key="accessibilityConfiguration" identifier="tweetButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="st0-jd-9nZ"/>
                                     <constraint firstAttribute="height" constant="77" id="z4l-r4-AOm"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="pen"/>
+                                <connections>
+                                    <segue destination="3Rs-05-xkj" kind="presentation" id="Jjl-ZE-rEC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こーめい" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-lT-786">
                                 <rect key="frame" x="24" y="109" width="70" height="21"/>
@@ -57,6 +40,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="komei" translatesAutoresizingMaskIntoConstraints="NO" id="8tI-pk-sOX">
+                                <rect key="frame" x="20" y="23" width="78" height="78"/>
+                                <accessibility key="accessibilityConfiguration" identifier="profileImage">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="5JL-j4-C7d"/>
+                                    <constraint firstAttribute="width" constant="78" id="ciZ-FN-1mu"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="timelineView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2S-eh-BEE">
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wLR-WC-aud" id="plx-q0-oQb"/>
+                                    <outlet property="delegate" destination="wLR-WC-aud" id="BbA-ct-VSZ"/>
+                                    <outlet property="prefetchDataSource" destination="wLR-WC-aud" id="qWc-AZ-0nU"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -81,6 +84,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUH-dO-jWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-690" y="-61.267605633802816"/>
+        </scene>
+        <!--Tweet-->
+        <scene sceneID="d04-bp-WF8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tweet" id="3Rs-05-xkj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mdd-Gs-7xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="-107"/>
         </scene>
     </scenes>
     <resources>

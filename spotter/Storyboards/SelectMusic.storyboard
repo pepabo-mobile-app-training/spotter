@@ -58,11 +58,20 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="musicTableView" destination="pvj-PX-ELt" id="3hP-MU-iQH"/>
+                        <segue destination="Ggs-MF-Tbv" kind="show" identifier="goConfirmTweet" id="Ao3-iv-eqL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6D-J0-zJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-108" y="126.38680659670166"/>
+        </scene>
+        <!--ConfirmTweet-->
+        <scene sceneID="Wg5-fm-DdL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ConfirmTweet" id="Ggs-MF-Tbv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="viL-Kv-lEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="130"/>
         </scene>
     </scenes>
 </document>
