@@ -9,8 +9,7 @@
 import UIKit
 
 class ConfirmTweetViewController: UIViewController {
-
-
+    
     @IBAction func emoteButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

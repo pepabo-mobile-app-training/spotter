@@ -10,7 +10,6 @@ import UIKit
 
 class TweetViewController: UIViewController {
     
-
     @IBAction func pushCloseButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
