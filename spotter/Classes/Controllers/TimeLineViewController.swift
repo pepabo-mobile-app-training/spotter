@@ -33,10 +33,8 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
             self.profile_url = profiles.img_url
             self.usernameLabel.text = profiles.name
             self.faceImage.kf.setImage(with: profiles.img_url)
-            // tableViewで利用する為
             self.timelineView.reloadData()
         }
-        
     }
     
     private func fetchProfile(){
