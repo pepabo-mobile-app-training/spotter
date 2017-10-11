@@ -36,10 +36,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
             self.timelineView.reloadData()
         }
     }
-    
-    private func fetchProfile(){
-        
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
