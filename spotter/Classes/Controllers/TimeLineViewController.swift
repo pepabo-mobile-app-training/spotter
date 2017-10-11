@@ -14,16 +14,14 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var timelineView: UITableView!
     @IBOutlet weak var faceImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
-    
-    
-    
+
     var DataList:[String] = ["FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンクFF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ ",
                              "どうもこんにちは!  \n\n こーめいとみせかけて遠藤です！！！ 遠藤です！！！！,　遠藤です！！！！",
                              "AutoLayoutで可変UITableViewCellの実装をしてみました!!!!!!!",
                              "テストテストテストテストテス\nトテストテストテストテストテストテストテストテストテストテストテストテストテストテス\nトテストテストテスト\n\n",
                              "便利です。"]
     
-    var profile = [Profile]()
+    var profile_url: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +30,17 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.rowHeight = UITableViewAutomaticDimension
         
         Profile.fetchProfiles(){ profiles in
-            self.profile = profiles
+            self.profile_url = profiles.img_url
+            self.usernameLabel.text = profiles.name
+            self.faceImage.kf.setImage(with: profiles.img_url)
+            // tableViewで利用する為
+            self.timelineView.reloadData()
         }
         
-//        usernameLabel.text = self.profile.name
-//        faceImage.kf.setImage(with: self.profile.img_url)
- 
-
+    }
+    
+    private func fetchProfile(){
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,11 +54,13 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = timelineView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
         
-        cell.faceImageView.image = UIImage(named: "komei")
-//       cell.faceImageView.image = faceImage.kf.setImage(with: self.profile.img_url)
-        let str = self.DataList[indexPath.row]
-        cell.tweetText.text = str
-        
+        guard ((self.profile_url) != nil) else {
+            return UITableViewCell()
+        }
+        cell.faceImageView.kf.setImage(with: self.profile_url)
+        cell.tweetText.text = self.DataList[indexPath.row]
         return cell
     }
+
+
 }
