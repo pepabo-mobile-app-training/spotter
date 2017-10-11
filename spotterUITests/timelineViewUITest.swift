@@ -23,13 +23,13 @@ class timelineViewUITest: XCTestCase {
     func testtimeLineViewElement() {
         let app = XCUIApplication()
         app.buttons["タイムライン画面"].tap()
-        
+
         XCTAssert(app.staticTexts["usernameLabel"].exists)
         XCTAssert(app.images["profileImage"].exists)
         XCTAssert(app.buttons["tweetButton"].exists)
         
         //カスタムテーブルビューセルの要素を確認する。
-        XCTAssert(app.tables.staticTexts["tweetTextBox"].exists)
+        XCTAssert(app.tables.staticTexts["tweetTexLabel"].exists)
         XCTAssert(app.tables.images["faceImageView"].exists)
     }
     
