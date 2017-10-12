@@ -56,6 +56,4 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         cell.tweetText.text = self.DataList[indexPath.row]
         return cell
     }
-
-
 }
