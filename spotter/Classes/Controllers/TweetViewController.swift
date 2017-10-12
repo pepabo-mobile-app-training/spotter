@@ -24,7 +24,7 @@ class TweetViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "goSelectMusic") {
+        if (segue.identifier == "goSelectMusic") {
             let selectMusicViewController: SelectMusicViewController = segue.destination as! SelectMusicViewController
             selectMusicViewController.tweetText = tweetTextView.text
             selectMusicViewController.emotionText = emotionText
