@@ -1,14 +1,14 @@
 //
-//  Profile.swift
+//  Users.swift
 //  spotter
 //
-//  Created by futoshi.endo on 2017/10/06.
+//  Created by futoshi.endo on 2017/10/12.
 //  Copyright © 2017年 GMO Pepabo. All rights reserved.
 //
 
 import Foundation
 
-class Profile {
+class Users {
     var name: String
     var img_url: URL
     
@@ -17,9 +17,9 @@ class Profile {
         self.img_url = img_url
     }
     
-    static func fetchProfiles(handler: @escaping ((Profile) -> Void)) {
+    static func fetchProfiles(handler: @escaping ((Users) -> Void)) {
         APIClient.request(endpoint: Endpoint.userProfile) { json in
-            let profiles = Profile(name: json["name"].stringValue,  img_url: (json["img_url"].url)!)
+            let profiles = Users(name: json["name"].stringValue,  img_url: (json["img_url"].url)!)
             return handler(profiles)
         }
     }

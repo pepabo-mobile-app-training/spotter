@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B724CD871F871AB4000FAA55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BE5B431F84B97700CAFCD9 /* Main.storyboard */; };
-		B724CD891F873581000FAA55 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD881F873581000FAA55 /* API.swift */; };
-		B724CD8B1F8736CA000FAA55 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD8A1F8736CA000FAA55 /* Profile.swift */; };
 		B724CD8F1F8C777B000FAA55 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */; };
+		B724CD931F8F4861000FAA55 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD921F8F4861000FAA55 /* Users.swift */; };
+		B724CD951F8F48C0000FAA55 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD941F8F48C0000FAA55 /* APIClient.swift */; };
 		B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED851F81E2D100529310 /* TimeLineViewController.swift */; };
 		B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */; };
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
@@ -57,9 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B724CD881F873581000FAA55 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = spotterUITests/API.swift; sourceTree = SOURCE_ROOT; };
-		B724CD8A1F8736CA000FAA55 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = spotterUITests/Profile.swift; sourceTree = SOURCE_ROOT; };
 		B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		B724CD921F8F4861000FAA55 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = SOURCE_ROOT; };
+		B724CD941F8F48C0000FAA55 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B747ED851F81E2D100529310 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		BEA4CBA81F7A21BA0066BF44 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B724CD881F873581000FAA55 /* API.swift */,
+				B724CD941F8F48C0000FAA55 /* APIClient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 		BEA4CBA91F7A21BA0066BF44 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B724CD8A1F8736CA000FAA55 /* Profile.swift */,
+				B724CD921F8F4861000FAA55 /* Users.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -439,9 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA4CBBE1F7BA82C0066BF44 /* LoginViewController.swift in Sources */,
-				B724CD8B1F8736CA000FAA55 /* Profile.swift in Sources */,
 				BEA4CBC41F7CD0000066BF44 /* TweetTextView.swift in Sources */,
-				B724CD891F873581000FAA55 /* API.swift in Sources */,
 				BEC8E1031F85FC6000AD1806 /* SelectMusicViewController.swift in Sources */,
 				BEA4CBB21F7A22EA0066BF44 /* ViewController.swift in Sources */,
 				BEA4CBC21F7CC7E00066BF44 /* TweetViewController.swift in Sources */,
@@ -450,6 +448,8 @@
 				BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */,
 				B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */,
 				B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */,
+				B724CD931F8F4861000FAA55 /* Users.swift in Sources */,
+				B724CD951F8F48C0000FAA55 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

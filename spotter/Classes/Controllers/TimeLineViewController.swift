@@ -29,7 +29,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.estimatedRowHeight = 70
         timelineView.rowHeight = UITableViewAutomaticDimension
         
-        Profile.fetchProfiles(){ profiles in
+        Users.fetchProfiles(){ profiles in
             self.profile_url = profiles.img_url
             self.usernameLabel.text = profiles.name
             self.faceImage.kf.setImage(with: profiles.img_url)

@@ -1,8 +1,8 @@
 //
-//  RailsAPI.swift
+//  APIClient.swift
 //  spotter
 //
-//  Created by futoshi.endo on 2017/10/06.
+//  Created by futoshi.endo on 2017/10/12.
 //  Copyright © 2017年 GMO Pepabo. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ class APIClient {
     static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint: endpoint)
-
+        
         Alamofire.request(url, method:method).validate(statusCode: 200...299).responseJSON { response in
             switch response.result {
                 
@@ -32,7 +32,7 @@ class APIClient {
         return baseUrl + endpoint.path()
     }
 }
-    
+
 enum Endpoint {
     case userProfile
     
