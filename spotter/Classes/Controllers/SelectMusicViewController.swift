@@ -31,6 +31,14 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         super.didReceiveMemoryWarning()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "goConfirmTweet") {
+            let confirmTweetViewController: ConfirmTweetViewController = segue.destination as! ConfirmTweetViewController
+            confirmTweetViewController.emotionText = emotionText
+            confirmTweetViewController.tweetText = tweetText
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }

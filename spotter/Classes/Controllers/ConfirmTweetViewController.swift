@@ -10,6 +10,9 @@ import UIKit
 
 class ConfirmTweetViewController: UIViewController {
     
+    var tweetText = ""
+    var emotionText = ""
+    
     @IBAction func emoteButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
