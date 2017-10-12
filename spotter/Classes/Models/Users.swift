@@ -20,10 +20,10 @@ class Users {
         self.userID = userID
     }
     
-    static func fetchProfiles(handler: @escaping ((Users) -> Void)) {
-        APIClient.request(endpoint: Endpoint.userProfile(1)) { json in
-            let profiles = Users(name: json["name"].stringValue, imgURL: (json["img_url"].url)!, userID: json["id"].intValue)
-            return handler(profiles)
+    static func fetchUsers(userID: Int, handler: @escaping ((Users) -> Void)) {
+        APIClient.request(endpoint: Endpoint.userProfile(userID)) { json in
+            let users = Users(name: json["name"].stringValue, imgURL: (json["img_url"].url)!, userID: json["id"].intValue)
+            return handler(users)
         }
     }
 }
