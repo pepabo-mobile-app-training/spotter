@@ -11,7 +11,9 @@ import UIKit
 class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var tweetText = ""
-    var emotion = ""
+    var emotionText = ""
+    
+    @IBOutlet weak var emotionLabel: UILabel!
     
     @IBOutlet weak var musicTableView: UITableView!
     
@@ -22,7 +24,7 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         musicTableView.estimatedRowHeight = 70
         musicTableView.rowHeight = UITableViewAutomaticDimension
         
-        print(tweetText)
+        emotionLabel.text = emotionText
     }
 
     override func didReceiveMemoryWarning() {

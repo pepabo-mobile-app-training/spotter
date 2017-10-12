@@ -57,6 +57,7 @@
                     <navigationItem key="navigationItem" id="8Sv-eQ-6S0"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="emotionLabel" destination="fL6-sl-w5a" id="sYq-IQ-3hH"/>
                         <outlet property="musicTableView" destination="pvj-PX-ELt" id="3hP-MU-iQH"/>
                         <segue destination="Ggs-MF-Tbv" kind="show" identifier="goConfirmTweet" id="Ao3-iv-eqL"/>
                     </connections>

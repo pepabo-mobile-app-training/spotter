@@ -10,13 +10,16 @@ import UIKit
 
 class TweetViewController: UIViewController {
     
+    var emotionText = ""
+    
     @IBOutlet weak var tweetTextView: TweetTextView!
     
     @IBAction func pushCloseButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func pushEmotionButton(_ sender: Any) {
+    @IBAction func pushEmotionButton(_ sender: UIButton) {
+        emotionText = sender.currentTitle!
         performSegue(withIdentifier: "goSelectMusic", sender: nil)
     }
     
@@ -24,6 +27,7 @@ class TweetViewController: UIViewController {
         if(segue.identifier == "goSelectMusic") {
             let selectMusicViewController: SelectMusicViewController = segue.destination as! SelectMusicViewController
             selectMusicViewController.tweetText = tweetTextView.text
+            selectMusicViewController.emotionText = emotionText
         }
     }
     
