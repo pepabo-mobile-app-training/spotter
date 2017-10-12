@@ -21,7 +21,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
                              "テストテストテストテストテス\nトテストテストテストテストテストテストテストテストテストテストテストテストテストテス\nトテストテストテスト\n\n",
                              "便利です。"]
     
-    var profileURL: URL?
+    var userImageURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +31,13 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         
         Users.fetchUsers(userID: 1){ users in
             
-            self.profileURL = users.imgURL
+            self.userImageURL = users.imgURL
             self.usernameLabel.text = users.name
             self.faceImage.kf.setImage(with: users.imgURL)
             
             self.timelineView.reloadData()
         }
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -50,7 +49,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = timelineView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
         
-        guard let profile_url = self.profileURL else{
+        guard let profile_url = self.userImageURL else{
             return UITableViewCell()
         }
         
