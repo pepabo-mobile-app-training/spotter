@@ -30,6 +30,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.rowHeight = UITableViewAutomaticDimension
         
         Users.fetchUsers(userID: 1){ users in
+            
             self.profileURL = users.imgURL
             self.usernameLabel.text = users.name
             self.faceImage.kf.setImage(with: users.imgURL)

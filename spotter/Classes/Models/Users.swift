@@ -1,4 +1,3 @@
-
 //
 //  Users.swift
 //  spotter
