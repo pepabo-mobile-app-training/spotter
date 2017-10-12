@@ -10,6 +10,8 @@ import UIKit
 
 class ConfirmTweetViewController: UIViewController {
     
+    @IBOutlet weak var tweetTextView: TweetTextView!
+    
     @IBAction func emoteButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
