@@ -21,7 +21,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
                              "テストテストテストテストテス\nトテストテストテストテストテストテストテストテストテストテストテストテストテストテス\nトテストテストテスト\n\n",
                              "便利です。"]
     
-    var profile_url: URL?
+    var profileURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +29,11 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.estimatedRowHeight = 70
         timelineView.rowHeight = UITableViewAutomaticDimension
         
+        
         Users.fetchProfiles(){ profiles in
-            self.profile_url = profiles.img_url
+            self.profileURL = profiles.imgURL
             self.usernameLabel.text = profiles.name
-            self.faceImage.kf.setImage(with: profiles.img_url)
+            self.faceImage.kf.setImage(with: profiles.imgURL)
             self.timelineView.reloadData()
         }
     }
@@ -48,7 +49,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = timelineView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
         
-        guard let profile_url = self.profile_url else{
+        guard let profile_url = self.profileURL else{
             return UITableViewCell()
         }
         

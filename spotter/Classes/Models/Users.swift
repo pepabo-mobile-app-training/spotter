@@ -1,3 +1,4 @@
+
 //
 //  Users.swift
 //  spotter
@@ -10,16 +11,16 @@ import Foundation
 
 class Users {
     var name: String
-    var img_url: URL
+    var imgURL: URL
     
-    init(name: String, img_url: URL) {
+    init(name: String, imgURL: URL) {
         self.name = name
-        self.img_url = img_url
+        self.imgURL = imgURL
     }
     
     static func fetchProfiles(handler: @escaping ((Users) -> Void)) {
         APIClient.request(endpoint: Endpoint.userProfile) { json in
-            let profiles = Users(name: json["name"].stringValue,  img_url: (json["img_url"].url)!)
+            let profiles = Users(name: json["name"].stringValue,  imgURL: (json["img_url"].url)!)
             return handler(profiles)
         }
     }

@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		B724CD871F871AB4000FAA55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BE5B431F84B97700CAFCD9 /* Main.storyboard */; };
 		B724CD8F1F8C777B000FAA55 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */; };
-		B724CD931F8F4861000FAA55 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD921F8F4861000FAA55 /* Users.swift */; };
 		B724CD951F8F48C0000FAA55 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD941F8F48C0000FAA55 /* APIClient.swift */; };
+		B724CD981F8F5808000FAA55 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD971F8F5808000FAA55 /* Users.swift */; };
 		B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED851F81E2D100529310 /* TimeLineViewController.swift */; };
 		B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */; };
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
@@ -58,8 +58,8 @@
 
 /* Begin PBXFileReference section */
 		B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		B724CD921F8F4861000FAA55 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = SOURCE_ROOT; };
 		B724CD941F8F48C0000FAA55 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B724CD971F8F5808000FAA55 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		B747ED851F81E2D100529310 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 		BEA4CBA91F7A21BA0066BF44 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B724CD921F8F4861000FAA55 /* Users.swift */,
+				B724CD971F8F5808000FAA55 /* Users.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -442,13 +442,13 @@
 				BEA4CBC41F7CD0000066BF44 /* TweetTextView.swift in Sources */,
 				BEC8E1031F85FC6000AD1806 /* SelectMusicViewController.swift in Sources */,
 				BEA4CBB21F7A22EA0066BF44 /* ViewController.swift in Sources */,
+				B724CD981F8F5808000FAA55 /* Users.swift in Sources */,
 				BEA4CBC21F7CC7E00066BF44 /* TweetViewController.swift in Sources */,
 				BEC8E1001F85FB9D00AD1806 /* MusicTableViewCell.swift in Sources */,
 				BEA4CBBA1F7B8DB10066BF44 /* RoundRectButton.swift in Sources */,
 				BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */,
 				B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */,
 				B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */,
-				B724CD931F8F4861000FAA55 /* Users.swift in Sources */,
 				B724CD951F8F48C0000FAA55 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
