@@ -33,8 +33,11 @@ class APIClient {
     }
 }
 
+
+
+
 enum Endpoint {
-    case userProfile
+    case userProfile(Int)
     
     func method() -> HTTPMethod {
         switch self{
@@ -44,7 +47,7 @@ enum Endpoint {
     
     func path() -> String {
         switch self{
-        case .userProfile: return "/api/users/1/profile"
+        case .userProfile(let value): return "/api/users/\(String(value))/profile"
         }
     }
 }
