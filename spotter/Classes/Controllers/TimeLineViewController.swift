@@ -48,10 +48,11 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = timelineView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
         
-        guard ((self.profile_url) != nil) else {
+        guard let profile_url = self.profile_url else{
             return UITableViewCell()
         }
-        cell.faceImageView.kf.setImage(with: self.profile_url)
+        
+        cell.faceImageView.kf.setImage(with: profile_url)
         cell.tweetText.text = self.DataList[indexPath.row]
         return cell
     }
