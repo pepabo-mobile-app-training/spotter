@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class APIClient {
-    static private let baseUrl = "http://localhost:3000"
+    static private let baseUrl = "http://piyorin.xyz"
     
     static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
