@@ -17,6 +17,7 @@
 		B7BE5B461F84BB1500CAFCD9 /* timelineViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */; };
 		B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */; };
 		BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */; };
+		BE9AD4811F87505100B7E2AA /* ConfirmTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9AD4801F87505100B7E2AA /* ConfirmTweetViewController.swift */; };
 		BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CB771F7A207B0066BF44 /* AppDelegate.swift */; };
 		BEA4CB7F1F7A207B0066BF44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CB7E1F7A207B0066BF44 /* Assets.xcassets */; };
 		BEA4CB8D1F7A207B0066BF44 /* spotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CB8C1F7A207B0066BF44 /* spotterTests.swift */; };
@@ -37,6 +38,7 @@
 		BEC8E1011F85FB9D00AD1806 /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC8E0FF1F85FB9D00AD1806 /* MusicTableViewCell.xib */; };
 		BEC8E1031F85FC6000AD1806 /* SelectMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E1021F85FC6000AD1806 /* SelectMusicViewController.swift */; };
 		BEC8E1061F8607F500AD1806 /* selectMusicViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */; };
+		BECA063C1F87691200E9118A /* tweetTransitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA063B1F87691200E9118A /* tweetTransitionUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timelineViewUITest.swift; sourceTree = "<group>"; };
 		B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
 		BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetViewUITests.swift; sourceTree = "<group>"; };
+		BE9AD4801F87505100B7E2AA /* ConfirmTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmTweetViewController.swift; sourceTree = "<group>"; };
 		BEA4CB741F7A207B0066BF44 /* spotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA4CB771F7A207B0066BF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA4CB7E1F7A207B0066BF44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 		BEC8E0FF1F85FB9D00AD1806 /* MusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 		BEC8E1021F85FC6000AD1806 /* SelectMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMusicViewController.swift; sourceTree = "<group>"; };
 		BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectMusicViewUITests.swift; sourceTree = "<group>"; };
+		BECA063B1F87691200E9118A /* tweetTransitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetTransitionUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 		BEA4CB961F7A207B0066BF44 /* spotterUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BECA063B1F87691200E9118A /* tweetTransitionUITests.swift */,
 				B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */,
 				BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */,
 				BEC8E0F61F83546600AD1806 /* confirmTweetViewUITests.swift */,
@@ -195,6 +200,7 @@
 				BEC8E1021F85FC6000AD1806 /* SelectMusicViewController.swift */,
 				BEA4CBC11F7CC7E00066BF44 /* TweetViewController.swift */,
 				BEA4CBBD1F7BA82C0066BF44 /* LoginViewController.swift */,
+				BE9AD4801F87505100B7E2AA /* ConfirmTweetViewController.swift */,
 				B747ED851F81E2D100529310 /* TimeLineViewController.swift */,
 				BEA4CBB11F7A22EA0066BF44 /* ViewController.swift */,
 			);
@@ -443,6 +449,7 @@
 				BEC8E1031F85FC6000AD1806 /* SelectMusicViewController.swift in Sources */,
 				BEA4CBB21F7A22EA0066BF44 /* ViewController.swift in Sources */,
 				B724CD981F8F5808000FAA55 /* Users.swift in Sources */,
+				BE9AD4811F87505100B7E2AA /* ConfirmTweetViewController.swift in Sources */,
 				BEA4CBC21F7CC7E00066BF44 /* TweetViewController.swift in Sources */,
 				BEC8E1001F85FB9D00AD1806 /* MusicTableViewCell.swift in Sources */,
 				BEA4CBBA1F7B8DB10066BF44 /* RoundRectButton.swift in Sources */,
@@ -468,6 +475,7 @@
 				BEC8E1061F8607F500AD1806 /* selectMusicViewUITests.swift in Sources */,
 				BEC8E0F71F83546600AD1806 /* confirmTweetViewUITests.swift in Sources */,
 				BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */,
+				BECA063C1F87691200E9118A /* tweetTransitionUITests.swift in Sources */,
 				B7BE5B461F84BB1500CAFCD9 /* timelineViewUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
