@@ -29,8 +29,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.estimatedRowHeight = 70
         timelineView.rowHeight = UITableViewAutomaticDimension
         
-        Users.fetchUsers(userID: 1){ users in
-            
+        Users.fetchUsers(userID: 1) { users in
             self.userImageURL = users.imgURL
             self.usernameLabel.text = users.name
             self.faceImage.kf.setImage(with: users.imgURL)
@@ -47,9 +46,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = timelineView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
-        
         guard let profile_url = self.userImageURL else{
             return UITableViewCell()
         }
