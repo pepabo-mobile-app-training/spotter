@@ -12,6 +12,10 @@ class ConfirmTweetViewController: UIViewController {
     
     var tweetText = ""
     var emotionText = ""
+    var musicName = ""
+    var musicURL = ""
+    
+    @IBOutlet weak var tweetTextView: TweetTextView!
     
     @IBAction func emoteButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -19,6 +23,8 @@ class ConfirmTweetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tweetTextView.text = "\(tweetText)\n\(emotionText)\n\(musicName)(\(musicURL))"
     }
 
     override func didReceiveMemoryWarning() {

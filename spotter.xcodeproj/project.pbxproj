@@ -36,6 +36,7 @@
 		BEC8E1031F85FC6000AD1806 /* SelectMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E1021F85FC6000AD1806 /* SelectMusicViewController.swift */; };
 		BEC8E1061F8607F500AD1806 /* selectMusicViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */; };
 		BECA063C1F87691200E9118A /* tweetTransitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA063B1F87691200E9118A /* tweetTransitionUITests.swift */; };
+		BEE4DEE51F9060E8004B2F94 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE4DEE41F9060E8004B2F94 /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		BEC8E1021F85FC6000AD1806 /* SelectMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMusicViewController.swift; sourceTree = "<group>"; };
 		BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectMusicViewUITests.swift; sourceTree = "<group>"; };
 		BECA063B1F87691200E9118A /* tweetTransitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetTransitionUITests.swift; sourceTree = "<group>"; };
+		BEE4DEE41F9060E8004B2F94 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 		BEA4CBA91F7A21BA0066BF44 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BEE4DEE41F9060E8004B2F94 /* Music.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */,
 				B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */,
 				B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */,
+				BEE4DEE51F9060E8004B2F94 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
