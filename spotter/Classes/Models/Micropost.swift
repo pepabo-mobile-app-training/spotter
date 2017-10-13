@@ -18,7 +18,7 @@ class Micropost {
         self.content = content
     }
 
-    static func MicropostsToJSON(_ json: JSON) -> Array<Micropost> {
+    static func jsonToMicroposts(_ json: JSON) -> Array<Micropost> {
         return json["microposts"].arrayValue.map {
             Micropost(userID: $0["user_id"].intValue, content: $0["content"].stringValue)
         }
@@ -26,7 +26,7 @@ class Micropost {
     
     static func fetchMicropost(userID: Int, handler: @escaping ((Array<Micropost>) -> Void)) {
         APIClient.request(endpoint: Endpoint.userMicropost(userID)) { json in
-            return handler(MicropostsToJSON(json))
+            return handler(jsonToMicroposts(json))
         }
     }
 }
