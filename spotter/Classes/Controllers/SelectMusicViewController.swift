@@ -12,6 +12,7 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
     
     var tweetText = ""
     var emotionText = ""
+    var music = Music()
     
     @IBOutlet weak var emotionLabel: UILabel!
     
@@ -31,6 +32,15 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         super.didReceiveMemoryWarning()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "goConfirmTweet") {
+            let confirmTweetViewController: ConfirmTweetViewController = segue.destination as! ConfirmTweetViewController
+            confirmTweetViewController.emotionText = emotionText
+            confirmTweetViewController.tweetText = tweetText
+            confirmTweetViewController.music = music
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -45,9 +55,10 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // セル選択
+        let cell = musicTableView.cellForRow(at: indexPath) as! MusicTableViewCell
+        music.name = cell.musicLabel.text!
+        music.url = "http://example.com"
         musicTableView.deselectRow(at: indexPath, animated: true)
-        
         self.performSegue(withIdentifier: "goConfirmTweet", sender: nil)
     }
 }
