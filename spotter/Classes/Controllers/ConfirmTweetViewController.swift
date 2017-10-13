@@ -12,8 +12,7 @@ class ConfirmTweetViewController: UIViewController {
     
     var tweetText = ""
     var emotionText = ""
-    var musicName = ""
-    var musicURL = ""
+    var music = Music()
     
     @IBOutlet weak var tweetTextView: TweetTextView!
     
@@ -24,7 +23,7 @@ class ConfirmTweetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tweetTextView.text = "\(tweetText)\n\(emotionText)\n\(musicName)(\(musicURL))"
+        tweetTextView.text = "\(tweetText)\n\(emotionText)\n\(music.name)(\(music.url))"
     }
 
     override func didReceiveMemoryWarning() {
