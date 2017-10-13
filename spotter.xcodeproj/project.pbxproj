@@ -12,6 +12,8 @@
 		B724CD951F8F48C0000FAA55 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD941F8F48C0000FAA55 /* APIClient.swift */; };
 		B724CD981F8F5808000FAA55 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD971F8F5808000FAA55 /* Users.swift */; };
 		B724CD9A1F90646A000FAA55 /* Micropost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CD991F906469000FAA55 /* Micropost.swift */; };
+		B724CDA81F909ECA000FAA55 /* testMicropost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CDA71F909ECA000FAA55 /* testMicropost.swift */; };
+		B724CDAA1F90A27B000FAA55 /* testUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724CDA91F90A27B000FAA55 /* testUser.swift */; };
 		B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED851F81E2D100529310 /* TimeLineViewController.swift */; };
 		B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */; };
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
@@ -64,6 +66,8 @@
 		B724CD941F8F48C0000FAA55 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B724CD971F8F5808000FAA55 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		B724CD991F906469000FAA55 /* Micropost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Micropost.swift; sourceTree = "<group>"; };
+		B724CDA71F909ECA000FAA55 /* testMicropost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testMicropost.swift; sourceTree = "<group>"; };
+		B724CDA91F90A27B000FAA55 /* testUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUser.swift; sourceTree = "<group>"; };
 		B747ED851F81E2D100529310 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 			children = (
 				BEA4CB8C1F7A207B0066BF44 /* spotterTests.swift */,
 				BEA4CB8E1F7A207B0066BF44 /* Info.plist */,
+				B724CDA71F909ECA000FAA55 /* testMicropost.swift */,
+				B724CDA91F90A27B000FAA55 /* testUser.swift */,
 			);
 			path = spotterTests;
 			sourceTree = "<group>";
@@ -468,6 +474,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B724CDA81F909ECA000FAA55 /* testMicropost.swift in Sources */,
+				B724CDAA1F90A27B000FAA55 /* testUser.swift in Sources */,
 				BEA4CB8D1F7A207B0066BF44 /* spotterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
