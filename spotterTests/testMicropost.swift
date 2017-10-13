@@ -11,7 +11,6 @@ import XCTest
 
 class testMicropost: XCTestCase {
     
-    
     override func setUp() {
         super.setUp()
     }
