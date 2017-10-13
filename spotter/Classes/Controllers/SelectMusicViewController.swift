@@ -57,7 +57,7 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = musicTableView.cellForRow(at: indexPath) as! MusicTableViewCell
         music.name = cell.musicLabel.text!
-        music.url = "http://hogehoge"
+        music.url = "http://example.com"
         musicTableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: "goConfirmTweet", sender: nil)
     }
