@@ -34,9 +34,11 @@ class confirmTweetViewUITests: XCTestCase {
         let emotionButtonText = "#嬉しい"
         app.buttons[emotionButtonText].tap()
         let musicLabel = "hogefugapiyohogehoge"
-        let musicURL = "http://hogehoge"
+        let musicURL = "http://example.com"
         app.tables.children(matching: .cell).element(boundBy: 0).staticTexts[musicLabel].tap()
+        sleep(1)
         let confirmTweetText = app.textViews["confirmTweetTextField"].value as! String
+        print("\(tweetText)\n\(emotionButtonText)\n\(musicLabel)(\(musicURL))")
         XCTAssertEqual("\(tweetText)\n\(emotionButtonText)\n\(musicLabel)(\(musicURL))", confirmTweetText)
 
     }
