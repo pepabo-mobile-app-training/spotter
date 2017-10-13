@@ -23,6 +23,7 @@ class timelineViewUITest: XCTestCase {
     func testtimeLineViewElement() {
         let app = XCUIApplication()
         app.buttons["タイムライン画面"].tap()
+        sleep(1)
         XCTAssert(app.staticTexts["usernameLabel"].exists)
         XCTAssert(app.images["profileImage"].exists)
         XCTAssert(app.buttons["tweetButton"].exists)
