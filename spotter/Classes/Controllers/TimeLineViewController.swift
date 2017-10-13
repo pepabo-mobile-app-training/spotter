@@ -36,12 +36,8 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
             
             self.timelineView.reloadData()
         }
-        
-        Micropost.fetchMicropost(userID: 1) { microposts in
-            dump(microposts)
-            
-        }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
