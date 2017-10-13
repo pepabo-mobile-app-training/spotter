@@ -21,8 +21,7 @@ class testUser: XCTestCase {
     
     func testFetchUsers() {
         Users.fetchUsers(userID:1){ users in
-              XCTAssertNotNil(users)
+          XCTAssertNotNil(users)
         }
     }
 }
-
