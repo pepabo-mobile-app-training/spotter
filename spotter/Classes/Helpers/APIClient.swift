@@ -37,14 +37,14 @@ enum Endpoint {
     case userMicropost(Int)
     
     func method() -> HTTPMethod {
-        switch self{
+        switch self {
         case .userProfile: return .get
         case .userMicropost: return .get
         }
     }
     
     func path() -> String {
-        switch self{
+        switch self {
         case .userProfile(let value): return "/api/users/\(String(value))/profile"
         case .userMicropost(let value): return "/api/users/\(String(value))/microposts"
         }

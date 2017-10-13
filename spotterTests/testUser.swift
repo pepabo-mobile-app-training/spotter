@@ -20,8 +20,12 @@ class testUser: XCTestCase {
     }
     
     func testFetchUsers() {
-        Users.fetchUsers(userID:1){ users in
-          XCTAssertNotNil(users)
+        let fetchUsersException: XCTestExpectation? =  self.expectation(description: "fetchUsers")
+        
+        Users.fetchUsers(userID: 1) { users in
+            XCTAssertNotNil(users.name)
+            fetchUsersException?.fulfill()
         }
+        self.waitForExpectations(timeout: 3, handler: nil)
     }
 }

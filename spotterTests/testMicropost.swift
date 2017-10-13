@@ -20,8 +20,12 @@ class testMicropost: XCTestCase {
     }
     
     func testFetchMicroposts() {
+        let fetchMicropostException: XCTestExpectation? =  self.expectation(description: "fetchMicropost")
+       
          Micropost.fetchMicropost(userID: 1) { microposts in
-            XCTAssertNotNil(microposts)
+            XCTAssertTrue(microposts.count > 1)
+            fetchMicropostException?.fulfill()
         }
+        self.waitForExpectations(timeout: 3, handler: nil)
     }
 }
