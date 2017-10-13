@@ -180,6 +180,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tweetTextView" destination="d3T-7r-DrF" id="JJs-uU-Qfu"/>
                         <segue destination="Q6p-yq-dCg" kind="show" identifier="goSelectMusic" id="wQ1-X0-2St"/>
                     </connections>
                 </viewController>
