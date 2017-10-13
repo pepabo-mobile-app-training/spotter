@@ -18,7 +18,6 @@ class Micropost {
         self.content = content
     }
 
-    
     static func MicropostsToJSON(_ json: JSON) -> Array<Micropost> {
         return json["microposts"].arrayValue.map {
             Micropost(userID: $0["user_id"].intValue, content: $0["content"].stringValue)
