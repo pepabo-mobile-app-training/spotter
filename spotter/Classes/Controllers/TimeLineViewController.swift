@@ -14,14 +14,10 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var timelineView: UITableView!
     @IBOutlet weak var faceImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
-
-    var DataList:[String] = ["FF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ http://曲が聞けるリンクFF9ありがとうございます! #うれしい「バンザイ ~好きでよかった~」ウルフルズ ",
-                             "どうもこんにちは!  \n\n こーめいとみせかけて遠藤です！！！ 遠藤です！！！！,　遠藤です！！！！",
-                             "AutoLayoutで可変UITableViewCellの実装をしてみました!!!!!!!",
-                             "テストテストテストテストテス\nトテストテストテストテストテストテストテストテストテストテストテストテストテストテス\nトテストテストテスト\n\n",
-                             "便利です。"]
     
+    let userID = 1  // ログイン機能がないためユーザを固定
     var userImageURL: URL?
+    var microposts = [Micropost]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +25,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.estimatedRowHeight = 70
         timelineView.rowHeight = UITableViewAutomaticDimension
         
-        Users.fetchUsers(userID: 1) { users in
-            self.userImageURL = users.imgURL
-            self.usernameLabel.text = users.name
-            self.faceImage.kf.setImage(with: users.imgURL)
-            
-            self.timelineView.reloadData()
-        }
+        setTimelineViewElements()
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,17 +33,31 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataList.count
+        return microposts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = timelineView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
-        guard let profile_url = self.userImageURL else{
+        guard let profile_url = self.userImageURL else {
             return UITableViewCell()
         }
         
         cell.faceImageView.kf.setImage(with: profile_url)
-        cell.tweetText.text = self.DataList[indexPath.row]
+        cell.tweetText.text = microposts[indexPath.row].content
         return cell
+    }
+    
+    private func setTimelineViewElements() {
+        Users.fetchUsers(userID: userID) { users in
+            self.userImageURL = users.imgURL
+            self.usernameLabel.text = users.name
+            self.faceImage.kf.setImage(with: users.imgURL)
+        }
+        
+        Micropost.fetchMicroposts(userID: userID) { microposts in
+            self.microposts = microposts.reversed()
+            self.timelineView.reloadData()
+        }
+        
     }
 }

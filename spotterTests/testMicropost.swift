@@ -22,7 +22,7 @@ class testMicropost: XCTestCase {
     func testFetchMicroposts() {
         let fetchMicropostException: XCTestExpectation? =  self.expectation(description: "fetchMicropost")
        
-         Micropost.fetchMicropost(userID: 1) { microposts in
+         Micropost.fetchMicroposts(userID: 1) { microposts in
             XCTAssertTrue(microposts.count > 1)
             fetchMicropostException?.fulfill()
         }
