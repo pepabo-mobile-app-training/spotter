@@ -25,16 +25,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.estimatedRowHeight = 70
         timelineView.rowHeight = UITableViewAutomaticDimension
         
-        Users.fetchUsers(userID: 1) { users in
-            self.userImageURL = users.imgURL
-            self.usernameLabel.text = users.name
-            self.faceImage.kf.setImage(with: users.imgURL)
-        }
-        
-        Micropost.fetchMicroposts(userID: 1) { microposts in
-            self.microposts = microposts
-            self.timelineView.reloadData()
-        }
+        setTimelineViewElements(userID: 1)
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,5 +45,18 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         cell.faceImageView.kf.setImage(with: profile_url)
         cell.tweetText.text = microposts[indexPath.row].content
         return cell
+    }
+    
+    private func setTimelineViewElements(userID: Int) {
+        Users.fetchUsers(userID: 1) { users in
+            self.userImageURL = users.imgURL
+            self.usernameLabel.text = users.name
+            self.faceImage.kf.setImage(with: users.imgURL)
+        }
+        
+        Micropost.fetchMicroposts(userID: 1) { microposts in
+            self.microposts = microposts
+            self.timelineView.reloadData()
+        }
     }
 }
