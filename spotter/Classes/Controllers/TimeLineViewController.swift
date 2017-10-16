@@ -55,8 +55,9 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         Micropost.fetchMicroposts(userID: userID) { microposts in
-            self.microposts = microposts
+            self.microposts = microposts.reversed()
             self.timelineView.reloadData()
         }
+        
     }
 }
