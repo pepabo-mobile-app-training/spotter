@@ -25,6 +25,14 @@ class TweetViewController: UIViewController {
         performSegue(withIdentifier: "goSelectMusic", sender: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "goSelectMusic") {
             let selectMusicViewController: SelectMusicViewController = segue.destination as! SelectMusicViewController
@@ -33,12 +41,8 @@ class TweetViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
+    
 }
