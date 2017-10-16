@@ -24,7 +24,7 @@ class Micropost {
         }
     }
     
-    static func fetchMicropost(userID: Int, handler: @escaping ((Array<Micropost>) -> Void)) {
+    static func fetchMicroposts(userID: Int, handler: @escaping ((Array<Micropost>) -> Void)) {
         APIClient.request(endpoint: Endpoint.userMicropost(userID)) { json in
             return handler(jsonToMicroposts(json))
         }
