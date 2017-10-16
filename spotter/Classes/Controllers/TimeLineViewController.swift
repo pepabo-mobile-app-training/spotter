@@ -15,9 +15,9 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var faceImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     
-    var microposts = [Micropost]()
-
+    let userID = 1
     var userImageURL: URL?
+    var microposts = [Micropost]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.estimatedRowHeight = 70
         timelineView.rowHeight = UITableViewAutomaticDimension
         
-        setTimelineViewElements(userID: 1)
+        setTimelineViewElements()
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,14 +47,14 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    private func setTimelineViewElements(userID: Int) {
-        Users.fetchUsers(userID: 1) { users in
+    private func setTimelineViewElements() {
+        Users.fetchUsers(userID: userID) { users in
             self.userImageURL = users.imgURL
             self.usernameLabel.text = users.name
             self.faceImage.kf.setImage(with: users.imgURL)
         }
         
-        Micropost.fetchMicroposts(userID: 1) { microposts in
+        Micropost.fetchMicroposts(userID: userID) { microposts in
             self.microposts = microposts
             self.timelineView.reloadData()
         }
