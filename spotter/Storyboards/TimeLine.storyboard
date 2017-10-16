@@ -26,7 +26,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="pen"/>
                                 <connections>
-                                    <segue destination="3Rs-05-xkj" kind="presentation" id="Jjl-ZE-rEC"/>
+                                    <segue destination="3Rs-05-xkj" kind="presentation" identifier="goTweet" id="Jjl-ZE-rEC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こーめい" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-lT-786">

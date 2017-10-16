@@ -47,6 +47,15 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "goTweet") {
+            if let navigationController = segue.destination as? UINavigationController {
+                let tweetViewController: TweetViewController = navigationController.topViewController as! TweetViewController
+                tweetViewController.micropost = Micropost(userID: userID, content: "")
+            }
+        }
+    }
+    
     private func setTimelineViewElements() {
         Users.fetchUsers(userID: userID) { users in
             self.userImageURL = users.imgURL
@@ -58,6 +67,5 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
             self.microposts = microposts.reversed()
             self.timelineView.reloadData()
         }
-        
     }
 }

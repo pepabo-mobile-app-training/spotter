@@ -10,6 +10,7 @@ import UIKit
 
 class TweetViewController: UIViewController {
     
+    var micropost = Micropost(userID: 0, content: "")
     var emotionText = ""
     
     @IBOutlet weak var tweetTextView: TweetTextView!
@@ -33,6 +34,7 @@ class TweetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dump(micropost)
     }
 
     override func didReceiveMemoryWarning() {
