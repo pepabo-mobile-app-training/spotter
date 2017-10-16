@@ -10,7 +10,7 @@ import UIKit
 
 class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var tweetText = ""
+    var micropost = Micropost(userID: 0, content: "")
     var emotionText = ""
     var music = Music()
     
@@ -36,7 +36,7 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         if(segue.identifier == "goConfirmTweet") {
             let confirmTweetViewController: ConfirmTweetViewController = segue.destination as! ConfirmTweetViewController
             confirmTweetViewController.emotionText = emotionText
-            confirmTweetViewController.tweetText = tweetText
+            confirmTweetViewController.micropost = micropost
             confirmTweetViewController.music = music
         }
     }

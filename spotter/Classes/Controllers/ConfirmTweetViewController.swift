@@ -10,7 +10,7 @@ import UIKit
 
 class ConfirmTweetViewController: UIViewController {
     
-    var tweetText = ""
+    var micropost = Micropost(userID: 0, content: "")
     var emotionText = ""
     var music = Music()
     
@@ -23,7 +23,7 @@ class ConfirmTweetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tweetTextView.text = "\(tweetText)\n\(emotionText)\n\(music.name)(\(music.url))"
+        tweetTextView.text = "\(micropost.content)\n\(emotionText)\n\(music.name)(\(music.url))"
     }
 
     override func didReceiveMemoryWarning() {
