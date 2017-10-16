@@ -15,7 +15,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var faceImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     
-    let userID = 1
+    let userID = 1  // ログイン機能がないためユーザを固定
     var userImageURL: URL?
     var microposts = [Micropost]()
     
