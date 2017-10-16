@@ -10,6 +10,7 @@ import UIKit
 
 class TweetViewController: UIViewController {
     
+    var micropost = Micropost(userID: 0, content: "")
     var emotionText = ""
     
     @IBOutlet weak var tweetTextView: TweetTextView!
@@ -20,13 +21,14 @@ class TweetViewController: UIViewController {
     
     @IBAction func pushEmotionButton(_ sender: UIButton) {
         emotionText = sender.currentTitle!
+        micropost.content = tweetTextView.text
         performSegue(withIdentifier: "goSelectMusic", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "goSelectMusic") {
             let selectMusicViewController: SelectMusicViewController = segue.destination as! SelectMusicViewController
-            selectMusicViewController.tweetText = tweetTextView.text
+            selectMusicViewController.micropost = micropost
             selectMusicViewController.emotionText = emotionText
         }
     }
