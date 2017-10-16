@@ -35,11 +35,13 @@ class APIClient {
 enum Endpoint {
     case userProfile(Int)
     case userMicropost(Int)
+    case createMicropost
     
     func method() -> HTTPMethod {
         switch self {
         case .userProfile: return .get
         case .userMicropost: return .get
+        case .createMicropost: return .post
         }
     }
     
@@ -47,6 +49,7 @@ enum Endpoint {
         switch self {
         case .userProfile(let value): return "/api/users/\(String(value))/profile"
         case .userMicropost(let value): return "/api/users/\(String(value))/microposts"
+        case .createMicropost: return "/api/microposts/create"
         }
     }
 }
