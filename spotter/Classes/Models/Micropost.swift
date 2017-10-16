@@ -29,4 +29,10 @@ class Micropost {
             return handler(jsonToMicroposts(json))
         }
     }
+    
+    static func postMicroposts(params: [String:Any], handler: @escaping ((Array<Micropost>) -> Void)) {
+        APIClient.request(endpoint: Endpoint.createMicropost, params: params) { json in
+            return handler(jsonToMicroposts(json))
+        }
+    }
 }
