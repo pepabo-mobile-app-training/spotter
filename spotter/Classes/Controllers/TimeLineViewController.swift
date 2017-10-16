@@ -37,6 +37,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
             self.timelineView.reloadData()
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
