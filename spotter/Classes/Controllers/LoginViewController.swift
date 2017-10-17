@@ -19,5 +19,9 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func pushLoginButton(_ sender: Any) {
+        performSegue(withIdentifier: "goTimeLine", sender: nil)
+    }
+    
 }
