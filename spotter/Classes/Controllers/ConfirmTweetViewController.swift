@@ -17,13 +17,7 @@ class ConfirmTweetViewController: UIViewController {
     @IBOutlet weak var tweetTextView: TweetTextView!
     
     @IBAction func emoteButton(_ sender: Any) {
-        let params: [String:Any] = [
-            "user_id": micropost.userID,
-            "micropost": ["content": micropost.content]
-            ]
-        micropost.postMicropost(params: params) { micropost in
-            dump(micropost)
-        }
+        micropost.post()
         dismiss(animated: true, completion: nil)
     }
     
