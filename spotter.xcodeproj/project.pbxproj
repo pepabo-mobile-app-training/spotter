@@ -440,10 +440,12 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework",
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/Alamofire.framework",
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(DERIVED_FILE_DIR)//Carthage/Build/iOS/OHHTTPStubs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
