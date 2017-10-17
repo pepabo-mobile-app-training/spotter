@@ -9,6 +9,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    //Spotifyの認証用の変数を用意する。
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

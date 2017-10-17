@@ -20,6 +20,7 @@
 		B7B7D98E1F95B2FC0081450F /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B7D98B1F95B2FB0081450F /* SpotifyAudioPlayback.framework */; };
 		B7B7D98F1F95B2FC0081450F /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B7D98C1F95B2FC0081450F /* SpotifyMetadata.framework */; };
 		B7B7D9901F95B2FC0081450F /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B7D98D1F95B2FC0081450F /* SpotifyAuthentication.framework */; };
+		B7B7D9941F95B5780081450F /* BridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B7D9931F95B5780081450F /* BridgeViewController.m */; };
 		B7BE5B461F84BB1500CAFCD9 /* timelineViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */; };
 		B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */; };
 		BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */; };
@@ -78,6 +79,9 @@
 		B7B7D98B1F95B2FB0081450F /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = SpotifyFramework/SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		B7B7D98C1F95B2FC0081450F /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = SpotifyFramework/SpotifyMetadata.framework; sourceTree = "<group>"; };
 		B7B7D98D1F95B2FC0081450F /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = SpotifyFramework/SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		B7B7D9911F95B5770081450F /* spotter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "spotter-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7B7D9921F95B5780081450F /* BridgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeViewController.h; sourceTree = "<group>"; };
+		B7B7D9931F95B5780081450F /* BridgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeViewController.m; sourceTree = "<group>"; };
 		B7BE5B431F84B97700CAFCD9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timelineViewUITest.swift; sourceTree = "<group>"; };
 		B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
@@ -168,6 +172,9 @@
 		BEA4CB761F7A207B0066BF44 /* spotter */ = {
 			isa = PBXGroup;
 			children = (
+				B7B7D9921F95B5780081450F /* BridgeViewController.h */,
+				B7B7D9931F95B5780081450F /* BridgeViewController.m */,
+				B7B7D9911F95B5770081450F /* spotter-Bridging-Header.h */,
 				BEA4CB771F7A207B0066BF44 /* AppDelegate.swift */,
 				BEA4CBA51F7A21BA0066BF44 /* Classes */,
 				BEA4CBAC1F7A21C50066BF44 /* Storyboards */,
@@ -361,6 +368,7 @@
 				TargetAttributes = {
 					BEA4CB731F7A207B0066BF44 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					BEA4CB871F7A207B0066BF44 = {
@@ -481,6 +489,7 @@
 				BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */,
 				B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */,
 				B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */,
+				B7B7D9941F95B5780081450F /* BridgeViewController.m in Sources */,
 				BEE4DEE51F9060E8004B2F94 /* Music.swift in Sources */,
 				B724CD951F8F48C0000FAA55 /* APIClient.swift in Sources */,
 			);
@@ -635,6 +644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -645,6 +655,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.spotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "spotter/spotter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -654,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -664,6 +677,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.spotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "spotter/spotter-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
