@@ -17,6 +17,9 @@
 		B747ED861F81E2D100529310 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED851F81E2D100529310 /* TimeLineViewController.swift */; };
 		B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */; };
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
+		B7B7D98E1F95B2FC0081450F /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B7D98B1F95B2FB0081450F /* SpotifyAudioPlayback.framework */; };
+		B7B7D98F1F95B2FC0081450F /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B7D98C1F95B2FC0081450F /* SpotifyMetadata.framework */; };
+		B7B7D9901F95B2FC0081450F /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B7D98D1F95B2FC0081450F /* SpotifyAuthentication.framework */; };
 		B7BE5B461F84BB1500CAFCD9 /* timelineViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */; };
 		B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */; };
 		BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */; };
@@ -72,6 +75,9 @@
 		B747ED851F81E2D100529310 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
+		B7B7D98B1F95B2FB0081450F /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = SpotifyFramework/SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		B7B7D98C1F95B2FC0081450F /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = SpotifyFramework/SpotifyMetadata.framework; sourceTree = "<group>"; };
+		B7B7D98D1F95B2FC0081450F /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = SpotifyFramework/SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		B7BE5B431F84B97700CAFCD9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timelineViewUITest.swift; sourceTree = "<group>"; };
 		B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B7D98E1F95B2FC0081450F /* SpotifyAudioPlayback.framework in Frameworks */,
+				B7B7D98F1F95B2FC0081450F /* SpotifyMetadata.framework in Frameworks */,
+				B7B7D9901F95B2FC0081450F /* SpotifyAuthentication.framework in Frameworks */,
 				B724CD8F1F8C777B000FAA55 /* Kingfisher.framework in Frameworks */,
 				BEA4CBB61F7B53410066BF44 /* Alamofire.framework in Frameworks */,
 				BEA4CBB71F7B53410066BF44 /* SwiftyJSON.framework in Frameworks */,
@@ -272,6 +281,9 @@
 		BEA4CBB31F7B53410066BF44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7B7D98B1F95B2FB0081450F /* SpotifyAudioPlayback.framework */,
+				B7B7D98D1F95B2FC0081450F /* SpotifyAuthentication.framework */,
+				B7B7D98C1F95B2FC0081450F /* SpotifyMetadata.framework */,
 				B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */,
 				BEA4CBB41F7B53410066BF44 /* Alamofire.framework */,
 				BEA4CBB51F7B53410066BF44 /* SwiftyJSON.framework */,
@@ -627,6 +639,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/SpotifyFramework",
 				);
 				INFOPLIST_FILE = spotter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -645,6 +658,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/SpotifyFramework",
 				);
 				INFOPLIST_FILE = spotter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
