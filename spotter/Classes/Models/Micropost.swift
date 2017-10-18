@@ -10,6 +10,7 @@ import Foundation
 import SwiftyJSON
 
 class Micropost {
+    var id = 0
     var userID: Int
     var content: String
     
@@ -30,14 +31,14 @@ class Micropost {
         }
     }
     
-    func post() {
+    static func pushMicropost(userID: Int, content: String, handler: @escaping ((Micropost) -> Void)) {
         let params: [String:Any] = [
-            "user_id": self.userID,
-            "micropost": ["content": self.content]
+            "user_id": userID,
+            "micropost": ["content": content]
         ]
         APIClient.request(endpoint: Endpoint.createMicropost, params: params) { json in
-            self.userID = json["micropost"]["user_id"].intValue
-            self.content = json["micropost"]["content"].stringValue
+            let pushedMicropost = Micropost(userID: json["micropost"]["user_id"].intValue, content: json["micropost"]["content"].stringValue)
+            return handler(pushedMicropost)
         }
     }
 }

@@ -11,13 +11,14 @@ import UIKit
 class ConfirmTweetViewController: UIViewController {
     
     var micropost = Micropost(userID: 0, content: "")
+    var pushedMicropost = Micropost(userID: 0, content: "")
     var emotionText = ""
     var music = Music()
     
     @IBOutlet weak var tweetTextView: TweetTextView!
     
     @IBAction func emoteButton(_ sender: Any) {
-        micropost.post()
+        Micropost.pushMicropost(userID: micropost.userID, content: micropost.content) { micropost in }
         dismiss(animated: true, completion: nil)
     }
     
