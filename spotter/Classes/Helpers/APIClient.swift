@@ -13,11 +13,11 @@ import SwiftyJSON
 class APIClient {
     static private let baseUrl = "http://piyorin.xyz"
     
-    static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void) {
+    static func request(endpoint: Endpoint, params: [String: Any]=[:], handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint: endpoint)
         
-        Alamofire.request(url, method:method).validate(statusCode: 200...299).responseJSON { response in
+        Alamofire.request(url, method:method, parameters:params).validate(statusCode: 200...299).responseJSON { response in
             switch response.result {
             case .success(let value):
                 handler(JSON(value))
@@ -35,11 +35,13 @@ class APIClient {
 enum Endpoint {
     case userProfile(Int)
     case userMicropost(Int)
+    case createMicropost
     
     func method() -> HTTPMethod {
         switch self {
         case .userProfile: return .get
         case .userMicropost: return .get
+        case .createMicropost: return .post
         }
     }
     
@@ -47,6 +49,7 @@ enum Endpoint {
         switch self {
         case .userProfile(let value): return "/api/users/\(String(value))/profile"
         case .userMicropost(let value): return "/api/users/\(String(value))/microposts"
+        case .createMicropost: return "/api/microposts/create"
         }
     }
 }

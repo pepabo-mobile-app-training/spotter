@@ -17,13 +17,14 @@ class ConfirmTweetViewController: UIViewController {
     @IBOutlet weak var tweetTextView: TweetTextView!
     
     @IBAction func emoteButton(_ sender: Any) {
+        Micropost.pushMicropost(userID: micropost.userID, content: micropost.content) { micropost in }
         dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tweetTextView.text = "\(micropost.content)\n\(emotionText)\n\(music.name)(\(music.url))"
+        micropost.content += "\n\(emotionText)\n\(music.name)(\(music.url))"
+        tweetTextView.text = micropost.content
     }
 
     override func didReceiveMemoryWarning() {

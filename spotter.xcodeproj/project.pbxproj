@@ -42,6 +42,8 @@
 		BEC8E1031F85FC6000AD1806 /* SelectMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E1021F85FC6000AD1806 /* SelectMusicViewController.swift */; };
 		BEC8E1061F8607F500AD1806 /* selectMusicViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */; };
 		BECA063C1F87691200E9118A /* tweetTransitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA063B1F87691200E9118A /* tweetTransitionUITests.swift */; };
+		BECD03CA1F972000006199CA /* successCreateMicropost.json in Resources */ = {isa = PBXBuildFile; fileRef = BECD03C91F972000006199CA /* successCreateMicropost.json */; };
+		BECD03CC1F972182006199CA /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD03CB1F972181006199CA /* OHHTTPStubs.framework */; };
 		BEE4DEE51F9060E8004B2F94 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE4DEE41F9060E8004B2F94 /* Music.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +106,8 @@
 		BEC8E1021F85FC6000AD1806 /* SelectMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMusicViewController.swift; sourceTree = "<group>"; };
 		BEC8E1051F8607F500AD1806 /* selectMusicViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectMusicViewUITests.swift; sourceTree = "<group>"; };
 		BECA063B1F87691200E9118A /* tweetTransitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetTransitionUITests.swift; sourceTree = "<group>"; };
+		BECD03C91F972000006199CA /* successCreateMicropost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successCreateMicropost.json; sourceTree = "<group>"; };
+		BECD03CB1F972181006199CA /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		BEE4DEE41F9060E8004B2F94 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECD03CC1F972182006199CA /* OHHTTPStubs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +176,7 @@
 		BEA4CB8B1F7A207B0066BF44 /* spotterTests */ = {
 			isa = PBXGroup;
 			children = (
+				BECD03C81F972000006199CA /* StubFiles */,
 				BEA4CB8C1F7A207B0066BF44 /* spotterTests.swift */,
 				BEA4CB8E1F7A207B0066BF44 /* Info.plist */,
 				B724CDA71F909ECA000FAA55 /* testMicropost.swift */,
@@ -272,11 +278,20 @@
 		BEA4CBB31F7B53410066BF44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BECD03CB1F972181006199CA /* OHHTTPStubs.framework */,
 				B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */,
 				BEA4CBB41F7B53410066BF44 /* Alamofire.framework */,
 				BEA4CBB51F7B53410066BF44 /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BECD03C81F972000006199CA /* StubFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BECD03C91F972000006199CA /* successCreateMicropost.json */,
+			);
+			path = StubFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BECD03CA1F972000006199CA /* successCreateMicropost.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,10 +456,12 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework",
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/Alamofire.framework",
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(DERIVED_FILE_DIR)//Carthage/Build/iOS/OHHTTPStubs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -661,6 +679,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = spotterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.spotterTests;
@@ -677,6 +699,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = spotterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.spotterTests;
