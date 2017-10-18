@@ -11,7 +11,6 @@ import UIKit
 class ConfirmTweetViewController: UIViewController {
     
     var micropost = Micropost(userID: 0, content: "")
-    var pushedMicropost = Micropost(userID: 0, content: "")
     var emotionText = ""
     var music = Music()
     

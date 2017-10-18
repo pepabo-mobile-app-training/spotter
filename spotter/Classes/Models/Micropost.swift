@@ -10,7 +10,6 @@ import Foundation
 import SwiftyJSON
 
 class Micropost {
-    var id = 0
     var userID: Int
     var content: String
     
