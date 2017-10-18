@@ -26,6 +26,10 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         timelineView.rowHeight = UITableViewAutomaticDimension
         
         setTimelineViewElements()
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.refreshTimeline(sender:)), for: .valueChanged)
+        timelineView.addSubview(refreshControl)
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,6 +70,13 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         Micropost.fetchMicroposts(userID: userID) { microposts in
             self.microposts = microposts
             self.timelineView.reloadData()
+        }
+    }
+    
+    @objc func refreshTimeline(sender: UIRefreshControl) {
+        setTimelineViewElements()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            sender.endRefreshing()
         }
     }
 }
