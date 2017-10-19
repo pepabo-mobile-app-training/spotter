@@ -60,7 +60,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    private func setTimelineViewElements() {
+    func setTimelineViewElements() {
         Users.fetchUsers(userID: userID) { users in
             self.userImageURL = users.imgURL
             self.usernameLabel.text = users.name

@@ -46,6 +46,7 @@ class tweetTransitionUITest: XCTestCase {
         
         // ツイートしてタイムライン画面へ
         app.buttons["エモート"].tap()
+        sleep(2)
         XCTAssertFalse(app.textViews["confirmTweetTextField"].exists)
         XCTAssert(app.images["profileImage"].exists)
     }

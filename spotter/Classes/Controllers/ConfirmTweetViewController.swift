@@ -18,7 +18,11 @@ class ConfirmTweetViewController: UIViewController {
     
     @IBAction func emoteButton(_ sender: Any) {
         Micropost.pushMicropost(userID: micropost.userID, content: micropost.content) { micropost in }
-        dismiss(animated: true, completion: nil)
+        let timelineViewController = presentingViewController as! TimeLineViewController
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            timelineViewController.setTimelineViewElements()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
