@@ -45,6 +45,8 @@
 		BECD03CA1F972000006199CA /* successCreateMicropost.json in Resources */ = {isa = PBXBuildFile; fileRef = BECD03C91F972000006199CA /* successCreateMicropost.json */; };
 		BECD03CC1F972182006199CA /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD03CB1F972181006199CA /* OHHTTPStubs.framework */; };
 		BEE4DEE51F9060E8004B2F94 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE4DEE41F9060E8004B2F94 /* Music.swift */; };
+		BEEBAFC01F989A64008FA413 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBAFBF1F989A64008FA413 /* LoginButton.swift */; };
+		BEEBAFC21F989BE5008FA413 /* SpotifyLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEBAFC11F989BE5008FA413 /* SpotifyLogin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		BECD03C91F972000006199CA /* successCreateMicropost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successCreateMicropost.json; sourceTree = "<group>"; };
 		BECD03CB1F972181006199CA /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		BEE4DEE41F9060E8004B2F94 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		BEEBAFBF1F989A64008FA413 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		BEEBAFC11F989BE5008FA413 /* SpotifyLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyLogin.framework; path = Carthage/Build/iOS/SpotifyLogin.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEBAFC21F989BE5008FA413 /* SpotifyLogin.framework in Frameworks */,
 				B724CD8F1F8C777B000FAA55 /* Kingfisher.framework in Frameworks */,
 				BEA4CBB61F7B53410066BF44 /* Alamofire.framework in Frameworks */,
 				BEA4CBB71F7B53410066BF44 /* SwiftyJSON.framework in Frameworks */,
@@ -251,6 +256,7 @@
 		BEA4CBAB1F7A21BA0066BF44 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BEEBAFBF1F989A64008FA413 /* LoginButton.swift */,
 				B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */,
 				B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */,
 				BEC8E0FE1F85FB9D00AD1806 /* MusicTableViewCell.swift */,
@@ -278,6 +284,7 @@
 		BEA4CBB31F7B53410066BF44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEEBAFC11F989BE5008FA413 /* SpotifyLogin.framework */,
 				BECD03CB1F972181006199CA /* OHHTTPStubs.framework */,
 				B724CD8E1F8C777B000FAA55 /* Kingfisher.framework */,
 				BEA4CBB41F7B53410066BF44 /* Alamofire.framework */,
@@ -305,7 +312,6 @@
 				BEA4CB711F7A207B0066BF44 /* Frameworks */,
 				BEA4CB721F7A207B0066BF44 /* Resources */,
 				BEA4CBB81F7B53510066BF44 /* ShellScript */,
-				B724CD901F8C779E000FAA55 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -434,19 +440,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B724CD901F8C779E000FAA55 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-		};
 		BEA4CBB81F7B53510066BF44 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,11 +450,13 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SpotifyLogin.framework",
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/Alamofire.framework",
 				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(DERIVED_FILE_DIR)//Carthage/Build/iOS/OHHTTPStubs.framework",
+				"$(DERIVED_FILE_DIR)/Carthage/Build/iOS/SpotifyLogin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -475,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA4CBBE1F7BA82C0066BF44 /* LoginViewController.swift in Sources */,
+				BEEBAFC01F989A64008FA413 /* LoginButton.swift in Sources */,
 				BEA4CBC41F7CD0000066BF44 /* TweetTextView.swift in Sources */,
 				B724CD9A1F90646A000FAA55 /* Micropost.swift in Sources */,
 				BEC8E1031F85FC6000AD1806 /* SelectMusicViewController.swift in Sources */,
