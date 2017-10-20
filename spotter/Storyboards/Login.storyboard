@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,6 +47,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エラーメッセージ用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFK-o9-XY4">
+                                <rect key="frame" x="41" y="222" width="293" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y14-oT-5bz" customClass="RoundRectButton" customModule="spotter" customModuleProvider="target">
                                 <rect key="frame" x="41" y="543" width="293" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -62,13 +68,10 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushLoginButton:" destination="CI2-0d-gYl" eventType="touchUpInside" id="VC7-qf-Sxp"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エラーメッセージ用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFK-o9-XY4">
-                                <rect key="frame" x="41" y="222" width="293" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -99,10 +102,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mea-IL-sp2"/>
                     </view>
+                    <connections>
+                        <segue destination="SQ1-Nm-8wa" kind="show" identifier="goTimeline" id="Kg0-xI-jfr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cC-D1-HvC" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--TimeLine-->
+        <scene sceneID="Ilq-aO-ZqJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TimeLine" id="SQ1-Nm-8wa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALC-Ei-9Tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="61"/>
         </scene>
     </scenes>
 </document>
