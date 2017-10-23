@@ -69,3 +69,6 @@ fastlane/test_output
 
 # Ignore tmp image file
 spotter/Assets.xcassets/tmp
+
+spotter.xcodeproj/xcshareddata/
+
