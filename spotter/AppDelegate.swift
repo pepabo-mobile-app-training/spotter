@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let env = ProcessInfo.processInfo.environment
+        guard env["CLIENT_ID"] != nil else { return true }
+        guard env["CLIENT_SECRET"] != nil else { return true }
         let redirectURL: URL = URL(string: "spotter://")!
         SpotifyLogin.shared.configure(clientID: env["CLIENT_ID"]!, clientSecret: env["CLIENT_SECRET"]!, redirectURL: redirectURL)
         return true
