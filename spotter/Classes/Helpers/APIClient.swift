@@ -53,3 +53,20 @@ enum Endpoint {
         }
     }
 }
+
+func spotifyGetPlaylist(OathToken: String, playlistID: String) {
+    let headers: HTTPHeaders = [
+        "Authorization": "Bearer  \(String(OathToken))"
+    ]
+    
+    Alamofire.request( "https://api.spotify.com/v1/users/kurukuru5284/playlists/\(String(playlistID))/tracks?offset=0&limit=10&market=JP", headers: headers).responseJSON {
+        response in
+        switch response.result {
+        case .success(let value):
+            dump(JSON(value))
+        default:
+            break
+        }
+    }
+}
+
