@@ -30,7 +30,8 @@ class Tracks{
                 name: $0["track"]["name"].stringValue,
                 album_name: $0["track"]["album"]["name"].stringValue,
                 imgURL: ($0["track"]["album"]["images"][1]["url"].url)!,
-                url: ($0["track"]["preview_url"].url)!)
+                url: ($0["track"]["preview_url"].url)!
+            )
         }
     }
     
