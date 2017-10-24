@@ -24,7 +24,7 @@ class Tracks{
         self.url = url
     }
     
-    static func jsonToPlaylist(_ json: JSON) -> Array<Tracks> {
+    static func jsonTracklist(_ json: JSON) -> Array<Tracks> {
         return json["items"].arrayValue.map {
             Tracks(
                 name: $0["track"]["name"].stringValue,
@@ -34,11 +34,11 @@ class Tracks{
         }
     }
     
-    static func fetchPlaylist(playlistID: String, handler: @escaping ((Array<Tracks>) -> Void)) {
+    static func fetchTracklist(playlistID: String, handler: @escaping ((Array<Tracks>) -> Void)) {
         let OathToken = env["OAUTH_TOKEN"]
         APIClient.spotifyAPIRequest(endpoint: Endpoint.fetchTrack(playlistID), OathToken: OathToken!){ json in
-            dump(jsonToPlaylist(json))
-            return handler(jsonToPlaylist(json))
+            dump(jsonTracklist(json))
+            return handler(jsonTracklist(json))
         }
     }
 }
