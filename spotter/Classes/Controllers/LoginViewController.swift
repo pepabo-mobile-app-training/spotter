@@ -10,10 +10,9 @@ import UIKit
 import SpotifyLogin
 
 class LoginViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        Tracks.fetchTracklist(playlistID: "1qhPhTZSuy9XfqurvqGwt8"){ tracks in
-        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,6 +18,7 @@
 		B747ED891F81EFEB00529310 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */; };
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
 		B78E500F1F9F23E9007418B4 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78E500E1F9F23E9007418B4 /* Tracks.swift */; };
+		B78E50111F9F2F1B007418B4 /* testTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78E50101F9F2F1B007418B4 /* testTrack.swift */; };
 		B7BE5B461F84BB1500CAFCD9 /* timelineViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */; };
 		B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */; };
 		BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */; };
@@ -77,6 +78,8 @@
 		B747ED871F81EFEB00529310 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
 		B78E500E1F9F23E9007418B4 /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
+		B78E50101F9F2F1B007418B4 /* testTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTrack.swift; sourceTree = "<group>"; };
+		B78E50121F9F3081007418B4 /* successFetchTrack.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = successFetchTrack.json; sourceTree = "<group>"; };
 		B7BE5B431F84B97700CAFCD9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timelineViewUITest.swift; sourceTree = "<group>"; };
 		B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 				BEA4CB8E1F7A207B0066BF44 /* Info.plist */,
 				B724CDA71F909ECA000FAA55 /* testMicropost.swift */,
 				B724CDA91F90A27B000FAA55 /* testUser.swift */,
+				B78E50101F9F2F1B007418B4 /* testTrack.swift */,
 			);
 			path = spotterTests;
 			sourceTree = "<group>";
@@ -296,6 +300,7 @@
 		BECD03C81F972000006199CA /* StubFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B78E50121F9F3081007418B4 /* successFetchTrack.json */,
 				BECD03C91F972000006199CA /* successCreateMicropost.json */,
 			);
 			path = StubFiles;
@@ -495,6 +500,7 @@
 				B724CDA81F909ECA000FAA55 /* testMicropost.swift in Sources */,
 				B724CDAA1F90A27B000FAA55 /* testUser.swift in Sources */,
 				BEA4CB8D1F7A207B0066BF44 /* spotterTests.swift in Sources */,
+				B78E50111F9F2F1B007418B4 /* testTrack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
