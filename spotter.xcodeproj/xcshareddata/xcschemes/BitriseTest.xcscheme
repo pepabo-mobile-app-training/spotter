@@ -29,6 +29,26 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BEA4CB871F7A207B0066BF44"
+               BuildableName = "spotterTests.xctest"
+               BlueprintName = "spotterTests"
+               ReferencedContainer = "container:spotter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BEA4CB921F7A207B0066BF44"
+               BuildableName = "spotterUITests.xctest"
+               BlueprintName = "spotterUITests"
+               ReferencedContainer = "container:spotter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
