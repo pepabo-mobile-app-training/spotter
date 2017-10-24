@@ -12,9 +12,6 @@ import SpotifyLogin
 class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        spotifyPlaylist.fetchPlaylist{ spotifyplaylists in
-        }
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
