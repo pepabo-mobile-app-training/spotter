@@ -49,10 +49,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         cell.faceImageView.kf.setImage(with: profile_url)
 //        cell.tweetText.text = microposts[indexPath.row].content
         
-        cell.tweetText.isUserInteractionEnabled = true
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGesture))
-        cell.tweetText.addGestureRecognizer(tapGestureRecognizer)
-        
         let tweetText = microposts[indexPath.row].content
         let urlText = getMatchStrings(targetString: tweetText, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")[0]
         let urlRange = (tweetText as NSString).range(of: urlText)
@@ -60,6 +56,15 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: urlRange)
         cell.tweetText.attributedText = attributedString
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = timelineView.cellForRow(at: indexPath) as! TimelineTableViewCell
+        let urlText = getMatchStrings(targetString: cell.tweetText.text!, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")[0]
+        let url = URL(string: urlText)
+        if UIApplication.shared.canOpenURL(url!){
+            UIApplication.shared.open(url!)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -89,24 +94,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             sender.endRefreshing()
         }
-    }
-    
-    @objc func tapGesture(gestureRecognizer: UITapGestureRecognizer) {
-        print("Url tapped")
-//        guard let text = helloLabel.text else { return }
-//        let touchPoint = gestureRecognizer.location(in: helloLabel)
-//        let textStorage = NSTextStorage(attributedString: NSAttributedString(string: linkText))
-//        let layoutManager = NSLayoutManager()
-//        textStorage.addLayoutManager(layoutManager)
-//        let textContainer = NSTextContainer(size: helloLabel.frame.size)
-//        layoutManager.addTextContainer(textContainer)
-//        textContainer.lineFragmentPadding = 0
-//        let toRange = (text as NSString).range(of: linkText)
-//        let glyphRange = layoutManager.glyphRange(forCharacterRange: toRange, actualCharacterRange: nil)
-//        let glyphRect = layoutManager.boundingRect(forGlyphRange: glyphRange, in: textContainer)
-//        if glyphRect.contains(touchPoint) {
-//            print("Tapped")
-//        }
     }
     
     // 正規表現にマッチした文字列を格納した配列を返す
