@@ -54,7 +54,7 @@ enum Endpoint {
     }
 }
 
-func spotifyGetPlaylist(OathToken: String, playlistID: String) {
+func spotifyAPIRequest(OathToken: String, playlistID: String,handler: @escaping (_ json: JSON) -> Void) {
     let headers: HTTPHeaders = [
         "Authorization": "Bearer  \(String(OathToken))"
     ]
@@ -63,7 +63,7 @@ func spotifyGetPlaylist(OathToken: String, playlistID: String) {
         response in
         switch response.result {
         case .success(let value):
-            dump(JSON(value))
+            handler(JSON(value))
         default:
             break
         }

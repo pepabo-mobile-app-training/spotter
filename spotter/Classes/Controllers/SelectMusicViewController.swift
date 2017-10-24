@@ -8,9 +8,6 @@
 
 import UIKit
 
-let env = ProcessInfo.processInfo.environment
-let OathToken = env["OAUTH_TOKEN"]
-let playlistID = env["PLAYLIST_ID"]
 
 class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -23,15 +20,15 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //  GET SpotifyPlayList
-        spotifyGetPlaylist(OathToken: OathToken!, playlistID: playlistID!)
         
         musicTableView.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "musicTableCell")
         musicTableView.estimatedRowHeight = 70
         musicTableView.rowHeight = UITableViewAutomaticDimension
-        
         emotionLabel.text = emotionText
     }
+    
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

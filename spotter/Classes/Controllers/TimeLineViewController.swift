@@ -19,6 +19,8 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     var userImageURL: URL?
     var microposts = [Micropost]()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         timelineView.register(UINib(nibName: "TimelineTableViewCell", bundle: nil), forCellReuseIdentifier: "TimelineTableViewCell")
