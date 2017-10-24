@@ -49,8 +49,12 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         cell.faceImageView.kf.setImage(with: profile_url)
         
         let tweetText = microposts[indexPath.row].content
-        let urlText = getMatchStrings(targetString: tweetText, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")[0]
-        let urlRange = (tweetText as NSString).range(of: urlText)
+        let urlTextArray = getMatchStrings(targetString: tweetText, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")
+        if (urlTextArray.count == 0) {
+            cell.tweetText.text = tweetText
+            return cell
+        }
+        let urlRange = (tweetText as NSString).range(of: urlTextArray[0])
         let attributedString = NSMutableAttributedString(string: tweetText)
         attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: urlRange)
         cell.tweetText.attributedText = attributedString
@@ -60,10 +64,12 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = timelineView.cellForRow(at: indexPath) as! TimelineTableViewCell
-        let urlText = getMatchStrings(targetString: cell.tweetText.text!, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")[0]
-        let url = URL(string: urlText)
-        if UIApplication.shared.canOpenURL(url!){
-            UIApplication.shared.open(url!)
+        let urlTextArray = getMatchStrings(targetString: cell.tweetText.text!, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")
+        if (urlTextArray.count != 0) {
+            let url = URL(string: urlTextArray[0])
+            if UIApplication.shared.canOpenURL(url!){
+                UIApplication.shared.open(url!)
+            }
         }
     }
     
