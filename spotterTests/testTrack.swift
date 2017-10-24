@@ -20,7 +20,6 @@ class testTrack: XCTestCase {
         super.tearDown()
     }
     
-    
     func testFetchTrack() {
         stub(condition: isHost("https://api.spotify.com/v1/users/kurukuru5284") && isPath("/playlists/1qhPhTZSuy9XfqurvqGwt8/tracks?offset=0&limit=10&market=JP")) { request in
             let stubPath = OHPathForFile("successFetchTrack.json", type(of: self))
