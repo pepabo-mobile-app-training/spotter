@@ -69,4 +69,3 @@ func spotifyAPIRequest(OathToken: String, playlistID: String,handler: @escaping 
         }
     }
 }
-

@@ -26,10 +26,8 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         musicTableView.rowHeight = UITableViewAutomaticDimension
         emotionLabel.text = emotionText
     }
-    
 
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
