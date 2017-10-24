@@ -47,7 +47,6 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         cell.faceImageView.kf.setImage(with: profile_url)
-//        cell.tweetText.text = microposts[indexPath.row].content
         
         let tweetText = microposts[indexPath.row].content
         let urlText = getMatchStrings(targetString: tweetText, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")[0]
@@ -55,6 +54,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         let attributedString = NSMutableAttributedString(string: tweetText)
         attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: urlRange)
         cell.tweetText.attributedText = attributedString
+        
         return cell
     }
     
@@ -99,25 +99,19 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     // 正規表現にマッチした文字列を格納した配列を返す
     func getMatchStrings(targetString: String, pattern: String) -> [String] {
         var matchStrings:[String] = []
-        
         do {
-            
             let regex = try NSRegularExpression(pattern: pattern, options: [])
             let targetStringRange = NSRange(location: 0, length: (targetString as NSString).length)
             
             let matches = regex.matches(in: targetString, options: [], range: targetStringRange)
             
             for match in matches {
-                
-                // rangeAtIndexに0を渡すとマッチ全体が、1以降を渡すと括弧でグループにした部分マッチが返される
                 let range = match.range(at: 0)
                 let result = (targetString as NSString).substring(with: range)
                 
                 matchStrings.append(result)
             }
-            
             return matchStrings
-            
         } catch {
             print("error: getMatchStrings")
         }
