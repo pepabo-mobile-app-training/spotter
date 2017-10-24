@@ -12,7 +12,7 @@ import SpotifyLogin
 class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        Tracks.fetchPlaylist(){ tracks in
+        Tracks.fetchPlaylist(playlistID: "1qhPhTZSuy9XfqurvqGwt8"){ tracks in
         }
     }
 
