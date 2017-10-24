@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var micropost = Micropost(userID: 0, content: "")
@@ -25,7 +24,6 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         musicTableView.rowHeight = UITableViewAutomaticDimension
         emotionLabel.text = emotionText
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

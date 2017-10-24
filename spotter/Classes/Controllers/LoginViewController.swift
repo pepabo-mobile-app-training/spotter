@@ -11,7 +11,6 @@ import SpotifyLogin
 
 class LoginViewController: UIViewController {
     override func viewDidLoad() {
-        
         super.viewDidLoad()
     }
 
@@ -27,7 +26,6 @@ class LoginViewController: UIViewController {
                                                object: nil)
     }
     @objc func loginSuccessful() {
-        
         SpotifyLogin.shared.getAccessToken { token, error in
             if(token != nil && error == nil) {
                 self.performSegue(withIdentifier: "goTimeline", sender: nil)
