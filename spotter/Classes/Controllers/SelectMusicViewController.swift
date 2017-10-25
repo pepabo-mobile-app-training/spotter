@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var micropost = Micropost(userID: 0, content: "")
     var emotionText = ""
     var music = Music()
+    var musicList = [Track]()
+    
     @IBOutlet weak var emotionLabel: UILabel!
     
     @IBOutlet weak var musicTableView: UITableView!
@@ -23,6 +26,11 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         musicTableView.estimatedRowHeight = 70
         musicTableView.rowHeight = UITableViewAutomaticDimension
         emotionLabel.text = emotionText
+        
+        Track.fetchTracklist(playlistID: "1qhPhTZSuy9XfqurvqGwt8") { tracks in
+            self.musicList = tracks
+            self.musicTableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,14 +47,14 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return musicList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = musicTableView.dequeueReusableCell(withIdentifier: "musicTableCell", for: indexPath) as! MusicTableViewCell
         
-        cell.musicImageView.image = UIImage(named: "linkin")
-        cell.musicLabel.text = "hogefugapiyohogehoge"
+        cell.musicImageView.kf.setImage(with: musicList[indexPath.row].imgURL)
+        cell.musicLabel.text = musicList[indexPath.row].name
         
         return cell
     }
@@ -54,7 +62,7 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = musicTableView.cellForRow(at: indexPath) as! MusicTableViewCell
         music.name = cell.musicLabel.text!
-        music.url = "http://example.com"
+        music.url = String(describing: musicList[indexPath.row].url)
         musicTableView.deselectRow(at: indexPath, animated: true)
         self.performSegue(withIdentifier: "goConfirmTweet", sender: nil)
     }
