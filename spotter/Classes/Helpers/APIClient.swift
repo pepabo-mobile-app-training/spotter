@@ -29,7 +29,7 @@ class APIClient {
     }
     
     // Spotify Playlist
-    static func spotifyAPIRequest(endpoint: Endpoint, OathToken: String, handler: @escaping (_ json: JSON) -> Void) {
+    static func spotifyAPIRequest(endpoint: Endpoint, OauthToken: String, handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullSpotifyURL(endpoint: endpoint)
         

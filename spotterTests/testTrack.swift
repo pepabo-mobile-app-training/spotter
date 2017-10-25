@@ -20,7 +20,6 @@ class testTrack: XCTestCase {
         super.tearDown()
     }
     
-
     func testFetchTrack() {
         stub(condition: isHost("api.spotify.com"))  { request in
             dump(request)
@@ -30,7 +29,6 @@ class testTrack: XCTestCase {
         
         let fetchTrackException: XCTestExpectation? =  self.expectation(description: "fetchTracklist")
         Tracks.fetchTracklist(playlistID: "1qhPhTZSuy9XfqurvqGwt8"){ tracks in
-            dump(tracks)
             XCTAssertEqual("暴れだす - full version", tracks[0].name)
             fetchTrackException?.fulfill()
         }
