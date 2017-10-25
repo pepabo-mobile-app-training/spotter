@@ -67,7 +67,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         let urlTextArray = getMatchStrings(targetString: cell.tweetText.text!, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")
         if (urlTextArray.count != 0) {
             let url = URL(string: urlTextArray[0])
-            if UIApplication.shared.canOpenURL(url!){
+            if UIApplication.shared.canOpenURL(url!) {
                 UIApplication.shared.open(url!)
             }
         }
@@ -118,9 +118,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
                 matchStrings.append(result)
             }
             return matchStrings
-        } catch {
-            print("error: getMatchStrings")
-        }
+        } catch {}
         return []
     }
 }
