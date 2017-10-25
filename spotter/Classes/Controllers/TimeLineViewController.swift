@@ -49,7 +49,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         cell.faceImageView.kf.setImage(with: profile_url)
         
         let tweetText = microposts[indexPath.row].content
-        let urlTextArray = TimelineHelper.getMatchStrings(targetString: tweetText, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")
+        let urlTextArray = TimelineHelper.getMatchStrings(targetString: tweetText, pattern: "(http://|https://){1}[\\w\\.\\-/:?=]+")
         if (urlTextArray.count == 0) {
             cell.tweetText.text = tweetText
             return cell
@@ -64,7 +64,7 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = timelineView.cellForRow(at: indexPath) as! TimelineTableViewCell
-        let urlTextArray = TimelineHelper.getMatchStrings(targetString: cell.tweetText.text!, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")
+        let urlTextArray = TimelineHelper.getMatchStrings(targetString: cell.tweetText.text!, pattern: "(http://|https://){1}[\\w\\.\\-/:?=]+")
         if (urlTextArray.count != 0) {
             let url = URL(string: urlTextArray[0])
             if UIApplication.shared.canOpenURL(url!) {
