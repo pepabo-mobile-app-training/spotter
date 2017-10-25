@@ -22,25 +22,10 @@ class confirmTweetViewUITests: XCTestCase {
     }
     
     func testConfirmTweetView() {
-        
         let app = XCUIApplication()
-        app.buttons["タイムライン画面"].tap()
-        app/*@START_MENU_TOKEN@*/.buttons["tweetButton"]/*[[".buttons[\"Button\"]",".buttons[\"tweetButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
-        let tweettextfieldTextView = app.textViews["tweetTextField"]
-        tweettextfieldTextView.tap()
-        let tweetText = "Hello"
-        tweettextfieldTextView.typeText(tweetText)
-        let emotionButtonText = "#嬉しい"
-        app.buttons[emotionButtonText].tap()
-        let musicLabel = "hogefugapiyohogehoge"
-        let musicURL = "http://example.com"
-        app.tables.children(matching: .cell).element(boundBy: 0).staticTexts[musicLabel].tap()
-        sleep(1)
-        let confirmTweetText = app.textViews["confirmTweetTextField"].value as! String
-        print("\(tweetText)\n\(emotionButtonText)\n\(musicLabel)(\(musicURL))")
-        XCTAssertEqual("\(tweetText)\n\(emotionButtonText)\n\(musicLabel)(\(musicURL))", confirmTweetText)
-
+        app.buttons["Tweet確認画面へ"].tap()
+        XCTAssert(app.textViews["confirmTweetTextField"].exists)
+        XCTAssert(app.buttons["エモート"].exists)
     }
     
 }
