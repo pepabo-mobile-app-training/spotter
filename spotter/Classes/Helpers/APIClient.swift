@@ -33,11 +33,10 @@ class APIClient {
         let method = endpoint.method()
         let url = fullSpotifyURL(endpoint: endpoint)
         
-        print("spotifyAPIRequest呼ばれたよ!")
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer  \(String(OathToken))"
+            "Authorization": "Bearer  \(String(OauthToken))"
         ]
-        print("OATh_tokenだよ！")
+
         Alamofire.request(url, method:method, headers: headers).validate(statusCode: 200...299).responseJSON {
             response in
             switch response.result {
