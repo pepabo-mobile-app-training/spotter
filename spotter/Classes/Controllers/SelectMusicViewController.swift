@@ -27,7 +27,8 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
         musicTableView.rowHeight = UITableViewAutomaticDimension
         emotionLabel.text = emotionText
         
-        Track.fetchTracklist(playlistID: "1qhPhTZSuy9XfqurvqGwt8") { tracks in
+        let playlistId = SelectMusicHelper.getPlaylistIdFromEmotion(emotion: emotionText)
+        Track.fetchTracklist(playlistID: playlistId) { tracks in
             self.musicList = tracks
             self.musicTableView.reloadData()
         }

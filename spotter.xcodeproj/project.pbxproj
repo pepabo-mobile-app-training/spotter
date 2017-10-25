@@ -21,6 +21,7 @@
 		B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */; };
 		BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */; };
 		BE4514691FA082D2008DBC02 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4514681FA082D1008DBC02 /* Track.swift */; };
+		BE45146B1FA08917008DBC02 /* SelectMusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE45146A1FA08917008DBC02 /* SelectMusicHelper.swift */; };
 		BE9AD4811F87505100B7E2AA /* ConfirmTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9AD4801F87505100B7E2AA /* ConfirmTweetViewController.swift */; };
 		BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4CB771F7A207B0066BF44 /* AppDelegate.swift */; };
 		BEA4CB7F1F7A207B0066BF44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA4CB7E1F7A207B0066BF44 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLine.storyboard; sourceTree = "<group>"; };
 		BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetViewUITests.swift; sourceTree = "<group>"; };
 		BE4514681FA082D1008DBC02 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		BE45146A1FA08917008DBC02 /* SelectMusicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMusicHelper.swift; sourceTree = "<group>"; };
 		BE9AD4801F87505100B7E2AA /* ConfirmTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmTweetViewController.swift; sourceTree = "<group>"; };
 		BEA4CB741F7A207B0066BF44 /* spotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA4CB771F7A207B0066BF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		BEA4CBA81F7A21BA0066BF44 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BE45146A1FA08917008DBC02 /* SelectMusicHelper.swift */,
 				BEDB688F1FA0353C0005B087 /* TimelineHelper.swift */,
 				B724CD941F8F48C0000FAA55 /* APIClient.swift */,
 			);
@@ -484,6 +487,7 @@
 				BEDB68901FA0353C0005B087 /* TimelineHelper.swift in Sources */,
 				BE9AD4811F87505100B7E2AA /* ConfirmTweetViewController.swift in Sources */,
 				BEA4CBC21F7CC7E00066BF44 /* TweetViewController.swift in Sources */,
+				BE45146B1FA08917008DBC02 /* SelectMusicHelper.swift in Sources */,
 				BEC8E1001F85FB9D00AD1806 /* MusicTableViewCell.swift in Sources */,
 				BEA4CBBA1F7B8DB10066BF44 /* RoundRectButton.swift in Sources */,
 				BEA4CB781F7A207B0066BF44 /* AppDelegate.swift in Sources */,
