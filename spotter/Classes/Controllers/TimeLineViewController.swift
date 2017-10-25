@@ -47,8 +47,30 @@ class TimeLineViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         cell.faceImageView.kf.setImage(with: profile_url)
-        cell.tweetText.text = microposts[indexPath.row].content
+        
+        let tweetText = microposts[indexPath.row].content
+        let urlTextArray = TimelineHelper.getMatchStrings(targetString: tweetText, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")
+        if (urlTextArray.count == 0) {
+            cell.tweetText.text = tweetText
+            return cell
+        }
+        let urlRange = (tweetText as NSString).range(of: urlTextArray[0])
+        let attributedString = NSMutableAttributedString(string: tweetText)
+        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: urlRange)
+        cell.tweetText.attributedText = attributedString
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = timelineView.cellForRow(at: indexPath) as! TimelineTableViewCell
+        let urlTextArray = TimelineHelper.getMatchStrings(targetString: cell.tweetText.text!, pattern: "(http://|https://){1}[\\w\\.\\-/:]+")
+        if (urlTextArray.count != 0) {
+            let url = URL(string: urlTextArray[0])
+            if UIApplication.shared.canOpenURL(url!) {
+                UIApplication.shared.open(url!)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
