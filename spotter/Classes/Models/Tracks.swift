@@ -36,8 +36,7 @@ class Tracks{
     }
     
     static func fetchTracklist(playlistID: String, handler: @escaping ((Array<Tracks>) -> Void)) {
-        let OathToken = env["OAUTH_TOKEN"]
-        APIClient.spotifyAPIRequest(endpoint: Endpoint.fetchTrack(playlistID), OathToken: OathToken!){ json in
+        APIClient.spotifyAPIRequest(endpoint: Endpoint.fetchTrack(playlistID), OauthToken: env["OAUTH_TOKEN"]!){ json in
             return handler(jsonTracklist(json))
         }
     }

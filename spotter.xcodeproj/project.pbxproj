@@ -19,6 +19,7 @@
 		B747ED8A1F81EFEB00529310 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B747ED881F81EFEB00529310 /* TimelineTableViewCell.xib */; };
 		B78E500F1F9F23E9007418B4 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78E500E1F9F23E9007418B4 /* Tracks.swift */; };
 		B78E50111F9F2F1B007418B4 /* testTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78E50101F9F2F1B007418B4 /* testTrack.swift */; };
+		B78E50131FA05AF0007418B4 /* successFetchTrack.json in Resources */ = {isa = PBXBuildFile; fileRef = B78E50121F9F3081007418B4 /* successFetchTrack.json */; };
 		B7BE5B461F84BB1500CAFCD9 /* timelineViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE5B451F84BB1500CAFCD9 /* timelineViewUITest.swift */; };
 		B7CF62701F7CA1FB00908326 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7CF626F1F7CA1FB00908326 /* TimeLine.storyboard */; };
 		BE0495AE1F823CA0000D4630 /* tweetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0495AD1F823CA0000D4630 /* tweetViewUITests.swift */; };
@@ -210,11 +211,10 @@
 		BEA4CBA51F7A21BA0066BF44 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BEA4CBA61F7A21BA0066BF44 /* Controllers */,
 				BEA4CBA81F7A21BA0066BF44 /* Helpers */,
+				BEA4CBA61F7A21BA0066BF44 /* Controllers */,
 				BEA4CBA91F7A21BA0066BF44 /* Models */,
 				BEA4CBAA1F7A21BA0066BF44 /* Stores */,
-				BEA4CBAB1F7A21BA0066BF44 /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -254,6 +254,7 @@
 		BEA4CBAA1F7A21BA0066BF44 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				BEA4CBAB1F7A21BA0066BF44 /* Views */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -431,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78E50131FA05AF0007418B4 /* successFetchTrack.json in Resources */,
 				BECD03CA1F972000006199CA /* successCreateMicropost.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
