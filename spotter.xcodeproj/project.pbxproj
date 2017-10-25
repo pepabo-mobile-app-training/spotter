@@ -211,6 +211,7 @@
 		BEA4CBA51F7A21BA0066BF44 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BEA4CBAB1F7A21BA0066BF44 /* Views */,
 				BEA4CBA81F7A21BA0066BF44 /* Helpers */,
 				BEA4CBA61F7A21BA0066BF44 /* Controllers */,
 				BEA4CBA91F7A21BA0066BF44 /* Models */,
@@ -254,7 +255,6 @@
 		BEA4CBAA1F7A21BA0066BF44 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				BEA4CBAB1F7A21BA0066BF44 /* Views */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
