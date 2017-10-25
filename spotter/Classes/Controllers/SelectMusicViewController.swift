@@ -13,18 +13,15 @@ class SelectMusicViewController: UIViewController, UITableViewDelegate, UITableV
     var micropost = Micropost(userID: 0, content: "")
     var emotionText = ""
     var music = Music()
-    
     @IBOutlet weak var emotionLabel: UILabel!
     
     @IBOutlet weak var musicTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         musicTableView.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "musicTableCell")
         musicTableView.estimatedRowHeight = 70
         musicTableView.rowHeight = UITableViewAutomaticDimension
-        
         emotionLabel.text = emotionText
     }
 

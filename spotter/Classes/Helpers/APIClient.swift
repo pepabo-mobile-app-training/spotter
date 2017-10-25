@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class APIClient {
     static private let baseUrl = "http://piyorin.xyz"
+    static private let spotifyUrl = "https://api.spotify.com/v1/users/kurukuru5284"
     
     static func request(endpoint: Endpoint, params: [String: Any]=[:], handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
@@ -27,8 +28,32 @@ class APIClient {
         }
     }
     
+    // Spotify Playlist
+    static func spotifyAPIRequest(endpoint: Endpoint, OauthToken: String, handler: @escaping (_ json: JSON) -> Void) {
+        let method = endpoint.method()
+        let url = fullSpotifyURL(endpoint: endpoint)
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer  \(String(OauthToken))"
+        ]
+
+        Alamofire.request(url, method:method, headers: headers).validate(statusCode: 200...299).responseJSON {
+            response in
+            switch response.result {
+            case .success(let value):
+                handler(JSON(value))
+            default:
+                break
+            }
+        }
+    }
+    
     static private func fullURL(endpoint: Endpoint) -> String {
         return baseUrl + endpoint.path()
+    }
+    
+    static private func fullSpotifyURL(endpoint: Endpoint) -> String {
+        return spotifyUrl + endpoint.path()
     }
 }
 
@@ -36,12 +61,15 @@ enum Endpoint {
     case userProfile(Int)
     case userMicropost(Int)
     case createMicropost
+    //Spotify Playlist
+    case fetchTrack(String)
     
     func method() -> HTTPMethod {
         switch self {
         case .userProfile: return .get
         case .userMicropost: return .get
         case .createMicropost: return .post
+        case .fetchTrack: return .get
         }
     }
     
@@ -50,6 +78,7 @@ enum Endpoint {
         case .userProfile(let value): return "/api/users/\(String(value))/profile"
         case .userMicropost(let value): return "/api/users/\(String(value))/microposts"
         case .createMicropost: return "/api/microposts/create"
+        case .fetchTrack(let value): return "/playlists/\(String(value))/tracks?offset=0&limit=10&market=JP"
         }
     }
 }

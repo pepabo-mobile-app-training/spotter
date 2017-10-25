@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
                                                name: .SpotifyLoginSuccessful,
                                                object: nil)
     }
-    
     @objc func loginSuccessful() {
         SpotifyLogin.shared.getAccessToken { token, error in
             if(token != nil && error == nil) {
