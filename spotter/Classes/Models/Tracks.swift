@@ -8,10 +8,11 @@
 
 import Foundation
 import SwiftyJSON
+import SpotifyLogin
 
 let env = ProcessInfo.processInfo.environment
 
-class Tracks{
+class Track {
     var name: String
     var album_name: String
     var imgURL: URL
@@ -24,9 +25,9 @@ class Tracks{
         self.url = url
     }
     
-    static func jsonTracklist(_ json: JSON) -> Array<Tracks> {
+    static func jsonTracklist(_ json: JSON) -> Array<Track> {
         return json["items"].arrayValue.map {
-            Tracks(
+            Track(
                 name: $0["track"]["name"].stringValue,
                 album_name: $0["track"]["album"]["name"].stringValue,
                 imgURL: ($0["track"]["album"]["images"][1]["url"].url)!,
@@ -35,9 +36,13 @@ class Tracks{
         }
     }
     
-    static func fetchTracklist(playlistID: String, handler: @escaping ((Array<Tracks>) -> Void)) {
-        APIClient.spotifyAPIRequest(endpoint: Endpoint.fetchTrack(playlistID), OauthToken: env["OAUTH_TOKEN"]!){ json in
-            return handler(jsonTracklist(json))
+    static func fetchTracklist(playlistID: String, handler: @escaping ((Array<Track>) -> Void)) {
+        SpotifyLogin.shared.getAccessToken() { token, error in
+            if(token != nil && error == nil) {
+                APIClient.spotifyAPIRequest(endpoint: Endpoint.fetchTrack(playlistID), OauthToken: token!) { json in
+                    return handler(jsonTracklist(json))
+                }
+            }
         }
     }
 }
