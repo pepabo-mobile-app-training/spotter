@@ -38,8 +38,14 @@ class Track {
     
     static func fetchTracklist(playlistID: String, handler: @escaping ((Array<Track>) -> Void)) {
         SpotifyLogin.shared.getAccessToken() { token, error in
+            // リモートだとSpotifyLoginによるtokenを取得できない為、CI上のテストを通す為に一時的に値を用意してる。
+            var OauthToken:String! = "hogehoge"
+            
+            if OauthToken != nil {
+                OauthToken = token
+            }
             if(token != nil && error == nil) {
-                APIClient.spotifyAPIRequest(endpoint: Endpoint.fetchTrack(playlistID), OauthToken: token!) { json in
+                APIClient.spotifyAPIRequest(endpoint: Endpoint.fetchTrack(playlistID), OauthToken: OauthToken) { json in
                     return handler(jsonTracklist(json))
                 }
             }
